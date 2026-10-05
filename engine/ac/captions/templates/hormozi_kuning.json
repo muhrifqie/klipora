@@ -1,0 +1,52 @@
+{
+  "name": "Hormozi Kuning",
+  "description": "Default shorts: 1-3 kata KAPITAL tebal, kata aktif kuning + pop, outline hitam tebal.",
+  "aspect": [
+    "9:16"
+  ],
+  "default_for": [
+    "portrait"
+  ],
+  "tags": [
+    "shorts",
+    "portrait"
+  ],
+  "font": {
+    "family": "Montserrat Black",
+    "size": 92,
+    "uppercase": true,
+    "punct": "strip",
+    "line_spacing": 1.0
+  },
+  "style": {
+    "outline": 9,
+    "shadow": 7,
+    "shadow_x": 0,
+    "shadow_y": 7,
+    "shadow_color": "#000000CC"
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 66
+  },
+  "timing": {
+    "max_gap": 0.35,
+    "max_dur": 1.5,
+    "hold": 0.1
+  },
+  "highlight": {
+    "color": "#FFE600",
+    "scale": 1.12
+  },
+  "anim": {
+    "in": "pop",
+    "in_dur": 0.16,
+    "out": "none"
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#22E58B"
+  }
+}

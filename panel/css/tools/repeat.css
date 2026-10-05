@@ -1,0 +1,39 @@
+/* repeat tool styles (owner: repeat tool agent). Shared components live in ../base.css; see docs/PANEL_API.md "CSS conventions". */
+
+/* Tinjau row: transcript snippet over exactly two lines (fixed height: the virtual list measures one row).
+   The removed attempt is struck through, the kept take is bold; state is never colour only. */
+.repeat-ctx { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; white-space: normal;
+  line-height: 1.4; height: 2.8em; color: var(--text-3); overflow-wrap: anywhere; }
+.repeat-ctx del { text-decoration: line-through; text-decoration-color: var(--danger); text-decoration-thickness: 1.5px;
+  color: var(--text-2); background: var(--danger-soft); border-radius: 3px; padding: 0 2px; }
+@media (min-width: 520px) { .repeat-ctx { -webkit-line-clamp: 1; height: 1.4em; } }   /* wide panel: one line is enough */
+.rv.is-off .repeat-ctx del { text-decoration: none; background: var(--surface-3); color: var(--text-2); }
+.repeat-ctx ins { text-decoration: none; color: var(--text-1); font-weight: 600; }
+.rv.is-off .repeat-ctx ins { font-weight: 400; color: var(--text-2); }
+.repeat-pre, .repeat-post { color: var(--text-3); }
+
+/* legend line under the review heading */
+.repeat-legend { margin: 0; font-size: var(--fs-xs); }
+.repeat-legend del { text-decoration: line-through; text-decoration-color: var(--danger); background: var(--danger-soft); border-radius: 3px; padding: 0 2px; color: var(--text-2); }
+.repeat-legend ins { text-decoration: none; font-weight: 600; color: var(--text-1); }
+
+/* "Transkrip ngaco" flags (never cut): one compact block with seekable time chips */
+.repeat-flags { flex: none; display: flex; flex-direction: column; gap: 5px; padding: 7px 9px; border-radius: var(--r-card);
+  background: var(--surface-1); box-shadow: inset 0 0 0 1px var(--border-subtle); }
+.repeat-flags-h { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; min-width: 0; font-size: var(--fs-sm); }
+.repeat-flags-h .svg-i { width: 14px; height: 14px; color: var(--warn); flex: none; }
+.repeat-flags-h b { font-weight: 600; white-space: nowrap; }
+.repeat-flags-h span { color: var(--text-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.repeat-flags-h .linkbtn { margin-left: auto; flex: none; }
+@media (max-width: 340px) { .repeat-flags-h span { display: none; } }
+.repeat-flag-list { display: flex; flex-wrap: wrap; gap: 4px; }
+.repeat-flag-list .chip { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.repeat-flag-list .tc { font-family: var(--font-mono); color: var(--text-1); }
+.rv-wrap > .alert { flex: none; }
+
+/* notes stay on one line (the virtual list measures a one-line note) */
+.screen[data-screen="tool-repeat"] .rv-note > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.screen[data-screen="tool-repeat"] .rv-note .svg-i { flex: none; }
+
+.repeat-ai-note { display: block; margin-top: -2px; }
+.repeat-audio { display: none; }

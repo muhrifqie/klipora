@@ -1,0 +1,56 @@
+/* podcast tool styles (owner: podcast tool agent). Shared components live in ../base.css; see docs/PANEL_API.md "CSS conventions".
+   Speaker colours are tool tokens (dark + light theme); the canvas ribbon reads them with AC.ui.css(). */
+:root {
+  --pod-c0: #f7843e; --pod-c1: #4ea4e6; --pod-c2: #4cc38a; --pod-c3: #b98bf2; --pod-c4: #e8c04e; --pod-c5: #ee6f9c;
+  --pod-wide: #8a8a8a;
+}
+:root[data-theme="light"] {
+  --pod-c0: #c95a17; --pod-c1: #1f6fb0; --pod-c2: #1d8653; --pod-c3: #7a4bc0; --pod-c4: #8a6a00; --pod-c5: #b8336a;
+  --pod-wide: #6d6d6d;
+}
+
+.podcast-key { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex: none; vertical-align: 0; margin-right: 5px; }
+
+/* speaker cards */
+.podcast-list { display: flex; flex-direction: column; gap: var(--gap-sm); }
+.podcast-spk { display: flex; flex-direction: column; gap: 6px; }
+.podcast-spk-h { display: flex; align-items: center; gap: 6px; }
+.podcast-spk-h .podcast-key { width: 10px; height: 10px; margin: 0 2px 0 0; }
+.podcast-spk-h .input { flex: 1; font-weight: 600; }
+.podcast-spk-h .ibtn[disabled] { opacity: .35; cursor: default; }
+.podcast-io { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.podcast-io .lbl { color: var(--text-3); font-size: var(--fs-xs); font-weight: 500; }
+@media (max-width: 330px) { .podcast-io { grid-template-columns: 1fr; } }
+.podcast-wide .select { width: auto; max-width: 52%; }
+.podcast-issue:empty, .podcast-warns:empty { display: none; }
+
+/* speaker ribbon: lanes per speaker + camera bar */
+.podcast-rib { display: block; width: 100%; height: 38px; border-radius: 6px; cursor: pointer; }
+.podcast-legend .podcast-key { margin-right: 4px; }
+.podcast-result .podcast-rib { cursor: default; }
+
+/* review: the speaker ribbon replaces the cut ribbon (nothing is removed, only cameras switch) */
+.podcast-rv .rv-head > canvas.ribbon, .podcast-rv .rv-head > .legend:not(.podcast-legend) { display: none; }
+.podcast-warns { display: flex; flex-direction: column; gap: 2px; }
+.podcast-warn { display: flex; align-items: flex-start; gap: 5px; margin: 0; font-size: var(--fs-xs); color: var(--text-2); }
+.podcast-warn .svg-i { width: 12px; height: 12px; flex: none; margin-top: 1px; }
+.podcast-warn.is-warn { color: var(--warn); }
+/* rows are measured once by the virtual list: tags, context and notes stay on one line */
+[data-screen="tool-podcast"] .rv-l1 { overflow: hidden; }
+[data-screen="tool-podcast"] .rv-l1 .tag { flex: none; }
+[data-screen="tool-podcast"] .rv-ctx .podcast-key { margin-right: 4px; }
+[data-screen="tool-podcast"] .rv-note { min-width: 0; }
+[data-screen="tool-podcast"] .rv-note > span { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* "Ganti kamera di playhead" */
+.podcast-switch { gap: var(--gap-sm); }
+.podcast-cams .btn[aria-pressed="true"] { border-color: var(--accent-line); background: var(--accent-soft); }
+.podcast-cams .btn .podcast-key { margin-right: 0; }
+.podcast-status { display: block; }
+.podcast-sw-result { gap: var(--gap-sm); padding-top: 4px; }
+
+/* review rows: the camera name is plain bold text with its colour dot (the ember mark means "cut" elsewhere) */
+[data-screen="tool-podcast"] .rv-ctx mark { background: none; color: var(--text-1); padding: 0; }
+[data-screen="tool-podcast"] .rv.is-off .rv-ctx mark { background: none; color: var(--text-3); }
+/* the core "Simpan/Buang bagian ini" toggle speaks about cuts; here the checkbox (or Space) skips a switch */
+[data-screen="tool-podcast"] .rv-actions [data-act="toggle"] { display: none; }

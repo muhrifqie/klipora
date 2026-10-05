@@ -1,0 +1,65 @@
+{
+  "name": "Panel Terang",
+  "description": "Kotak putih per baris dengan bayangan halus, teks gelap, garis biru di bawah kata aktif.",
+  "group": "tutorial",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "tutorial",
+    "landscape",
+    "clean"
+  ],
+  "font": {
+    "family": "Manrope ExtraBold",
+    "size": 50,
+    "line_spacing": 1.36
+  },
+  "style": {
+    "fill": "#0F172A",
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 9,
+    "max_chars": 38,
+    "max_lines": 2,
+    "y": 85,
+    "width": 80
+  },
+  "timing": {
+    "max_gap": 0.6,
+    "max_dur": 4.0,
+    "hold": 0.3,
+    "fill_gaps": 0.5
+  },
+  "box": {
+    "enabled": true,
+    "per": "line",
+    "color": "#FFFFFF",
+    "opacity": 0.96,
+    "radius": 14,
+    "pad_x": 22,
+    "pad_y": 10,
+    "shadow": {
+      "x": 0,
+      "y": 6,
+      "blur": 10,
+      "color": "#0000004D"
+    }
+  },
+  "highlight": {
+    "color": "#1D4ED8",
+    "underline": "#2563EB"
+  },
+  "anim": {
+    "in": "slide_up",
+    "in_dur": 0.16,
+    "out": "fade",
+    "out_dur": 0.12
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#1D4ED8"
+  }
+}

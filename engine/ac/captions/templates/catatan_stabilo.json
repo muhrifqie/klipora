@@ -1,0 +1,49 @@
+{
+  "name": "Catatan Stabilo",
+  "description": "Seperti catatan distabilo: latar stabilo kuning kasar, teks hitam, kata aktif oranye tua.",
+  "group": "edukasi",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "education",
+    "tutorial"
+  ],
+  "font": {
+    "family": "Nunito Black",
+    "size": 62,
+    "line_spacing": 1.32,
+    "case": "sentence"
+  },
+  "style": {
+    "fill": "#111111",
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 7,
+    "max_chars": 28,
+    "max_lines": 2,
+    "y": 78
+  },
+  "box": {
+    "enabled": true,
+    "per": "line",
+    "shape": "marker",
+    "color": "#FFE14D",
+    "opacity": 0.95,
+    "radius": 0,
+    "pad_x": 16,
+    "pad_y": 6,
+    "tilt": -1.5
+  },
+  "highlight": {
+    "color": "#C2410C"
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.14,
+    "out": "fade",
+    "out_dur": 0.12
+  }
+}

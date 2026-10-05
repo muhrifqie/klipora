@@ -1,0 +1,6 @@
+# Optional: CUDA 12 runtime DLLs (cuBLAS, cuDNN) for faster-whisper / CTranslate2 on an NVIDIA GPU.
+# Needs only a current NVIDIA driver; the engine loads these DLLs itself (ac.util.cuda_setup).
+# Without them transcription runs on the CPU.
+#   py -m pip install --no-cache-dir -r requirements-gpu.txt
+nvidia-cublas-cu12==12.9.2.10 ; sys_platform == "win32"
+nvidia-cudnn-cu12==9.27.0.42 ; sys_platform == "win32"

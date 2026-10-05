@@ -1,0 +1,48 @@
+{
+  "name": "Fokus Belajar",
+  "description": "Kalimat utuh, kata yang belum diucap redup, kata aktif biru muda bergaris bawah. Enak untuk belajar.",
+  "group": "edukasi",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "education",
+    "clean"
+  ],
+  "font": {
+    "family": "Inter ExtraBold",
+    "size": 60,
+    "line_spacing": 1.22
+  },
+  "style": {
+    "outline": 4,
+    "outline_color": "#0B1220",
+    "shadow": 3,
+    "shadow_x": 0,
+    "shadow_y": 3,
+    "shadow_blur": 6,
+    "shadow_color": "#00000099"
+  },
+  "layout": {
+    "max_words": 8,
+    "max_chars": 30,
+    "max_lines": 2,
+    "y": 80
+  },
+  "highlight": {
+    "color": "#7DD3FC",
+    "underline": "#38BDF8",
+    "future_alpha": 0.6
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.15,
+    "out": "fade",
+    "out_dur": 0.12
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#FDE047"
+  }
+}

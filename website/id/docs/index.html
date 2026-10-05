@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dokumentasi: pasang dan pakai Klipora</title>
+<meta name="description" content="Pasang Klipora untuk Premiere Pro 2026: Python, FFmpeg, GPU, mengaktifkan ekstensi CEP tanpa tanda tangan, semua alat, penyedia AI, dan pemecahan masalah.">
+<link rel="canonical" href="https://klipora.vercel.app/id/docs">
+<link rel="alternate" hreflang="en" href="https://klipora.vercel.app/docs">
+<link rel="alternate" hreflang="id" href="https://klipora.vercel.app/id/docs">
+<link rel="alternate" hreflang="x-default" href="https://klipora.vercel.app/docs">
+<meta name="theme-color" content="#111110">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Klipora">
+<meta property="og:title" content="Dokumentasi: pasang dan pakai Klipora">
+<meta property="og:description" content="Pasang Klipora untuk Premiere Pro 2026: Python, FFmpeg, GPU, mengaktifkan ekstensi CEP tanpa tanda tangan, semua alat, penyedia AI, dan pemecahan masalah.">
+<meta property="og:url" content="https://klipora.vercel.app/id/docs">
+<meta property="og:image" content="https://klipora.vercel.app/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Klipora: panel edit otomatis untuk Premiere Pro">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="/assets/site.js"></script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol id="i-wave-sine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12h-2c-.894 0 -1.662 -.857 -1.761 -2c-.296 -3.45 -.749 -6 -2.749 -6s-2.5 3.582 -2.5 8s-.5 8 -2.5 8s-2.452 -2.547 -2.749 -6c-.1 -1.147 -.867 -2 -1.763 -2h-2" /></symbol>
+<symbol id="i-message-circle-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.595 4.577c3.223 -1.176 7.025 -.61 9.65 1.63c2.982 2.543 3.601 6.523 1.636 9.66m-1.908 2.109c-2.787 2.19 -6.89 2.666 -10.273 1.024l-4.7 1l1.3 -3.9c-2.229 -3.296 -1.494 -7.511 1.68 -10.057" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-repeat-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v-3c0 -1.336 .873 -2.468 2.08 -2.856m3.92 -.144h10m-3 -3l3 3l-3 3" /> <path d="M20 12v3a3 3 0 0 1 -.133 .886m-1.99 1.984a3 3 0 0 1 -.877 .13h-13m3 3l-3 -3l3 -3" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-volume-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8a5 5 0 0 1 1.912 4.934m-1.377 2.602a5 5 0 0 1 -.535 .464" /> <path d="M17.7 5a9 9 0 0 1 2.362 11.086m-1.676 2.299a9 9 0 0 1 -.686 .615" /> <path d="M9.069 5.054l.431 -.554a.8 .8 0 0 1 1.5 .5v2m0 4v8a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l1.294 -1.664" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-badge-cc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /> <path d="M10 10.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /> <path d="M17 10.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /></symbol>
+<symbol id="i-list-numbers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 6h9" /> <path d="M11 12h9" /> <path d="M12 18h8" /> <path d="M4 16a2 2 0 1 1 4 0c0 .591 -.5 1 -1 1.5l-3 2.5h4" /> <path d="M6 10v-6l-2 2" /></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z" /></symbol>
+<symbol id="i-zoom-in" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /> <path d="M7 10l6 0" /> <path d="M10 7l0 6" /> <path d="M21 21l-6 -6" /></symbol>
+<symbol id="i-device-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" /> <path d="M11 4h2" /> <path d="M12 17v.01" /></symbol>
+<symbol id="i-focus-centered" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M4 8v-2a2 2 0 0 1 2 -2h2" /> <path d="M4 16v2a2 2 0 0 0 2 2h2" /> <path d="M16 4h2a2 2 0 0 1 2 2v2" /> <path d="M16 20h2a2 2 0 0 0 2 -2v-2" /></symbol>
+<symbol id="i-microphone-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12.9a5 5 0 1 0 -3.902 -3.9" /> <path d="M15 12.9l-3.902 -3.899l-7.513 8.584a2 2 0 1 0 2.827 2.83l8.588 -7.515z" /></symbol>
+<symbol id="i-photo-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15h-3a3 3 0 0 1 -3 -3v-6a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v3" /> <path d="M9 9m0 3a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-6a3 3 0 0 1 -3 -3z" /> <path d="M3 12l2.296 -2.296a2.41 2.41 0 0 1 3.408 0l.296 .296" /> <path d="M14 13.5v3l2.5 -1.5z" /> <path d="M7 6v.01" /></symbol>
+<symbol id="i-ear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3a4.5 4.5 0 0 1 -6.8 1.4" /> <path d="M10 10a3 3 0 1 1 5 2.2" /></symbol>
+<symbol id="i-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /> <path d="M9 9h6v6h-6z" /> <path d="M3 10h2" /> <path d="M3 14h2" /> <path d="M10 3v2" /> <path d="M14 3v2" /> <path d="M21 10h-2" /> <path d="M21 14h-2" /> <path d="M14 21v-2" /> <path d="M10 21v-2" /></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /> <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /> <path d="M8 11v-4a4 4 0 1 1 8 0v4" /></symbol>
+<symbol id="i-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" /> <path d="M15 19l2 2l4 -4" /></symbol>
+<symbol id="i-brand-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></symbol>
+<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /> <path d="M7 11l5 5l5 -5" /> <path d="M12 4l0 12" /></symbol>
+<symbol id="i-terminal-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l3 3l-3 3" /> <path d="M13 15l3 0" /> <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /></symbol>
+<symbol id="i-plug-connected" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5z" /> <path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5z" /> <path d="M3 21l2.5 -2.5" /> <path d="M18.5 5.5l2.5 -2.5" /> <path d="M10 11l-2 2" /> <path d="M13 14l-2 2" /></symbol>
+<symbol id="i-language" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h7" /> <path d="M9 3v2c0 4.418 -2.239 8 -5 8" /> <path d="M5 9c0 2.144 2.952 3.908 6.7 4" /> <path d="M12 20l4 -9l4 9" /> <path d="M19.1 18h-6.2" /></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /> <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></symbol>
+<symbol id="i-menu-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l16 0" /> <path d="M4 12l16 0" /> <path d="M4 18l16 0" /></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6l-12 12" /> <path d="M6 6l12 12" /></symbol>
+<symbol id="i-brand-windows" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 20l-12 -1.5c-1 -.1 -1.8 -.9 -1.8 -1.9v-9.2c0 -1 .8 -1.8 1.8 -1.9l12 -1.5c1.2 -.1 2.2 .8 2.2 1.9v12.1c0 1.2 -1.1 2.1 -2.2 1.9z" /> <path d="M12 5l0 14" /> <path d="M4 12l16 0" /></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6z" /></symbol>
+<symbol id="i-external-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /> <path d="M11 13l9 -9" /> <path d="M15 4h5v5" /></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6" /></symbol>
+<symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /> <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></symbol>
+<symbol id="i-typography" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l3 0" /> <path d="M14 20l7 0" /> <path d="M6.9 15l6.9 0" /> <path d="M10.2 6.3l5.8 13.7" /> <path d="M5 20l6 -16l2 0l7 16" /></symbol>
+<symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /> <path d="M13 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /> <path d="M9 17v-13h10v13" /> <path d="M9 8h10" /></symbol>
+<symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0z" /> <path d="M15 9h.01" /></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2" /></symbol>
+<symbol id="i-alert-triangle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4" /> <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /> <path d="M12 16h.01" /></symbol>
+<symbol id="i-info-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M12 9h.01" /> <path d="M11 12h1v4h1" /></symbol>
+<symbol id="i-player-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16l13 -8z" /></symbol>
+<symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M6 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M8.6 8.6l10.4 10.4" /> <path d="M8.6 15.4l10.4 -10.4" /></symbol>
+<symbol id="i-text-caption" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15h16" /> <path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /> <path d="M4 20h12" /></symbol>
+<symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" /> <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" /></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /> <path d="M7 9l5 -5l5 5" /> <path d="M12 4l0 12" /></symbol>
+<symbol id="i-git-fork" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2" /> <path d="M12 12l0 4" /></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /> <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></symbol>
+<symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /> <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /> <path d="M3 6l0 13" /> <path d="M12 6l0 13" /> <path d="M21 6l0 13" /></symbol>
+<symbol id="i-history" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8l0 4l2 2" /> <path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5" /></symbol>
+<symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7l-10 10" /> <path d="M8 7l9 0l0 9" /></symbol>
+<symbol id="i-cloud-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.58 5.548c.24 -.11 .492 -.207 .752 -.286c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 .957 -.383 1.824 -1.003 2.454m-2.997 1.033h-11.343c-2.572 -.004 -4.657 -2.011 -4.657 -4.487c0 -2.475 2.085 -4.482 4.657 -4.482c.13 -.582 .37 -1.128 .7 -1.62" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /> <path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /> <path d="M7 8l0 .01" /> <path d="M7 16l0 .01" /></symbol>
+</svg>
+
+<a class="skip" href="#main">Lewati ke konten</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/id"><img src="/assets/logo.svg" alt="" width="28" height="28">Klipora</a>
+    <nav class="nav-links" aria-label="Utama"><a href="/id#features">Fitur</a><a href="/id#install">Pasang</a><a href="/id/docs" aria-current="page">Dokumentasi</a><a href="/id/changelog">Catatan rilis</a></nav>
+    <div class="nav-end">
+      <div class="lang" role="group" aria-label="Bahasa">
+        <a href="/docs" hreflang="en" lang="en">EN</a>
+        <a href="/id/docs" hreflang="id" lang="id" aria-current="true">ID</a>
+      </div>
+      <a class="btn btn-ghost btn-sm gh-btn" href="https://github.com/muhrifqie/klipora"><svg class="icon" aria-hidden="true"><use href="#i-brand-github"/></svg>GitHub</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="icon i-open" aria-hidden="true"><use href="#i-menu-2"/></svg><svg class="icon i-close" aria-hidden="true"><use href="#i-x"/></svg></summary>
+        <nav class="menu-panel" aria-label="Seluler"><a href="/id#features">Fitur</a><a href="/id#install">Pasang</a><a href="/id/docs" aria-current="page">Dokumentasi</a><a href="/id/changelog">Catatan rilis</a><a href="https://github.com/muhrifqie/klipora">GitHub</a></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<div class="doc-hero">
+  <div class="wrap">
+    <span class="eyebrow">Dokumentasi</span>
+    <h1>Pasang dan pakai Klipora</h1>
+    <p class="lede">Dari PC Windows yang masih bersih sampai potongan otomatis pertama, lalu semua alat di panel.</p>
+    <details class="toc-mobile"><summary>Di halaman ini</summary><nav class="toc" aria-label="Daftar isi">
+    <p>Mulai</p><ul><li><a href="#requirements">Kebutuhan</a></li><li><a href="#install">Pasang engine</a></li><li><a href="#gpu">Atur GPU</a></li><li><a href="#cep">Aktifkan panel</a></li><li><a href="#first-run">Pemakaian pertama</a></li></ul>
+    <p>Alat</p><ul><li><a href="#basics">Dasar bersama</a></li><li><a href="#silence">Potong silence</a></li><li><a href="#fillers">Hapus filler</a></li><li><a href="#repeat">Potong pengulangan</a></li><li><a href="#profanity">Sensor kata kasar</a></li><li><a href="#captions">Caption animasi</a></li><li><a href="#chapters">Bab otomatis</a></li><li><a href="#viral">Klip viral</a></li><li><a href="#zoom">Auto zoom</a></li><li><a href="#resize">Auto resize / reframe</a></li><li><a href="#angles">Angle otomatis</a></li><li><a href="#podcast">Podcast multicam</a></li><li><a href="#broll">B-roll</a></li><li><a href="#voice">Suara Jernih</a></li></ul>
+    <p>Lainnya</p><ul><li><a href="#ai">Penyedia AI</a></li><li><a href="#troubleshooting">Pemecahan masalah</a></li><li><a href="#update">Update dan hapus</a></li></ul></nav></details>
+  </div>
+</div>
+<div class="wrap doc-layout">
+  <nav class="toc" aria-label="Daftar isi">
+    <p>Mulai</p><ul><li><a href="#requirements">Kebutuhan</a></li><li><a href="#install">Pasang engine</a></li><li><a href="#gpu">Atur GPU</a></li><li><a href="#cep">Aktifkan panel</a></li><li><a href="#first-run">Pemakaian pertama</a></li></ul>
+    <p>Alat</p><ul><li><a href="#basics">Dasar bersama</a></li><li><a href="#silence">Potong silence</a></li><li><a href="#fillers">Hapus filler</a></li><li><a href="#repeat">Potong pengulangan</a></li><li><a href="#profanity">Sensor kata kasar</a></li><li><a href="#captions">Caption animasi</a></li><li><a href="#chapters">Bab otomatis</a></li><li><a href="#viral">Klip viral</a></li><li><a href="#zoom">Auto zoom</a></li><li><a href="#resize">Auto resize / reframe</a></li><li><a href="#angles">Angle otomatis</a></li><li><a href="#podcast">Podcast multicam</a></li><li><a href="#broll">B-roll</a></li><li><a href="#voice">Suara Jernih</a></li></ul>
+    <p>Lainnya</p><ul><li><a href="#ai">Penyedia AI</a></li><li><a href="#troubleshooting">Pemecahan masalah</a></li><li><a href="#update">Update dan hapus</a></li></ul></nav>
+  <article class="prose">
+
+<section id="requirements">
+  <h2>Kebutuhan</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Bagian</th><th>Yang dibutuhkan</th></tr></thead>
+    <tbody>
+      <tr><td>Sistem operasi</td><td>Windows 10 atau 11, 64-bit. Dites di Windows 11. macOS belum didukung.</td></tr>
+      <tr><td>Premiere Pro</td><td>2026 (26.x). Panel ini ekstensi CEP 12.</td></tr>
+      <tr><td>Python</td><td>3.14 (versi yang dites), dengan pip.</td></tr>
+      <tr><td>FFmpeg</td><td>8.x full build (libass dan NVENC) tersedia di PATH.</td></tr>
+      <tr><td>GPU</td><td>Opsional. GPU NVIDIA dengan driver baru menjalankan Whisper di CUDA 12. Dites dengan VRAM 8 GB. Tanpa GPU, CPU yang dipakai.</td></tr>
+      <tr><td>Disk</td><td>Beberapa GB kosong untuk model Whisper, cache, dan render. Klipora mengecek ruang kosong sebelum tiap render.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="install">
+  <h2>Pasang engine</h2>
+  <p>Klipora punya dua bagian: panel di dalam Premiere, dan engine Python yang mengerjakan proses berat di PC kamu. Buka <strong>PowerShell</strong> lalu jalankan perintah di bawah.</p>
+  <h3>1. Ambil kodenya</h3>
+  <p>Clone repository, atau unduh ZIP dari <a href="https://github.com/muhrifqie/klipora">GitHub</a> lalu ekstrak. Contoh di sini memakai <code>C:\klipora</code>.</p>
+  <div class="code"><pre><code><span class="ln">git clone https://github.com/muhrifqie/klipora.git C:\klipora</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <h3>2. Python dan paketnya</h3>
+  <p>Pasang Python 3.14 kalau belum ada, lalu pasang paket engine. <code>--no-cache-dir</code> supaya pip tidak memenuhi drive C.</p>
+  <div class="code"><pre><code><span class="ln">winget install Python.Python.3.14</span>
+<span class="ln">py -3.14 -m pip install --no-cache-dir -r C:\klipora\requirements.txt</span>
+<span class="c"># NVIDIA GPU only (optional): CUDA 12 libraries for faster transcription</span>
+<span class="ln">py -3.14 -m pip install --no-cache-dir -r C:\klipora\requirements-gpu.txt</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <h3>3. FFmpeg</h3>
+  <p>Klipora butuh FFmpeg full build (libass untuk caption, NVENC untuk render video cepat). Buka terminal baru setelahnya supaya PATH ter-update.</p>
+  <div class="code"><pre><code><span class="ln">winget install Gyan.FFmpeg</span>
+<span class="ln">ffmpeg -version</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+</section>
+
+<section id="gpu">
+  <h2>Atur GPU</h2>
+  <p>Transkripsi memakai faster-whisper. Di GPU NVIDIA, prosesnya sekitar 1 menit per 30 menit video di PC uji. Library CUDA 12 (cuBLAS, cuDNN) terpasang dari paket pip di <code>requirements-gpu.txt</code>, jadi kamu cukup punya driver NVIDIA terbaru.</p>
+  <div class="code"><pre><code><span class="c"># check that Windows sees the GPU and the driver</span>
+<span class="ln">nvidia-smi</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <ul>
+    <li>Model bawaan: <code>large-v3-turbo</code>. Transkripsi pertama akan mengunduhnya, jadi run pertama lebih lama.</li>
+    <li>Hanya satu proses Whisper yang memakai GPU dalam satu waktu. Yang lain menunggu, bukan kehabisan VRAM.</li>
+    <li>Tidak punya GPU NVIDIA, atau VRAM kecil? Matikan <strong>Pakai GPU untuk transkripsi</strong> di Pengaturan, CPU akan dipakai.</li>
+    <li>Transkrip disimpan di cache di samping file media, jadi alat lain memakainya ulang tanpa proses lagi.</li>
+  </ul>
+</section>
+
+<section id="cep">
+  <h2>Aktifkan panel di Premiere</h2>
+  <p>Klipora tidak ditandatangani dan tidak dijual lewat Adobe Exchange, jadi Premiere menyembunyikannya sampai ekstensi tanpa tanda tangan diizinkan. Premiere Pro 26.x memakai CEP 12, yang membaca kunci registry <code>CSXS.12</code>.</p>
+  <h3>1. Nyalakan PlayerDebugMode</h3>
+  <div class="code"><pre><code><span class="ln">reg add "HKCU\Software\Adobe\CSXS.12" /v PlayerDebugMode /t REG_SZ /d 1 /f</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <div class="callout"><svg class="icon" aria-hidden="true"><use href="#i-info-circle"/></svg><div>Ini hanya mengubah user Windows kamu (HKCU), tidak perlu hak admin, dan hanya mengizinkan panel CEP tanpa tanda tangan dimuat. Untuk membatalkan, ubah nilainya kembali ke <code>0</code>.</div></div>
+  <h3>2. Hubungkan folder panel</h3>
+  <p>Buat junction dari folder ekstensi CEP ke folder <code>panel</code> di repo. Junction menjaga satu salinan saja, jadi <code>git pull</code> ikut meng-update panel.</p>
+  <div class="code"><pre><code><span class="ln">New-Item -ItemType Directory -Force "$env:APPDATA\Adobe\CEP\extensions" | Out-Null</span>
+<span class="ln">New-Item -ItemType Junction -Path "$env:APPDATA\Adobe\CEP\extensions\com.klipora.panel" -Target "C:\klipora\panel"</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <h3>3. Buka panelnya</h3>
+  <p>Buka ulang Premiere Pro, lalu pilih <strong>Window &gt; Extensions</strong> dan klik panel Klipora. Taruh di mana saja. Panel tetap rapi mulai lebar 280 px.</p>
+</section>
+
+<section id="first-run">
+  <h2>Pemakaian pertama</h2>
+  <ol>
+    <li>Buka <strong>Pengaturan</strong> (ikon slider). Di bagian <strong>Mesin</strong>, isi <strong>Python</strong> dengan <code>py</code>, <code>python</code>, atau path lengkap <code>python.exe</code>, lalu klik <strong>Tes</strong>.</li>
+    <li>Klik <strong>Cek ulang</strong>. Python, FFmpeg, dan GPU harus hijau. Titik AI tetap abu-abu sampai kamu menambah penyedia, dan itu normal.</li>
+    <li>Pilih <strong>Folder kerja</strong> di drive yang masih lega. File tinjauan, render, dan XML disimpan di sana, satu folder per sequence.</li>
+    <li>Buka sequence apa saja dan mulai dari <strong>Potong Silence</strong>. Ini cara tercepat melihat alur lengkapnya.</li>
+  </ol>
+</section>
+
+<section id="basics">
+  <h2>Dasar bersama</h2>
+  <p>Semua alat mengikuti pola yang sama, jadi kalau sudah paham satu, yang lain ikut mudah.</p>
+  <ul>
+    <li><strong>Cakupan</strong>: kartu sumber di atas memilih <em>Seluruh sequence</em>, <em>In/Out</em>, atau <em>Clip terpilih</em>.</li>
+    <li><strong>Preset dulu</strong>: tiap alat dibuka dengan preset yang masuk akal. Pengaturan detail ada di <em>Pengaturan lanjutan</em>.</li>
+    <li><strong>Tinjau</strong>: hasil muncul sebagai daftar centang. Klik baris untuk memindah playhead Premiere ke sana, tekan Spasi untuk mendengar, hapus centang yang mau disimpan. <em>Kirim ke marker</em> mengubah baris jadi marker.</li>
+    <li><strong>Terapkan</strong>: <kbd>Ctrl</kbd>+<kbd>Enter</kbd> menjalankan tombol utama. Potongan masuk ke salinan sequence di samping aslinya; <em>Buka yang asli</em> membuka sequence asli lagi.</li>
+    <li><strong>Jalankan ulang tetap ingat pilihanmu</strong>: baris yang kamu ubah manual tetap seperti itu saat dianalisis lagi.</li>
+    <li><kbd>Ctrl</kbd>+<kbd>K</kbd> membuka palet perintah untuk lompat ke alat mana pun.</li>
+  </ul>
+
+  <h2 style="margin-top:48px">Alat</h2>
+
+  <div class="tool-head" id="silence"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-wave-sine"/></svg></span><h3>Potong silence</h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-silence-id.webp" width="380" height="720" loading="lazy" decoding="async" alt="Alat potong silence dengan gelombang audio dan preset">
+  <p>Mencari jeda di semua track audio yang tidak di-mute lalu membuangnya (ripple) di salinan. Sebuah frame dihitung diam hanya kalau semua track yang ikut juga diam.</p>
+  <ol>
+    <li>Pilih gaya: <em>Santai</em>, <em>Natural</em> (bawaan), <em>Cepat</em>, atau <em>Kilat</em>, dari longgar ke rapat.</li>
+    <li>Ambang dihitung otomatis dari seluruh file sumber. Geser garis di gelombang audio atau pakai tombol panah untuk menyesuaikan.</li>
+    <li>Biarkan <strong>Lindungi kata</strong> menyala. Fitur ini butuh transkrip; centang <em>Buat transkrip dulu</em> kalau belum ada.</li>
+    <li>Pilih hasil: buang jeda (ripple), tandai saja (marker), atau senyapkan jeda. Lalu tinjau dan terapkan.</li>
+  </ol>
+  <p>Menjalankan ulang di sequence yang sudah dipotong tidak menemukan jeda baru, karena ambang diambil dari media sumber, bukan dari timeline yang sudah dipotong.</p><div class="clear"></div>
+
+  <div class="tool-head" id="fillers"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-message-circle-off"/></svg></span><h3>Hapus filler</h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-fillers-id.webp" width="380" height="720" loading="lazy" decoding="async" alt="Alat hapus filler dengan opsi suara ragu dan kata kebiasaan">
+  <p>Membuang suara ragu seperti eh, ehm, emm, eee, hmm, uh, dan um. Tiga detektor bekerja bersama: transkrip utama, dengar ulang verbatim, dan detektor akustik yang menangkap suara ragu yang tidak ditulis Whisper.</p>
+  <ul>
+    <li><strong>Kepekaan</strong>: Hati-hati 80 %, Seimbang 65 % (bawaan), atau Bersih total 50 %.</li>
+    <li>Kata kebiasaan (ya, oke, gitu, apa namanya...) mati sampai kamu pilih. Setelah dijalankan, tiap chip menunjukkan seberapa sering kata itu ada di batas frasa.</li>
+    <li>Baris bertanda <em>Mepet</em> menempel ke kata lain. Dengarkan dulu sebelum dibuang.</li>
+    <li><em>Sekalian potong jeda</em> ikut membuang jeda di proses yang sama, memakai pengaturan potong silence kamu.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="repeat"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-repeat-off"/></svg></span><h3>Potong pengulangan</h3></div>
+  <p>Mencari gagap, mulai ulang, ralat ("eh maaf, maksudnya...") dan take ulang, lalu membuang percobaan awal sehingga take terakhir selalu disimpan.</p>
+  <ul>
+    <li>Preset <em>Ketat</em>, <em>Normal</em>, <em>Longgar</em> mengatur keyakinan minimal, kemiripan kalimat, dan jarak maksimal antar take.</li>
+    <li><strong>Dengar</strong> memutar 2 detik sebelum dan sesudah potongan dengan potongan sudah diterapkan, jadi kamu dengar hasilnya sebelum memutuskan.</li>
+    <li>Halusinasi Whisper (teks di atas keheningan) hanya ditandai, tidak dipotong. <em>Minta pendapat AI</em> menambah pendapat per baris tapi tidak pernah mengubah centang.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="profanity"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-volume-off"/></svg></span><h3>Sensor kata kasar</h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-profanity-id.webp" width="380" height="720" loading="lazy" decoding="async" alt="Alat sensor kata kasar dengan tingkat dan cara sensor">
+  <p>Mencari kata kasar (Indonesia, daerah, dan Inggris) di transkrip dan dengar ulang, lalu menyensor yang tetap kamu centang.</p>
+  <ul>
+    <li>Tingkat: <em>Longgar</em>, <em>Normal</em>, atau <em>Ketat</em>. Kata yang punya arti biasa (misalnya nama hewan) dinilai dari konteks, dengan voting AI opsional.</li>
+    <li>Cara: <em>Bip</em> (nada 1 kHz menyesuaikan volume suaramu), <em>Senyap</em>, <em>Kecilkan</em> (turun 20 dB), atau suara kustom sendiri.</li>
+    <li>Simpan daftar sendiri: selalu sensor, selalu izinkan. Caption bisa ikut menyamarkan kata yang sama secara otomatis.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="captions"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-badge-cc"/></svg></span><h3>Caption animasi</h3></div>
+  <p>Caption per kata dari transkrip lokal, dipratinjau di atas frame asli dan dirender sebagai overlay transparan di track caption sendiri. Edit hanya merender ulang bagian yang berubah.</p>
+  <ol>
+    <li><strong>Setup</strong>: pilih template awal, sembunyikan filler di caption, rapikan angka dan Rupiah, tambah kata kamus yang sering salah dengar. Lalu <strong>Buat caption</strong>.</li>
+    <li><strong>Template</strong>: 51 template dalam grup (Shorts, tutorial, podcast, promo, sinematik, gaming, dan lainnya). Arahkan mouse untuk melihat animasinya. <em>Cocok</em> memfilter template yang pas dengan bentuk video. <em>Acak gaya</em> dan <em>Gabung gaya</em> mencampur gaya.</li>
+    <li><strong>Teks</strong>: edit kata, pisah atau gabung halaman, beri gaya satu kata saja. Edit terikat ke id kata yang stabil dan bertahan saat dijalankan ulang.</li>
+    <li><strong>Gaya</strong>: font dengan contoh asli, warna dan gradasi, garis tepi, bayangan dan 3D, cahaya, 10 bentuk latar, kata aktif, posisi. Ada efek cepat dan reset per grup. <kbd>Ctrl</kbd>+<kbd>Z</kbd> bisa dipakai.</li>
+    <li><strong>Animasi</strong>: 40 animasi (masuk, kata aktif, keluar, berulang), <em>Studio</em> keyframe, dan <em>Efek suara</em>: bunyi di angka, kata penting, emoji, atau tiap halaman, ditaruh di satu track SFX khusus.</li>
+    <li><strong>Ekspor</strong>: terapkan overlay, atau ekspor caption SRT bawaan Premiere. <em>Perbarui di timeline</em> mengganti versi baru di tempat yang sama.</li>
+  </ol>
+  <h3>Tiru gaya dari gambar</h3>
+  <p>Screenshot caption yang kamu suka (<kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>), buka <strong>Template</strong> lalu <em>Tiru gaya dari gambar</em> &gt; <em>Tempel</em>. Bandingkan gambar kamu dengan hasilnya, lalu pakai atau simpan. Dengan pembaca gambar AI mati, prosesnya gratis dan offline; kalau nyala, memakai satu permintaan Vision.</p>
+  <h3>Brand Kit dan gaya tersimpan</h3>
+  <p>Di <strong>Gaya</strong>, bar Brand Kit menyimpan 4 warna, font judul, kata brand yang selalu dieja benar, emoji, dan gaya bahasa. <em>Sorot kata penting (AI)</em> menyarankan kata yang diwarnai. <em>Simpan gaya</em> menyimpan tampilan sekarang ke <em>Gaya Saya</em>, bisa ekspor dan impor .json. Video baru mulai dari gaya terakhir dipakai, diingat terpisah untuk vertikal dan horizontal.</p><div class="clear"></div>
+
+  <div class="tool-head" id="chapters"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-list-numbers"/></svg></span><h3>Bab otomatis</h3></div>
+  <p>Membuat bab YouTube dari transkrip: daftar yang bisa diedit, marker bab di sequence, dan teks <code>00:00 Judul</code> untuk deskripsi (disalin ke clipboard dan disimpan sebagai .txt).</p>
+  <ul>
+    <li>Edit judul dan waktu, gabung bab, tambah bab di playhead. Peringatan langsung mengikuti aturan YouTube (pertama di 00:00, minimal 3 bab, masing-masing minimal 10 detik).</li>
+    <li>Dengan AI: judul lebih bagus, plus <em>Judul, deskripsi &amp; hashtag</em> untuk judul video, deskripsi, dan tag. Tanpa AI: pergantian topik dan kata penanda, dengan judul ditandai untuk kamu cek.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="viral"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-flame"/></svg></span><h3>Klip viral</h3></div>
+  <p>Mencari momen di video panjang yang cocok jadi Shorts, TikTok, atau Reels, memberi skor 0 sampai 100, lalu mengubah yang kamu pilih jadi satu sub-sequence per klip, plus marker berwarna sesuai skor.</p>
+  <ul>
+    <li>Preset durasi 15 sampai 90 detik, jumlah klip (otomatis, 3, 5, 10), gaya (edukasi, lucu, jualan, cerita, atau custom), dan topik opsional.</li>
+    <li><em>Jadikan 9:16</em> sekalian membuat versi vertikal tiap klip dengan Auto Resize.</li>
+    <li>Tetap jalan tanpa AI (diberi label "tanpa AI"), skor dari kata kunci, energi suara, dan kepadatan bicara.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="zoom"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-zoom-in"/></svg></span><h3>Auto zoom</h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-zoom-id.webp" width="380" height="720" loading="lazy" decoding="async" alt="Mode dan kekuatan Auto Zoom">
+  <p>Zoom punch-in sebagai keyframe Motion Scale dan Position yang bisa diedit, di salinan sequence.</p>
+  <ul>
+    <li><em>Ikuti aksi layar</em> (bawaan): untuk rekaman layar. Zoom ke klik, ketikan, menu, dan kursor yang berhenti, dari 1,25x sampai 2,2x.</li>
+    <li><em>Penekanan bicara</em>: punch-in di kata aksi dan penekanan, angka, dan kata yang lebih keras, berpusat di wajah terbesar.</li>
+    <li><em>Ritmis</em>: bergantian lebar dan dekat tiap kalimat, seperti syuting dua kamera.</li>
+    <li>Atur kekuatan, maksimal zoom per menit, animasi (halus, cepat, lompat), dan area yang diabaikan seperti taskbar.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="resize"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-device-mobile"/></svg></span><h3>Auto resize dan reframe</h3></div>
+  <p>Membuat versi 9:16, 1:1, 4:5, atau 16:9 dari sequence. Setiap hasil adalah sequence baru.</p>
+  <ul>
+    <li><em>Pintar</em> (bawaan): framing mengikuti kursor, klik, ketikan, dan pergantian halaman, atau wajah dan pembicara aktif. Keyframe Position per clip bisa diedit.</li>
+    <li><em>Fokus + blur</em>: untuk konten layar, jendela tajam yang mengikuti aksi di atas latar blur, supaya formulir dan teks tidak terpotong.</li>
+    <li><em>Premiere Auto Reframe</em>: fitur reframe bawaan Premiere, dijalankan dari panel.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="angles"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-focus-centered"/></svg></span><h3>Angle kamera virtual</h3></div>
+  <p>"Multicam" dari satu kamera: tiap clip dapat crop statis lebar, sedang, atau dekat (bawaan 100 / 118 / 140 %). Angle berganti di tiap potongan, tidak pernah sama dua kali berturut-turut, dan berpusat di aksi atau wajah.</p>
+  <ul>
+    <li>Preset <em>Halus</em>, <em>Normal</em>, <em>Sering</em>. Pilih kapan ganti: di setiap potongan, atau setelah durasi shot minimal.</li>
+    <li>Cuma satu clip panjang? <em>Tambah potongan di awal kalimat</em> memotong di awal kalimat supaya angle lebih sering berganti.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="podcast"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-microphone-2"/></svg></span><h3>Podcast multicam</h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-podcast-id.webp" width="380" height="720" loading="lazy" decoding="async" alt="Pemetaan pembicara podcast multicam">
+  <p>Kamera mengikuti siapa yang bicara. Siapkan satu track mic dan satu track kamera per pembicara (bertumpuk dan sudah sinkron), plus kamera wide opsional.</p>
+  <ul>
+    <li>Track dipetakan otomatis. Memberi nama "Mic Andi" dan "Cam Andi" membuatnya tepat. Maksimal 6 pembicara.</li>
+    <li>Tinjau tiap shot di pita pembicara, pilih kamera lain secara manual, lalu terapkan. Clip kamera yang tidak aktif dinonaktifkan di salinan; audio tidak pernah dipotong atau di-mute.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="broll"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-photo-video"/></svg></span><h3>B-roll</h3></div>
+  <p>Mencari momen dalam ucapan yang cocok diberi footage pendukung, lalu menaruh clip di track video teratas yang baru di salinan sequence.</p>
+  <ul>
+    <li>Sumber: folder kamu sendiri, video stok Pexels (isi kunci API Pexels gratis di Pengaturan), atau gambar AI dengan gerakan Ken Burns pelan. Kredit ditulis ke file teks.</li>
+    <li>Penempatan memperhatikan aktivitas: layar tenang dapat b-roll penuh, layar dengan aksi dapat kartu PiP di pojok paling sepi, layar sibuk dilewati.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="voice"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-ear"/></svg></span><h3>Suara Jernih</h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-voice-id.webp" width="380" height="720" loading="lazy" decoding="async" alt="Pengaturan Suara Jernih">
+  <p>Membuat suaramu enak didengar tanpa merusak aslinya. Suara hasil olahan dirender ke track audio baru di salinan, dan clip suara asli dinonaktifkan di sana.</p>
+  <ul>
+    <li><strong>Hilangkan noise</strong> dengan DeepFilterNet3 (jalan di CPU), kekuatannya bisa diatur.</li>
+    <li><strong>Klik dan napas</strong>: bunyi klik mouse dan keyboard di sela kata dikecilkan, napas dihaluskan. Tidak pernah di dalam kata. Semuanya muncul di daftar tinjau.</li>
+    <li><strong>Volume per platform</strong>: YouTube -14, podcast -16, TikTok/Reels -14 LUFS atau target sendiri, true peak -1 dBTP.</li>
+    <li><strong>Kecilkan musik saat bicara</strong>: track musik turun 12 dB (bisa diatur) saat kamu bicara.</li>
+    <li>Bandingkan sebelum dan sesudah di kartu hasil. <em>Buka yang asli</em> kembali ke sequence asli.</li>
+  </ul><div class="clear"></div>
+</section>
+
+<section id="ai">
+  <h2>Penyedia AI</h2>
+  <p>AI itu opsional. AI memperbaiki judul bab, pilihan klip viral, rencana b-roll, pendapat soal pengulangan, kata kasar yang ambigu, rapikan teks caption, dan membaca gaya caption dari gambar. Tanpa AI, semua alat memakai aturan bawaannya.</p>
+  <h3>Menambah penyedia</h3>
+  <ol>
+    <li>Buka <strong>Pengaturan</strong> &gt; <strong>AI</strong> &gt; <strong>Penyedia AI</strong> &gt; <strong>Tambah penyedia</strong> lalu pilih penyedia. Alamat URL terisi sendiri.</li>
+    <li>Tempel kunci API lalu klik <strong>Simpan kunci</strong>. Kolom langsung dikosongkan; kunci dienkripsi dengan Windows DPAPI dan tidak pernah ditampilkan lagi.</li>
+    <li>Klik <strong>Ambil daftar model</strong> lalu pilih model <em>Cepat</em>, <em>Pintar</em>, dan <em>Vision</em> (opsional).</li>
+    <li><strong>Tes koneksi</strong>, lalu <strong>Simpan</strong>. Atur urutan dengan panah: paling atas jadi utama, sisanya cadangan.</li>
+  </ol>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Penyedia</th><th>Tempat ambil kunci</th><th>Catatan</th></tr></thead>
+    <tbody>
+      <tr><td>Proxy lokal</td><td>milik sendiri</td><td>Server apa saja yang kompatibel OpenAI di 127.0.0.1</td></tr>
+      <tr><td>OpenRouter</td><td><code>openrouter.ai/keys</code></td><td>Satu kunci untuk banyak model, ada yang gratis</td></tr>
+      <tr><td>Gemini</td><td><code>aistudio.google.com/apikey</code></td><td>Ada kuota gratis harian</td></tr>
+      <tr><td>OpenAI</td><td><code>platform.openai.com/api-keys</code></td><td>Berbayar</td></tr>
+      <tr><td>xAI</td><td><code>console.x.ai</code></td><td>Berbayar</td></tr>
+      <tr><td>Anthropic</td><td><code>console.anthropic.com/settings/keys</code></td><td>Berbayar, lewat Messages API asli</td></tr>
+      <tr><td>DeepSeek</td><td><code>platform.deepseek.com/api_keys</code></td><td>Murah, tidak bisa baca gambar</td></tr>
+      <tr><td>Groq</td><td><code>console.groq.com/keys</code></td><td>Sangat cepat, ada kuota gratis</td></tr>
+      <tr><td>Ollama</td><td>tanpa kunci</td><td>Jalan di PC kamu, tidak ada yang keluar</td></tr>
+      <tr><td>Custom</td><td>opsional</td><td>Endpoint apa saja dengan <code>/chat/completions</code></td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><svg class="icon" aria-hidden="true"><use href="#i-info-circle"/></svg><div><strong>Privasi dan biaya.</strong> Dengan penyedia cloud, teks transkrip (dan screenshot untuk "tiru gaya dari gambar") dikirim ke penyedia itu sesuai kebijakannya. Penyedia berbayar memotong saldo per permintaan. Hasil disimpan di cache, dan AI hanya jalan saat kamu klik tombolnya.</div></div>
+  <div class="callout warn"><svg class="icon" aria-hidden="true"><use href="#i-alert-triangle"/></svg><div>Proxy lokal yang memakai akun web biasa (bukan API resmi) bisa membuat akun itu kena batas atau diblokir. Siapkan satu penyedia lain sebagai cadangan.</div></div>
+</section>
+
+<section id="troubleshooting">
+  <h2>Pemecahan masalah</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Gejala</th><th>Solusi</th></tr></thead>
+    <tbody>
+      <tr><td>Klipora tidak ada di Window &gt; Extensions</td><td>Pastikan nilai PlayerDebugMode di <code>CSXS.12</code> berupa teks <code>1</code>, junction mengarah ke folder <code>panel</code> (harus berisi <code>CSXS\manifest.xml</code>), lalu tutup Premiere sepenuhnya dan buka lagi.</td></tr>
+      <tr><td>Panel terbuka kosong</td><td>Tutup panel lalu buka lagi dari menu Window. Kalau tetap kosong, cek apakah folder tersalin lengkap dengan subfoldernya.</td></tr>
+      <tr><td>Python "Belum dicek" atau merah</td><td>Isi path lengkap <code>python.exe</code> di Pengaturan (jalankan <code>py -3.14 -c "import sys; print(sys.executable)"</code> untuk mencarinya), lalu klik Tes.</td></tr>
+      <tr><td>FFmpeg merah</td><td>Buka terminal baru dan jalankan <code>ffmpeg -version</code>. Kalau tidak ditemukan, pasang ulang dengan winget lalu buka ulang Premiere supaya PATH baru terbaca.</td></tr>
+      <tr><td>GPU merah atau "GPU sibuk"</td><td>Update driver NVIDIA. Hanya satu transkripsi yang jalan bersamaan, jadi tunggu proses lain atau batalkan. Kalau tetap gagal, matikan GPU di Pengaturan dan pakai CPU.</td></tr>
+      <tr><td>Transkripsi pertama lambat</td><td>Model Whisper diunduh saat pertama dipakai. Setelah itu transkrip disimpan di cache dan dipakai ulang semua alat.</td></tr>
+      <tr><td>"Ruang disk tidak cukup"</td><td>Klipora menolak render kalau drive hampir penuh. Pindahkan folder kerja ke drive lain di Pengaturan.</td></tr>
+      <tr><td>AI: kunci ditolak (401/403)</td><td>Kunci salah atau dicabut. <em>Ubah</em> &gt; tempel kunci baru &gt; <em>Simpan kunci</em>.</td></tr>
+      <tr><td>AI: kuota habis atau dibatasi (402/429)</td><td>Tunggu, isi saldo, atau pindahkan penyedia lain ke atas. Klipora sudah otomatis lompat ke penyedia berikutnya.</td></tr>
+      <tr><td>AI: tidak merespons</td><td>Cek koneksi internet, atau pastikan Ollama / proxy kamu jalan, lalu <em>Cek status</em>.</td></tr>
+      <tr><td>Sequence hasil potong terlihat salah</td><td>Sequence aslimu tidak berubah. Klik <em>Buka yang asli</em>, ubah pengaturan atau hapus centang, lalu jalankan lagi. Pilihan manual tetap diingat.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Masih bermasalah? <a href="https://github.com/muhrifqie/klipora/issues">Buka issue</a> dengan versi Premiere, langkah yang sedang dijalankan, dan teks error. Jangan pernah menempel kunci API atau file <code>.env</code>.</p>
+</section>
+
+<section id="update">
+  <h2>Update dan hapus</h2>
+  <h3>Update</h3>
+  <div class="code"><pre><code><span class="ln">cd C:\klipora</span>
+<span class="ln">git pull</span>
+<span class="ln">py -3.14 -m pip install --no-cache-dir -r requirements.txt</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <p>Lalu tutup dan buka lagi panel di Premiere.</p>
+  <h3>Hapus</h3>
+  <p>Hapus junction (ini tidak menghapus repo), dan kalau mau, matikan lagi mode debug.</p>
+  <div class="code"><pre><code><span class="ln">cmd /c rmdir "%APPDATA%\Adobe\CEP\extensions\com.klipora.panel"</span>
+<span class="ln">reg add "HKCU\Software\Adobe\CSXS.12" /v PlayerDebugMode /t REG_SZ /d 0 /f</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+</section>
+
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <a class="brand" href="/id"><img src="/assets/logo.svg" alt="" width="24" height="24">Klipora</a>
+    <nav aria-label="Kaki halaman">
+      <a href="/id/docs">Dokumentasi</a>
+      <a href="/id/docs#troubleshooting">Pemecahan masalah</a>
+      <a href="/id/changelog">Catatan rilis</a>
+      <a href="https://github.com/muhrifqie/klipora">GitHub</a>
+      <a href="https://github.com/muhrifqie/klipora/issues">Lapor bug</a>
+    </nav>
+    <p>Open source. Tidak berafiliasi dengan Adobe. Premiere Pro adalah merek dagang Adobe.</p>
+  </div>
+</footer>
+</body>
+</html>

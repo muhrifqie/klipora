@@ -1,0 +1,49 @@
+{
+  "name": "Kotak Muncul",
+  "description": "Kata aktif dapat kotak merah sendiri yang muncul pop, teks putih tebal bayangan lembut.",
+  "group": "shorts_viral",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "shorts",
+    "portrait"
+  ],
+  "font": {
+    "family": "Poppins Black",
+    "size": 84,
+    "uppercase": true,
+    "punct": "strip",
+    "line_spacing": 1.15
+  },
+  "style": {
+    "outline": 4,
+    "outline_color": "#000000",
+    "shadow": 5,
+    "shadow_x": 0,
+    "shadow_y": 5,
+    "shadow_blur": 4,
+    "shadow_color": "#00000099"
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 66
+  },
+  "highlight": {
+    "color": "#FFFFFF",
+    "pill": "#FF2D55",
+    "pill_slide": false,
+    "pill_radius": 14,
+    "pill_pad_x": 14,
+    "pill_pad_y": 8,
+    "scale": 1.08
+  },
+  "anim": {
+    "in": "pop",
+    "in_dur": 0.16,
+    "out": "fade",
+    "out_dur": 0.08
+  }
+}

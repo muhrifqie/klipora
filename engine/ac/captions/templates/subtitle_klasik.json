@@ -1,0 +1,38 @@
+{
+  "name": "Subtitle Klasik",
+  "description": "Subtitle film: putih, outline hitam tipis, bawah tengah, tanpa animasi.",
+  "aspect": [
+    "16:9",
+    "21:9"
+  ],
+  "tags": [
+    "subtitle",
+    "landscape"
+  ],
+  "font": {
+    "family": "Inter SemiBold",
+    "size": 50,
+    "line_spacing": 1.22
+  },
+  "style": {
+    "outline": 3,
+    "shadow": 2,
+    "shadow_color": "#000000B3"
+  },
+  "layout": {
+    "max_words": 12,
+    "max_chars": 42,
+    "max_lines": 2,
+    "y": 89,
+    "width": 90
+  },
+  "timing": {
+    "mode": "line",
+    "max_dur": 5.0,
+    "hold": 0.4
+  },
+  "anim": {
+    "in": "none",
+    "out": "none"
+  }
+}

@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klipora: panel edit otomatis gratis untuk Premiere Pro</title>
+<meta name="description" content="Panel Premiere Pro open source untuk potong silence, filler, dan take ulang, caption animasi, auto zoom, reframe 9:16, dan pembersih suara. Jalan lokal di Windows.">
+<link rel="canonical" href="https://klipora.vercel.app/id">
+<link rel="alternate" hreflang="en" href="https://klipora.vercel.app/">
+<link rel="alternate" hreflang="id" href="https://klipora.vercel.app/id">
+<link rel="alternate" hreflang="x-default" href="https://klipora.vercel.app/">
+<meta name="theme-color" content="#111110">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Klipora">
+<meta property="og:title" content="Klipora: panel edit otomatis gratis untuk Premiere Pro">
+<meta property="og:description" content="Panel Premiere Pro open source untuk potong silence, filler, dan take ulang, caption animasi, auto zoom, reframe 9:16, dan pembersih suara. Jalan lokal di Windows.">
+<meta property="og:url" content="https://klipora.vercel.app/id">
+<meta property="og:image" content="https://klipora.vercel.app/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Klipora: panel edit otomatis untuk Premiere Pro">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="/assets/site.js"></script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol id="i-wave-sine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12h-2c-.894 0 -1.662 -.857 -1.761 -2c-.296 -3.45 -.749 -6 -2.749 -6s-2.5 3.582 -2.5 8s-.5 8 -2.5 8s-2.452 -2.547 -2.749 -6c-.1 -1.147 -.867 -2 -1.763 -2h-2" /></symbol>
+<symbol id="i-message-circle-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.595 4.577c3.223 -1.176 7.025 -.61 9.65 1.63c2.982 2.543 3.601 6.523 1.636 9.66m-1.908 2.109c-2.787 2.19 -6.89 2.666 -10.273 1.024l-4.7 1l1.3 -3.9c-2.229 -3.296 -1.494 -7.511 1.68 -10.057" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-repeat-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v-3c0 -1.336 .873 -2.468 2.08 -2.856m3.92 -.144h10m-3 -3l3 3l-3 3" /> <path d="M20 12v3a3 3 0 0 1 -.133 .886m-1.99 1.984a3 3 0 0 1 -.877 .13h-13m3 3l-3 -3l3 -3" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-volume-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8a5 5 0 0 1 1.912 4.934m-1.377 2.602a5 5 0 0 1 -.535 .464" /> <path d="M17.7 5a9 9 0 0 1 2.362 11.086m-1.676 2.299a9 9 0 0 1 -.686 .615" /> <path d="M9.069 5.054l.431 -.554a.8 .8 0 0 1 1.5 .5v2m0 4v8a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l1.294 -1.664" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-badge-cc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /> <path d="M10 10.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /> <path d="M17 10.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /></symbol>
+<symbol id="i-list-numbers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 6h9" /> <path d="M11 12h9" /> <path d="M12 18h8" /> <path d="M4 16a2 2 0 1 1 4 0c0 .591 -.5 1 -1 1.5l-3 2.5h4" /> <path d="M6 10v-6l-2 2" /></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z" /></symbol>
+<symbol id="i-zoom-in" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /> <path d="M7 10l6 0" /> <path d="M10 7l0 6" /> <path d="M21 21l-6 -6" /></symbol>
+<symbol id="i-device-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" /> <path d="M11 4h2" /> <path d="M12 17v.01" /></symbol>
+<symbol id="i-focus-centered" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M4 8v-2a2 2 0 0 1 2 -2h2" /> <path d="M4 16v2a2 2 0 0 0 2 2h2" /> <path d="M16 4h2a2 2 0 0 1 2 2v2" /> <path d="M16 20h2a2 2 0 0 0 2 -2v-2" /></symbol>
+<symbol id="i-microphone-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12.9a5 5 0 1 0 -3.902 -3.9" /> <path d="M15 12.9l-3.902 -3.899l-7.513 8.584a2 2 0 1 0 2.827 2.83l8.588 -7.515z" /></symbol>
+<symbol id="i-photo-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15h-3a3 3 0 0 1 -3 -3v-6a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v3" /> <path d="M9 9m0 3a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-6a3 3 0 0 1 -3 -3z" /> <path d="M3 12l2.296 -2.296a2.41 2.41 0 0 1 3.408 0l.296 .296" /> <path d="M14 13.5v3l2.5 -1.5z" /> <path d="M7 6v.01" /></symbol>
+<symbol id="i-ear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3a4.5 4.5 0 0 1 -6.8 1.4" /> <path d="M10 10a3 3 0 1 1 5 2.2" /></symbol>
+<symbol id="i-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /> <path d="M9 9h6v6h-6z" /> <path d="M3 10h2" /> <path d="M3 14h2" /> <path d="M10 3v2" /> <path d="M14 3v2" /> <path d="M21 10h-2" /> <path d="M21 14h-2" /> <path d="M14 21v-2" /> <path d="M10 21v-2" /></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /> <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /> <path d="M8 11v-4a4 4 0 1 1 8 0v4" /></symbol>
+<symbol id="i-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" /> <path d="M15 19l2 2l4 -4" /></symbol>
+<symbol id="i-brand-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></symbol>
+<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /> <path d="M7 11l5 5l5 -5" /> <path d="M12 4l0 12" /></symbol>
+<symbol id="i-terminal-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l3 3l-3 3" /> <path d="M13 15l3 0" /> <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /></symbol>
+<symbol id="i-plug-connected" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5z" /> <path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5z" /> <path d="M3 21l2.5 -2.5" /> <path d="M18.5 5.5l2.5 -2.5" /> <path d="M10 11l-2 2" /> <path d="M13 14l-2 2" /></symbol>
+<symbol id="i-language" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h7" /> <path d="M9 3v2c0 4.418 -2.239 8 -5 8" /> <path d="M5 9c0 2.144 2.952 3.908 6.7 4" /> <path d="M12 20l4 -9l4 9" /> <path d="M19.1 18h-6.2" /></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /> <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></symbol>
+<symbol id="i-menu-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l16 0" /> <path d="M4 12l16 0" /> <path d="M4 18l16 0" /></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6l-12 12" /> <path d="M6 6l12 12" /></symbol>
+<symbol id="i-brand-windows" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 20l-12 -1.5c-1 -.1 -1.8 -.9 -1.8 -1.9v-9.2c0 -1 .8 -1.8 1.8 -1.9l12 -1.5c1.2 -.1 2.2 .8 2.2 1.9v12.1c0 1.2 -1.1 2.1 -2.2 1.9z" /> <path d="M12 5l0 14" /> <path d="M4 12l16 0" /></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6z" /></symbol>
+<symbol id="i-external-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /> <path d="M11 13l9 -9" /> <path d="M15 4h5v5" /></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6" /></symbol>
+<symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /> <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></symbol>
+<symbol id="i-typography" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l3 0" /> <path d="M14 20l7 0" /> <path d="M6.9 15l6.9 0" /> <path d="M10.2 6.3l5.8 13.7" /> <path d="M5 20l6 -16l2 0l7 16" /></symbol>
+<symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /> <path d="M13 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /> <path d="M9 17v-13h10v13" /> <path d="M9 8h10" /></symbol>
+<symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0z" /> <path d="M15 9h.01" /></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2" /></symbol>
+<symbol id="i-alert-triangle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4" /> <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /> <path d="M12 16h.01" /></symbol>
+<symbol id="i-info-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M12 9h.01" /> <path d="M11 12h1v4h1" /></symbol>
+<symbol id="i-player-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16l13 -8z" /></symbol>
+<symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M6 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M8.6 8.6l10.4 10.4" /> <path d="M8.6 15.4l10.4 -10.4" /></symbol>
+<symbol id="i-text-caption" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15h16" /> <path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /> <path d="M4 20h12" /></symbol>
+<symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" /> <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" /></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /> <path d="M7 9l5 -5l5 5" /> <path d="M12 4l0 12" /></symbol>
+<symbol id="i-git-fork" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2" /> <path d="M12 12l0 4" /></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /> <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></symbol>
+<symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /> <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /> <path d="M3 6l0 13" /> <path d="M12 6l0 13" /> <path d="M21 6l0 13" /></symbol>
+<symbol id="i-history" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8l0 4l2 2" /> <path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5" /></symbol>
+<symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7l-10 10" /> <path d="M8 7l9 0l0 9" /></symbol>
+<symbol id="i-cloud-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.58 5.548c.24 -.11 .492 -.207 .752 -.286c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 .957 -.383 1.824 -1.003 2.454m-2.997 1.033h-11.343c-2.572 -.004 -4.657 -2.011 -4.657 -4.487c0 -2.475 2.085 -4.482 4.657 -4.482c.13 -.582 .37 -1.128 .7 -1.62" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /> <path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /> <path d="M7 8l0 .01" /> <path d="M7 16l0 .01" /></symbol>
+</svg>
+
+<a class="skip" href="#main">Lewati ke konten</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/id"><img src="/assets/logo.svg" alt="" width="28" height="28">Klipora</a>
+    <nav class="nav-links" aria-label="Utama"><a href="/id#features">Fitur</a><a href="/id#install">Pasang</a><a href="/id/docs">Dokumentasi</a><a href="/id/changelog">Catatan rilis</a></nav>
+    <div class="nav-end">
+      <div class="lang" role="group" aria-label="Bahasa">
+        <a href="/" hreflang="en" lang="en">EN</a>
+        <a href="/id" hreflang="id" lang="id" aria-current="true">ID</a>
+      </div>
+      <a class="btn btn-ghost btn-sm gh-btn" href="https://github.com/muhrifqie/klipora"><svg class="icon" aria-hidden="true"><use href="#i-brand-github"/></svg>GitHub</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="icon i-open" aria-hidden="true"><use href="#i-menu-2"/></svg><svg class="icon i-close" aria-hidden="true"><use href="#i-x"/></svg></summary>
+        <nav class="menu-panel" aria-label="Seluler"><a href="/id#features">Fitur</a><a href="/id#install">Pasang</a><a href="/id/docs">Dokumentasi</a><a href="/id/changelog">Catatan rilis</a><a href="https://github.com/muhrifqie/klipora">GitHub</a></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Gratis dan open source</span>
+      <h1><em>Premiere&nbsp;Pro</em>, tanpa bagian membosankan.</h1>
+      <p class="lede">Panel yang memotong jeda dan take ulang, memberi caption per kata, dan membuat versi Shorts. Jalan di PC kamu sendiri.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/muhrifqie/klipora"><svg class="icon" aria-hidden="true"><use href="#i-brand-github"/></svg>Ambil di GitHub</a>
+        <a class="btn btn-ghost" href="/id/docs">Panduan pasang<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+    <div class="stage">
+      <img class="shot-panel" src="/assets/img/panel-home-id.webp" width="380" height="720" alt="Layar utama panel Klipora di Premiere Pro, berisi alat potong, teks, dan kamera" fetchpriority="high">
+      <div class="phone" role="img" aria-label="Pratinjau caption animasi per kata">
+        <p class="phone-cap" aria-hidden="true"><span>Buang</span> <span>jedanya,</span> <span>simpan</span> <span>cerita</span> <span>yang</span> <span>penting</span></p>
+        <span class="phone-tag">caption per kata</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <ul>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-brand-windows"/></svg><span><strong>Windows 10/11</strong>Premiere Pro 2026 (26.x)</span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg><span><strong>Jalan lokal</strong>faster-whisper di GPU kamu</span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg><span><strong>Tidak merusak</strong>bekerja di salinan sequence</span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg><span><strong>AI opsional</strong>pakai penyedia sendiri</span></li>
+    </ul>
+  </div>
+</div>
+
+<section id="features" aria-labelledby="cut-h">
+  <div class="wrap cut-grid">
+    <div>
+      <div class="sec-head reveal">
+        <span class="group-tag"><svg class="icon" aria-hidden="true"><use href="#i-scissors"/></svg>Potong</span>
+        <h2 id="cut-h">Rough cut dalam hitungan detik, bukan seharian.</h2>
+        <p class="lede">Setiap potongan ditampilkan dulu untuk ditinjau. Hapus centang yang tidak perlu, lalu terapkan ke salinan sequence.</p>
+      </div>
+      <div class="tool-list reveal">
+      <div class="tool"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-wave-sine"/></svg></span><div><h3>Potong silence</h3><p>Ambang dihitung otomatis dari audio, jadi cocok untuk mic apa pun. Pelindung kata menjaga suku kata pelan: di tutorial 34,6 menit, 0 kata terpotong di semua preset.</p></div></div>
+      <div class="tool"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-message-circle-off"/></svg></span><div><h3>Hapus filler</h3><p>Mencari "eee", "emm", "hmm" dari transkrip, dengar ulang, dan bentuk suaranya. Kata kebiasaan seperti "ya" atau "oke" hanya kalau kamu nyalakan.</p></div></div>
+      <div class="tool"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-repeat-off"/></svg></span><div><h3>Potong pengulangan</h3><p>Gagap, mulai ulang, ralat, dan take ulang. Percobaan awal dibuang, take terakhir disimpan. Dengar hasil potongannya sebelum diterapkan.</p></div></div>
+      <div class="tool"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-volume-off"/></svg></span><div><h3>Sensor kata kasar</h3><p>Bip, senyap, atau kecilkan, dengan nada yang menyesuaikan volume suara. Aturan konteks (dan voting AI opsional) membedakan makian dari kata biasa.</p></div></div></div>
+    </div>
+    <div class="shot-col reveal">
+      <img class="shot" src="/assets/img/panel-silence-id.webp" width="380" height="720" loading="lazy" decoding="async" alt="Alat potong silence dengan gelombang audio, garis ambang otomatis, dan preset Natural">
+      <p class="caption">Geser garis ambang di gelombang audio. Jumlahnya langsung berubah.</p>
+    </div>
+  </div>
+</section>
+
+<section class="text-sec" aria-labelledby="text-h">
+  <div class="wrap">
+    <div class="cap-head reveal">
+      <span class="group-tag"><svg class="icon" aria-hidden="true"><use href="#i-badge-cc"/></svg>Teks</span>
+      <h2 id="text-h">Caption yang terlihat didesain, kata demi kata.</h2>
+      <p class="lede">51 template bawaan, dipratinjau di atas frame asli, lalu dirender sebagai overlay transparan di track sendiri.</p>
+    </div>
+  </div>
+  <div class="marquee" aria-label="Contoh template caption">
+    <div class="marquee-track"><figure><img src="/assets/img/tpl-kuning-3d.webp" width="200" height="282" decoding="async" alt="Template caption Kuning 3D"><figcaption>Kuning 3D</figcaption></figure><figure><img src="/assets/img/tpl-neon.webp" width="200" height="282" decoding="async" alt="Template caption Neon"><figcaption>Neon</figcaption></figure><figure><img src="/assets/img/tpl-flash-sale.webp" width="200" height="282" decoding="async" alt="Template caption Flash Sale"><figcaption>Flash Sale</figcaption></figure><figure><img src="/assets/img/tpl-esports.webp" width="200" height="282" decoding="async" alt="Template caption Esports"><figcaption>Esports</figcaption></figure><figure><img src="/assets/img/tpl-pita-diskon.webp" width="200" height="282" decoding="async" alt="Template caption Pita Diskon"><figcaption>Pita Diskon</figcaption></figure><figure><img src="/assets/img/tpl-stiker-viral.webp" width="200" height="282" decoding="async" alt="Template caption Stiker Viral"><figcaption>Stiker Viral</figcaption></figure><figure><img src="/assets/img/tpl-goyang-hijau.webp" width="200" height="282" decoding="async" alt="Template caption Goyang Hijau"><figcaption>Goyang Hijau</figcaption></figure><figure><img src="/assets/img/tpl-bold-pop.webp" width="200" height="282" decoding="async" alt="Template caption Bold Pop"><figcaption>Bold Pop</figcaption></figure><figure><img src="/assets/img/tpl-judul-emas.webp" width="200" height="282" decoding="async" alt="Template caption Judul Emas"><figcaption>Judul Emas</figcaption></figure><figure><img src="/assets/img/tpl-komik-ledak.webp" width="200" height="282" decoding="async" alt="Template caption Komik Ledak"><figcaption>Komik Ledak</figcaption></figure><figure><img src="/assets/img/tpl-promo-spanduk.webp" width="200" height="282" decoding="async" alt="Template caption Promo Spanduk"><figcaption>Promo Spanduk</figcaption></figure><figure><img src="/assets/img/tpl-neon-gamer.webp" width="200" height="282" decoding="async" alt="Template caption Neon Gamer"><figcaption>Neon Gamer</figcaption></figure><figure><img src="/assets/img/tpl-papan-kapur.webp" width="200" height="282" decoding="async" alt="Template caption Papan Kapur"><figcaption>Papan Kapur</figcaption></figure><figure><img src="/assets/img/tpl-hijau-viral.webp" width="200" height="282" decoding="async" alt="Template caption Hijau Viral"><figcaption>Hijau Viral</figcaption></figure><figure><img src="/assets/img/tpl-gradasi-api.webp" width="200" height="282" decoding="async" alt="Template caption Gradasi Api"><figcaption>Gradasi Api</figcaption></figure><figure><img src="/assets/img/tpl-catatan-stabilo.webp" width="200" height="282" decoding="async" alt="Template caption Catatan Stabilo"><figcaption>Catatan Stabilo</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-kuning-3d.webp" width="200" height="282" decoding="async" alt=""><figcaption>Kuning 3D</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-neon.webp" width="200" height="282" decoding="async" alt=""><figcaption>Neon</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-flash-sale.webp" width="200" height="282" decoding="async" alt=""><figcaption>Flash Sale</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-esports.webp" width="200" height="282" decoding="async" alt=""><figcaption>Esports</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-pita-diskon.webp" width="200" height="282" decoding="async" alt=""><figcaption>Pita Diskon</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-stiker-viral.webp" width="200" height="282" decoding="async" alt=""><figcaption>Stiker Viral</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-goyang-hijau.webp" width="200" height="282" decoding="async" alt=""><figcaption>Goyang Hijau</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-bold-pop.webp" width="200" height="282" decoding="async" alt=""><figcaption>Bold Pop</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-judul-emas.webp" width="200" height="282" decoding="async" alt=""><figcaption>Judul Emas</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-komik-ledak.webp" width="200" height="282" decoding="async" alt=""><figcaption>Komik Ledak</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-promo-spanduk.webp" width="200" height="282" decoding="async" alt=""><figcaption>Promo Spanduk</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-neon-gamer.webp" width="200" height="282" decoding="async" alt=""><figcaption>Neon Gamer</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-papan-kapur.webp" width="200" height="282" decoding="async" alt=""><figcaption>Papan Kapur</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-hijau-viral.webp" width="200" height="282" decoding="async" alt=""><figcaption>Hijau Viral</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-gradasi-api.webp" width="200" height="282" decoding="async" alt=""><figcaption>Gradasi Api</figcaption></figure><figure aria-hidden="true"><img src="/assets/img/tpl-catatan-stabilo.webp" width="200" height="282" decoding="async" alt=""><figcaption>Catatan Stabilo</figcaption></figure></div>
+  </div>
+  <div class="wrap">
+    <div class="cap-features reveal">
+      <div><h3>Gaya per kata</h3><p>Font, gradasi, garis tepi, 3D dan bayangan panjang, cahaya, 10 bentuk latar, sorotan kuas di kata aktif.</p></div>
+      <div><h3>Studio animasi</h3><p>40 animasi siap pakai untuk masuk, kata aktif, keluar, dan berulang, plus editor keyframe sendiri.</p></div>
+      <div><h3>Efek suara per kata</h3><p>Pop di kata penting, bunyi kaching di angka, 12 suara bawaan atau suara sendiri, digabung ke satu track SFX.</p></div>
+      <div><h3>Tiru gaya dari gambar</h3><p>Tempel screenshot caption yang kamu suka. Klipora meniru warna, font mirip, kapital, posisi, dan sorotan.</p></div>
+      <div><h3>Brand Kit dan gaya tersimpan</h3><p>Warna, font, dan kata brand yang selalu dieja benar. Simpan gaya, dan video baru mulai dari gaya terakhir dipakai.</p></div>
+      <div><h3>Bab otomatis</h3><p>Marker bab siap YouTube plus teks 00:00 untuk deskripsi, bisa diedit sebelum ditambahkan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="cam-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="group-tag"><svg class="icon" aria-hidden="true"><use href="#i-video"/></svg>Kamera</span>
+      <h2 id="cam-h">Gerakan kamera untuk rekaman yang diam.</h2>
+    </div>
+    <div class="bento reveal">
+      <article class="cell c-zoom">
+        <div class="zoom-copy">
+          <span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-zoom-in"/></svg></span>
+          <h3>Auto zoom yang mengikuti aksi</h3>
+          <p>Untuk rekaman layar, zoom mengarah ke klik, ketikan, dan menu. Untuk wajah, punch-in di kata penekanan. Keyframe tetap bisa diedit.</p>
+          <ul class="mini-list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Tiga mode: aksi layar, penekanan bicara, ritmis</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Mengabaikan taskbar dan notifikasi</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Batas zoom per menit supaya tetap tenang</span></li>
+          </ul>
+        </div>
+        <img class="shot" src="/assets/img/panel-zoom-id.webp" width="380" height="720" loading="lazy" decoding="async" alt="Pengaturan Auto Zoom dengan mode Ikuti aksi layar terpilih">
+      </article>
+      <article class="cell c-angles">
+        <span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-focus-centered"/></svg></span>
+        <h3>Angle kamera virtual</h3>
+        <p>Crop lebar, sedang, dan dekat di tiap potongan, tidak pernah sama dua kali berturut-turut.</p>
+        <div class="angle-boxes" aria-hidden="true"><span>100%</span><span>118%</span><span>140%</span></div>
+      </article>
+      <article class="cell c-podcast">
+        <span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-microphone-2"/></svg></span>
+        <h3>Podcast multicam</h3>
+        <p>Kamera mengikuti siapa yang bicara, dengan shot lebar saat bersahutan. Audio tidak pernah dipotong.</p>
+      </article>
+      <article class="cell c-broll">
+        <span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-photo-video"/></svg></span>
+        <h3>B-roll yang tidak menutupi klikmu</h3>
+        <p>Memilih momen dari transkrip lalu mengisinya dari folder kamu, Pexels, atau gambar AI. Layar tenang dapat b-roll penuh, layar sibuk dapat kartu di pojok.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="pub-h" style="padding-top:0">
+  <div class="wrap duo">
+    <div class="duo-col reveal">
+      <span class="group-tag"><svg class="icon" aria-hidden="true"><use href="#i-upload"/></svg>Publikasi</span>
+      <h2 id="pub-h">Satu video panjang, banyak video pendek.</h2>
+      <ul class="mini-list">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-flame"/></svg><span><strong>Klip viral</strong>Memberi skor momen 0 sampai 100 dan membuat satu sub-sequence per klip yang kamu pilih.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-device-mobile"/></svg><span><strong>Auto resize ke 9:16</strong>Juga 1:1 dan 4:5. Framing mengikuti kursor, aksi, atau pembicara, atau pakai fokus + blur untuk konten layar.</span></li>
+      </ul>
+      <div class="clips"><img src="/assets/img/tpl-hijau-viral.webp" width="200" height="282" loading="lazy" decoding="async" alt="Klip vertikal 9:16 dengan caption"><img src="/assets/img/tpl-kuning-3d.webp" width="200" height="282" loading="lazy" decoding="async" alt="Klip vertikal 9:16 dengan caption"><img src="/assets/img/tpl-stiker-viral.webp" width="200" height="282" loading="lazy" decoding="async" alt="Klip vertikal 9:16 dengan caption"></div>
+      <p class="caption">Tiap klip bisa langsung vertikal, dengan caption dari template pilihanmu.</p>
+    </div>
+    <div class="duo-col voice reveal">
+      <span class="group-tag"><svg class="icon" aria-hidden="true"><use href="#i-ear"/></svg>Suara</span>
+      <h3 style="font-size:clamp(26px,3vw,36px)">Suara Jernih</h3>
+      <p class="muted">Denoise AI dengan DeepFilterNet3, hapus klik dan napas, volume per platform, dan musik mengecil saat bicara. Dirender ke track baru, aslinya tetap ada.</p>
+      <div class="lufs"><b class="from">-20,4</b><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg><b class="to">-14,0 LUFS</b><small>Hasil ukur di rekaman uji, target YouTube.</small></div>
+      <div class="duo-shots one">
+        <img class="shot" src="/assets/img/panel-voice-id.webp" width="380" height="720" loading="lazy" decoding="async" alt="Pengaturan Suara Jernih: gaya, target volume, hapus klik dan napas, denoise AI">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-h" class="text-sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2 id="how-h">Cara kerjanya</h2></div>
+    <ol class="flow reveal">
+      <li><h3>Baca timeline</h3><p>Panel membaca sequence aktif: track, clip, In/Out, atau clip terpilih.</p></li>
+      <li><h3>Analisis lokal</h3><p>Engine Python di PC kamu mentranskripsi dengan Whisper, mengukur audio, dan membaca frame. Hasil disimpan di cache.</p></li>
+      <li><h3>Tinjau daftarnya</h3><p>Setiap potongan, zoom, atau caption jadi baris yang bisa dicentang, dibatalkan, dan dilompati di Premiere.</p></li>
+      <li><h3>Terapkan ke salinan</h3><p>Perubahan masuk ke salinan sequence atau track khusus. Satu klik membuka yang asli lagi.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="privacy" aria-labelledby="priv-h">
+  <div class="wrap privacy">
+    <div class="sec-head reveal">
+      <h2 id="priv-h">Rekamanmu tidak pernah keluar dari PC.</h2>
+      <p class="lede">Transkripsi, analisis audio, render, dan denoise semuanya jalan lokal. Tidak ada yang diunggah kecuali kamu menyalakan penyedia AI cloud.</p>
+    </div>
+    <div class="priv-points reveal">
+      <div><svg class="icon" aria-hidden="true"><use href="#i-cloud-off"/></svg><h3>Offline sejak awal</h3><p>Semua alat punya logika berbasis aturan, jadi tetap jalan saat AI dimatikan.</p></div>
+      <div><svg class="icon" aria-hidden="true"><use href="#i-key"/></svg><h3>Kunci terenkripsi</h3><p>Kunci API disimpan dengan Windows DPAPI khusus user Windows kamu dan tidak pernah ditampilkan lagi.</p></div>
+      <div><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg><h3>Kamu tahu apa yang dikirim</h3><p>Kalau penyedia cloud nyala, yang dikirim hanya teks transkrip (dan gambar gaya, kalau fitur itu dipakai).</p></div>
+      <div><svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg><h3>Tanpa akun, tanpa pelacakan</h3><p>Tanpa daftar dan tanpa pelacakan pemakaian. Kodenya terbuka, jadi bisa kamu cek.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ai" aria-labelledby="ai-h" style="padding-top:0">
+  <div class="wrap ai-grid">
+    <div class="reveal">
+      <div class="sec-head" style="margin-bottom:28px">
+        <h2 id="ai-h">Pakai AI sendiri, atau tanpa AI.</h2>
+        <p class="lede">Atur penyedia utama dan cadangan. Kalau satu gagal, yang berikutnya mengambil alih. Kalau semua gagal, aturan bawaan tetap jalan.</p>
+      </div>
+      <ul class="providers" aria-label="Penyedia AI yang didukung">
+        <li class="local"><span class="mono" aria-hidden="true">LP</span>Proxy lokal</li><li><span class="mono" aria-hidden="true">OR</span>OpenRouter</li><li><span class="mono" aria-hidden="true">G</span>Gemini</li><li><span class="mono" aria-hidden="true">AI</span>OpenAI</li><li><span class="mono" aria-hidden="true">X</span>xAI</li><li><span class="mono" aria-hidden="true">A</span>Anthropic</li><li><span class="mono" aria-hidden="true">DS</span>DeepSeek</li><li><span class="mono" aria-hidden="true">GQ</span>Groq</li><li class="local"><span class="mono" aria-hidden="true">OL</span>Ollama (lokal)</li><li><span class="mono" aria-hidden="true">{}</span>Endpoint custom</li>
+      </ul>
+    </div>
+    <div class="reveal" style="display:grid;gap:16px">
+      <p class="note">Tiap penyedia punya model Cepat, model Pintar, dan model Vision opsional. Pilih dari daftar model yang diambil langsung.</p>
+      <p class="note">Hasil AI disimpan di cache, jadi menjalankan alat lagi di video yang sama tidak memakan permintaan baru.</p>
+      <p class="note">AI tidak pernah menentukan waktu. Jawabannya dicocokkan ke kata Whisper dan ditampilkan sebagai saran yang kamu setujui.</p>
+    </div>
+  </div>
+</section>
+
+<section id="install" aria-labelledby="inst-h" class="text-sec">
+  <div class="wrap install">
+    <div class="reveal">
+      <div class="sec-head" style="margin-bottom:28px">
+        <h2 id="inst-h">Kebutuhan</h2>
+      </div>
+      <dl class="req">
+        <div><dt>Sistem</dt><dd>Windows 10 atau 11, 64-bit (dites di 11)</dd></div>
+        <div><dt>Premiere</dt><dd>Premiere Pro 2026 (26.x)</dd></div>
+        <div><dt>Python</dt><dd>3.14 (versi yang dites)</dd></div>
+        <div><dt>FFmpeg</dt><dd>8.x full build di PATH</dd></div>
+        <div><dt>GPU</dt><dd>Opsional. NVIDIA dengan CUDA 12 untuk transkripsi cepat</dd></div>
+        <div><dt>Disk</dt><dd>Beberapa GB untuk model Whisper dan hasil render</dd></div>
+      </dl>
+    </div>
+    <div class="reveal">
+      <h2 class="sr-only">Langkah pasang</h2>
+      <ol class="steps">
+        <li><div><h3>Ambil kodenya</h3><div class="code"><pre><code><span class="ln">git clone https://github.com/muhrifqie/klipora.git C:\klipora</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div></div></li>
+        <li><div><h3>Pasang engine</h3><p>Paket Python plus FFmpeg.</p><div class="code"><pre><code><span class="ln">py -3.14 -m pip install --no-cache-dir -r C:\klipora\requirements.txt</span>
+<span class="ln">winget install Gyan.FFmpeg</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div></div></li>
+        <li><div><h3>Izinkan ekstensi tanpa tanda tangan</h3><div class="code"><pre><code><span class="ln">reg add "HKCU\Software\Adobe\CSXS.12" /v PlayerDebugMode /t REG_SZ /d 1 /f</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div></div></li>
+        <li><div><h3>Hubungkan panel ke Premiere</h3><div class="code"><pre><code><span class="ln">New-Item -ItemType Junction -Path "$env:APPDATA\Adobe\CEP\extensions\com.klipora.panel" -Target "C:\klipora\panel"</span></code></pre><button class="copy-btn" type="button" aria-label="Salin perintah" data-label="Salin perintah" data-copied="Tersalin"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div><p style="margin-top:12px">Buka ulang Premiere, lalu <strong>Window &gt; Extensions</strong>. Panduan lengkap membahas GPU dan pemakaian pertama. <a href="/id/docs#install">Baca dokumentasi</a></p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2 id="faq-h">Pertanyaan</h2></div>
+    <div class="faq reveal">
+      <details><summary>Klipora beneran gratis?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><div class="ans"><p>Ya. Panel dan engine-nya open source di GitHub. Tanpa akun, tanpa langganan, tanpa watermark. Biaya hanya muncul kalau kamu sendiri memasang penyedia AI berbayar, dan semua langkah AI itu opsional.</p></div></details>
+      <details><summary>Bisa dipakai di macOS?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><div class="ans"><p>Belum. Untuk sekarang Klipora khusus Windows: engine-nya memakai fitur Windows seperti DPAPI untuk menyimpan kunci, dan dites di Windows 11 dengan Premiere Pro 2026 (26.x).</p></div></details>
+      <details><summary>Apakah sequence asli saya diubah?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><div class="ans"><p>Tidak. Alat potong bekerja di salinan sequence yang ditaruh di samping aslinya, overlay ditaruh di track sendiri, dan marker diberi tanda supaya diganti saat dijalankan ulang. Klipora juga tidak pernah menyimpan project kamu.</p></div></details>
+      <details><summary>Harus punya GPU?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><div class="ans"><p>Tidak wajib, tapi sangat membantu. Transkripsi memakai faster-whisper di GPU NVIDIA (CUDA 12) kalau ada, sekitar 1 menit per 30 menit video di PC uji. Tanpa GPU, otomatis pindah ke CPU dan lebih lambat.</p></div></details>
+      <details><summary>Perlu langganan AI?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><div class="ans"><p>Tidak. Semua alat punya logika berbasis aturan yang jalan offline. AI cuma menambah bonus seperti judul bab, pilihan klip viral, atau membaca gaya dari gambar. Kalau mau, pasang penyedia sendiri, termasuk yang sepenuhnya lokal lewat Ollama.</p></div></details>
+      <details><summary>Panelnya pakai bahasa apa?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><div class="ans"><p>Tampilan panel saat ini berbahasa Indonesia, dan aturan teksnya (filler, angka, Rupiah) disetel untuk ucapan bahasa Indonesia. Whisper sendiri bisa mentranskripsi banyak bahasa, dan bahasa ucapan bisa diganti di Pengaturan.</p></div></details>
+      <details><summary>Kenapa ekstensinya tidak muncul di menu Window?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><div class="ans"><p>Klipora adalah ekstensi CEP tanpa tanda tangan, jadi Premiere menyembunyikannya sampai mode debug dinyalakan. Atur <code>PlayerDebugMode</code> untuk <code>CSXS.12</code> lalu buka ulang Premiere. Perintah lengkapnya ada di <a href="/id/docs#cep">panduan pasang</a>.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" style="padding-top:0">
+  <div class="wrap">
+    <div class="final-box reveal">
+      <div>
+        <h2>Pakai waktumu untuk ceritanya.</h2>
+        <p>Klipora gratis dan open source. Kasih bintang, laporkan bug, atau kirim pull request.</p>
+      </div>
+      <a class="btn btn-primary" href="https://github.com/muhrifqie/klipora"><svg class="icon" aria-hidden="true"><use href="#i-brand-github"/></svg>Ambil di GitHub</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Klipora","applicationCategory":"MultimediaApplication","operatingSystem":"Windows 10, Windows 11","description":"Panel Adobe Premiere Pro open source dengan engine Python lokal untuk potong silence, hapus filler, caption animasi, auto zoom, reframe, dan pembersih suara.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://github.com/muhrifqie/klipora","inLanguage":"id"}</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <a class="brand" href="/id"><img src="/assets/logo.svg" alt="" width="24" height="24">Klipora</a>
+    <nav aria-label="Kaki halaman">
+      <a href="/id/docs">Dokumentasi</a>
+      <a href="/id/docs#troubleshooting">Pemecahan masalah</a>
+      <a href="/id/changelog">Catatan rilis</a>
+      <a href="https://github.com/muhrifqie/klipora">GitHub</a>
+      <a href="https://github.com/muhrifqie/klipora/issues">Lapor bug</a>
+    </nav>
+    <p>Open source. Tidak berafiliasi dengan Adobe. Premiere Pro adalah merek dagang Adobe.</p>
+  </div>
+</footer>
+</body>
+</html>

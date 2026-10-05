@@ -1,0 +1,54 @@
+{
+  "name": "Kartu Podcast",
+  "description": "Kartu gelap berbingkai tipis dengan bayangan, kata yang belum diucap abu-abu, kata aktif emas.",
+  "group": "podcast",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "podcast",
+    "interview"
+  ],
+  "font": {
+    "family": "Outfit Bold",
+    "size": 54,
+    "line_spacing": 1.25
+  },
+  "style": {
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 9,
+    "max_chars": 32,
+    "max_lines": 2,
+    "y": 83
+  },
+  "box": {
+    "enabled": true,
+    "per": "page",
+    "color": "#0B0B10",
+    "opacity": 0.9,
+    "radius": 22,
+    "pad_x": 32,
+    "pad_y": 20,
+    "border": 2,
+    "border_color": "#FFFFFF33",
+    "shadow": {
+      "x": 0,
+      "y": 8,
+      "blur": 14,
+      "color": "#00000080"
+    }
+  },
+  "highlight": {
+    "color": "#FFC94A",
+    "future_color": "#9CA3AF"
+  },
+  "anim": {
+    "in": "slide_up",
+    "in_dur": 0.2,
+    "out": "fade",
+    "out_dur": 0.12
+  }
+}

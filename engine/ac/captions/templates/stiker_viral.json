@@ -1,0 +1,56 @@
+{
+  "name": "Stiker Viral",
+  "description": "Tiap kata di stiker putih miring selang-seling, kata aktif merah. Gaya CapCut yang lagi tren.",
+  "group": "shorts_viral",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "shorts",
+    "portrait",
+    "fun"
+  ],
+  "font": {
+    "family": "Rubik Black",
+    "size": 78,
+    "uppercase": true,
+    "punct": "strip",
+    "line_spacing": 1.3
+  },
+  "style": {
+    "fill": "#111111",
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 66
+  },
+  "box": {
+    "enabled": true,
+    "per": "word",
+    "shape": "sticker",
+    "color": "#FFFFFF",
+    "radius": 12,
+    "pad_x": 16,
+    "pad_y": 8,
+    "tilt": 4,
+    "shadow": {
+      "x": 4,
+      "y": 6,
+      "blur": 2,
+      "color": "#00000099"
+    }
+  },
+  "highlight": {
+    "color": "#E11D48",
+    "scale": 1.06
+  },
+  "anim": {
+    "in": "pop",
+    "in_dur": 0.18,
+    "out": "pop",
+    "out_dur": 0.1
+  }
+}

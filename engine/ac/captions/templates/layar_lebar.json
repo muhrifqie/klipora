@@ -1,0 +1,46 @@
+{
+  "name": "Layar Lebar",
+  "description": "Oswald renggang kecil di bawah, pudar pelan, bayangan lembut. Nuansa film dan vlog perjalanan.",
+  "group": "sinematik",
+  "aspect": [
+    "16:9",
+    "21:9"
+  ],
+  "tags": [
+    "cinematic",
+    "landscape"
+  ],
+  "font": {
+    "family": "Oswald SemiBold",
+    "size": 62,
+    "uppercase": true,
+    "letter_spacing": 5,
+    "punct": "soft"
+  },
+  "style": {
+    "outline": 2,
+    "outline_color": "#00000080",
+    "shadow": 3,
+    "shadow_x": 0,
+    "shadow_y": 3,
+    "shadow_blur": 10,
+    "shadow_color": "#000000E6"
+  },
+  "layout": {
+    "max_words": 7,
+    "max_chars": 34,
+    "max_lines": 1,
+    "y": 88
+  },
+  "timing": {
+    "mode": "line",
+    "max_dur": 4.0,
+    "hold": 0.3
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.35,
+    "out": "fade",
+    "out_dur": 0.3
+  }
+}

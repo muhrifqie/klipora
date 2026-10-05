@@ -1,0 +1,61 @@
+{
+  "name": "Stabilo Tutorial",
+  "description": "Rekaman layar: panel gelap per baris, stabilo kuning mengikuti kata yang diucap.",
+  "group": "tutorial",
+  "aspect": [
+    "16:9",
+    "21:9"
+  ],
+  "tags": [
+    "tutorial",
+    "landscape"
+  ],
+  "font": {
+    "family": "Plus Jakarta Sans ExtraBold",
+    "size": 50,
+    "line_spacing": 1.34
+  },
+  "style": {
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 10,
+    "max_chars": 42,
+    "max_lines": 2,
+    "y": 86,
+    "width": 80
+  },
+  "timing": {
+    "max_gap": 0.6,
+    "max_dur": 4.0,
+    "hold": 0.3,
+    "fill_gaps": 0.5
+  },
+  "box": {
+    "enabled": true,
+    "per": "line",
+    "color": "#0B0F19",
+    "opacity": 0.78,
+    "radius": 12,
+    "pad_x": 22,
+    "pad_y": 10
+  },
+  "highlight": {
+    "color": "#111111",
+    "pill": "#FFD60A",
+    "pill_shape": "marker",
+    "pill_slide": true,
+    "pill_pad_x": 8,
+    "pill_pad_y": 4
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.12,
+    "out": "fade",
+    "out_dur": 0.12
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#7FE7FF"
+  }
+}

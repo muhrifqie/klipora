@@ -1,0 +1,53 @@
+{
+  "name": "Judul Emas",
+  "description": "DM Serif bergradasi emas dengan cahaya hangat, masuk blur. Untuk momen penting dan intro.",
+  "group": "sinematik",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "cinematic"
+  ],
+  "font": {
+    "family": "DM Serif Display",
+    "size": 96,
+    "punct": "soft",
+    "line_spacing": 1.05,
+    "case": "title"
+  },
+  "style": {
+    "outline": 3,
+    "outline_color": "#2B1D00",
+    "gradient": {
+      "colors": [
+        "#FFF4C2",
+        "#E8B44A",
+        "#9A6B12"
+      ],
+      "dir": "vertical",
+      "span": "word",
+      "bands": 8
+    },
+    "glow": {
+      "color": "#00000099",
+      "width": 6,
+      "blur": 16
+    }
+  },
+  "layout": {
+    "max_words": 4,
+    "max_chars": 22,
+    "max_lines": 2,
+    "y": 55
+  },
+  "timing": {
+    "mode": "line"
+  },
+  "anim": {
+    "in": "blur",
+    "in_dur": 0.4,
+    "out": "fade",
+    "out_dur": 0.25
+  }
+}

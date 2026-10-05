@@ -1,0 +1,54 @@
+{
+  "name": "Neon Gamer",
+  "description": "Black Ops One hijau neon menyala, miring ke depan, kata aktif putih bercahaya.",
+  "group": "gaming",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "gaming",
+    "night",
+    "shorts"
+  ],
+  "font": {
+    "family": "Black Ops One",
+    "size": 84,
+    "uppercase": true,
+    "punct": "strip",
+    "skew": 0.12
+  },
+  "style": {
+    "fill": "#B6FF3B",
+    "outline": 4,
+    "outline_color": "#062B00",
+    "glow": {
+      "color": "#39FF14B3",
+      "width": 12,
+      "blur": 14,
+      "strength": 1.4
+    }
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 66
+  },
+  "highlight": {
+    "color": "#FFFFFF",
+    "scale": 1.08,
+    "glow": {
+      "color": "#FFFFFFCC",
+      "width": 8,
+      "blur": 10,
+      "strength": 1.2
+    }
+  },
+  "anim": {
+    "in": "zoom_blur",
+    "in_dur": 0.16,
+    "out": "blur",
+    "out_dur": 0.12
+  }
+}

@@ -1,0 +1,67 @@
+/* ai_settings.css: Pengaturan > AI > Penyedia AI (js/core/ai_settings.js). Tokens from base.css only.
+   Chrome 99 / CEP 12: no nesting, :has(), container queries, color-mix(). */
+.aip { display: flex; flex-direction: column; gap: var(--gap-sm); min-width: 0; }
+.aip-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: var(--ctl-h); }
+.aip-top b { font-weight: 600; }
+.aip-list { display: flex; flex-direction: column; gap: 4px; min-width: 0; transition: opacity var(--t) var(--ease); }
+.aip-list.is-busy { opacity: .6; }
+.aip-row { border: 1px solid var(--border-subtle); border-radius: var(--r-card); background: var(--surface-1); min-width: 0; }
+.aip-row.is-open { border-color: var(--border); }
+.aip-row.is-off .aip-txt b { color: var(--text-3); }
+.aip-head { display: flex; align-items: center; gap: 2px; padding: 2px 4px 2px 0; min-width: 0; }
+.aip-main { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; padding: 6px 4px 6px 10px; border: 0; background: none; color: inherit;
+  text-align: left; border-radius: var(--r-card); min-height: var(--row-h); }
+.aip-main:hover .aip-txt b { color: var(--text-1); }
+.aip-main:focus-visible { box-shadow: var(--ring); outline: none; }
+.aip-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.aip-txt b { font-weight: 600; color: var(--text-1); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.aip-txt small { color: var(--text-3); font-size: var(--fs-xs); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.aip-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; background: var(--text-off); box-shadow: 0 0 0 3px var(--surface-3); }
+.aip-dot.is-ok { background: var(--success); box-shadow: 0 0 0 3px var(--success-soft); }
+.aip-dot.is-err { background: var(--danger); box-shadow: 0 0 0 3px var(--danger-soft); }
+.aip-dot.is-warn { background: var(--warn); box-shadow: 0 0 0 3px var(--warn-soft); }
+.aip-dot.is-off { background: transparent; box-shadow: inset 0 0 0 1.5px var(--text-off); }
+.aip-mv { width: 24px; height: 24px; }
+.aip-mv[disabled] { opacity: .3; cursor: default; }
+.aip-mv[disabled]:hover { background: transparent; color: var(--text-2); }
+.aip-detail { display: flex; flex-direction: column; gap: 8px; padding: 2px 10px 10px; border-top: 1px solid var(--border-subtle); padding-top: 8px; }
+.aip-kv b { word-break: break-all; }
+.aip-chain { font-size: var(--fs-xs); }
+.aip-wizwrap { min-width: 0; }
+.aip-wiz { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.aip-wiz-h { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.aip-wiz-h b { font: 650 var(--fs-lg) var(--font-display); }
+.aip-step { font-weight: 600; color: var(--text-2); font-size: var(--fs-sm); margin-top: 4px; }
+.aip-presets { display: flex; flex-wrap: wrap; gap: 6px; }
+.aip-note { font-size: var(--fs-xs); }
+.aip-keystate { display: flex; align-items: center; gap: 5px; color: var(--text-3); font-size: var(--fs-xs); min-height: 16px; overflow-wrap: anywhere; }
+.aip-keystate .svg-i { width: 13px; height: 13px; color: var(--success); flex: none; }
+.aip-slots { display: flex; flex-direction: column; gap: 6px; }
+.aip-slotrow { display: grid; grid-template-columns: 112px 1fr; gap: 6px; align-items: center; min-width: 0; }
+.aip-slot { display: flex; flex-direction: column; align-items: flex-start; padding: 3px 8px; min-height: var(--ctl-h); border: 1px solid var(--border-subtle);
+  border-radius: var(--r-ctl); background: var(--surface-1); color: var(--text-2); text-align: left; min-width: 0; }
+.aip-slot b { font-weight: 600; font-size: var(--fs-sm); }
+.aip-slot small { font-size: var(--fs-2xs); color: var(--text-3); line-height: 1.25; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 100%; }
+.aip-slot.is-on { border-color: var(--accent-line); background: var(--accent-soft); color: var(--text-1); }
+.aip-slot:focus-visible { box-shadow: var(--ring); outline: none; }
+.aip-mbox { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.aip-mhead { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.aip-mhead .input { flex: 1; }
+.aip-mcount { color: var(--text-3); font-size: var(--fs-xs); white-space: nowrap; flex: none; }
+.aip-mlist { max-height: 220px; overflow-y: auto; border: 1px solid var(--border-subtle); border-radius: var(--r-ctl); background: var(--surface-0); }
+.aip-model { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; width: 100%; min-height: 28px; padding: 4px 8px; border: 0;
+  border-bottom: 1px solid var(--border-subtle); background: none; color: var(--text-2); text-align: left; font-family: var(--font-mono); font-size: var(--fs-xs); }
+.aip-model:last-child { border-bottom: 0; }
+.aip-model span { min-width: 0; overflow-wrap: anywhere; }
+.aip-model small { flex: none; font-family: var(--font-ui); color: var(--text-3); font-size: var(--fs-2xs); }
+.aip-model:hover { background: var(--surface-2); color: var(--text-1); }
+.aip-model.is-on { background: var(--accent-soft); color: var(--text-1); box-shadow: inset 2px 0 0 var(--accent); }
+.aip-model:focus-visible { box-shadow: var(--ring); outline: none; }
+.aip-mtarget { font-size: var(--fs-xs); }
+.aip-test:empty { display: none; }
+.aip-actions { justify-content: flex-end; }
+.aip-actions #aiwTest { margin-right: auto; }
+@media (max-width: 340px) {
+  .aip-slotrow { grid-template-columns: 1fr; }
+  .aip-slot small { display: none; }
+}

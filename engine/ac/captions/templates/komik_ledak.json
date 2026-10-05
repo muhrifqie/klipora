@@ -1,0 +1,57 @@
+{
+  "name": "Komik Ledak",
+  "description": "Bangers warna-warni dengan garis hitam lalu putih, halaman miring selang-seling, kata jatuh.",
+  "group": "fun",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "fun",
+    "portrait",
+    "shorts"
+  ],
+  "font": {
+    "family": "Bangers",
+    "size": 110,
+    "uppercase": true,
+    "letter_spacing": 2,
+    "punct": "soft",
+    "line_spacing": 0.98
+  },
+  "style": {
+    "outline": 7,
+    "outline2": 6,
+    "outline2_color": "#FFFFFF",
+    "shadow": 8,
+    "shadow_x": 6,
+    "shadow_y": 8,
+    "shadow_color": "#000000",
+    "color_cycle": [
+      "#FFE600",
+      "#45F0FF",
+      "#FF5EC4",
+      "#7CFF4F"
+    ]
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 62,
+    "rotate": 3,
+    "rotate_jitter": 3
+  },
+  "timing": {
+    "mode": "reveal"
+  },
+  "highlight": {
+    "color": null
+  },
+  "anim": {
+    "in": "none",
+    "out": "fade",
+    "out_dur": 0.1,
+    "word_in": "drop",
+    "word_in_dur": 0.22
+  }
+}

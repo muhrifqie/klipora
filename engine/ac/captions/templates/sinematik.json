@@ -1,0 +1,42 @@
+{
+  "name": "Sinematik",
+  "description": "Bebas Neue renggang di tengah layar, masuk blur + zoom pelan.",
+  "aspect": [
+    "16:9",
+    "9:16"
+  ],
+  "tags": [
+    "cinematic"
+  ],
+  "font": {
+    "family": "Bebas Neue",
+    "size": 96,
+    "uppercase": true,
+    "letter_spacing": 7,
+    "punct": "strip"
+  },
+  "style": {
+    "outline": 0,
+    "shadow": 0,
+    "glow": {
+      "color": "#00000099",
+      "width": 6,
+      "blur": 16
+    }
+  },
+  "layout": {
+    "max_words": 4,
+    "max_chars": 24,
+    "max_lines": 1,
+    "y": 50
+  },
+  "timing": {
+    "mode": "line"
+  },
+  "anim": {
+    "in": "blur",
+    "in_dur": 0.35,
+    "out": "fade",
+    "out_dur": 0.25
+  }
+}

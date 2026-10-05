@@ -1,0 +1,45 @@
+{
+  "name": "Neon",
+  "description": "Glow magenta, kata aktif cyan menyala, masuk dengan blur.",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "gaming",
+    "night"
+  ],
+  "font": {
+    "family": "Poppins ExtraBold",
+    "size": 80,
+    "uppercase": true,
+    "punct": "strip"
+  },
+  "style": {
+    "fill": "#FFFFFF",
+    "outline": 3,
+    "outline_color": "#FF2BD6",
+    "glow": {
+      "color": "#FF2BD6CC",
+      "width": 14,
+      "blur": 14
+    }
+  },
+  "layout": {
+    "max_words": 4,
+    "max_chars": 18,
+    "max_lines": 2,
+    "y": 64
+  },
+  "highlight": {
+    "color": "#7DF9FF",
+    "outline_color": "#00B7FF",
+    "scale": 1.06
+  },
+  "anim": {
+    "in": "blur",
+    "in_dur": 0.25,
+    "out": "blur",
+    "out_dur": 0.15
+  }
+}

@@ -1,0 +1,71 @@
+/* angles tool styles (owner: angles tool agent). Shared components live in ../base.css; see docs/PANEL_API.md "CSS conventions".
+   Tool-only classes are prefixed .angles-; the two review-list overrides are scoped to the angles screen. */
+
+/* Main pane: nested crop boxes of the enabled angles on a frame of the sequence aspect */
+.angles-demo { width: 100%; max-width: 260px; }
+.angles-demo-in { position: relative; height: 0; padding-top: 41.9%; border-radius: 6px; background: var(--surface-0); border: 1px solid var(--border-subtle); overflow: hidden; }
+.angles-demo-box { position: absolute; box-sizing: border-box; border: 1.5px dashed var(--border-strong); border-radius: 3px; }
+.angles-demo-box i { position: absolute; left: 3px; top: 2px; font-style: normal; font-size: var(--fs-2xs); line-height: 1.2; color: var(--text-3); }
+.angles-demo-box.is-wide { border-style: solid; border-color: var(--border); }
+.angles-demo-box.is-wide i { top: auto; bottom: 2px; }
+.angles-demo-box.is-medium { border-color: var(--text-3); }
+.angles-demo-box.is-medium i { color: var(--text-2); }
+.angles-demo-box.is-close { border: 1.5px solid var(--accent-line); background: var(--accent-soft); }
+.angles-demo-box.is-close i { color: var(--accent-text); }
+.angles-notice:empty { display: none; }
+.angles-bad { color: var(--danger); }
+
+/* Tinjau: angle lane replaces the cut ribbon (every shot stays, only its framing changes) */
+[data-screen="tool-angles"] .rv-head > canvas.ribbon,
+[data-screen="tool-angles"] .rv-head > .legend:not(.angles-legend) { display: none; }
+[data-screen="tool-angles"] .rv-actions [data-act="toggle"] { display: none; }   /* checkbox = diatur / dibiarkan */
+canvas.angles-lane { display: block; width: 100%; height: 22px; border-radius: 4px; cursor: pointer; }
+.angles-legend { align-items: flex-end; }
+.angles-lg { display: inline-block; width: 10px; margin-right: 5px; border-radius: 2px 2px 0 0; background: var(--accent); vertical-align: -1px; }
+.angles-lg.is-wide { height: 4px; opacity: .45; }
+.angles-lg.is-medium { height: 7px; opacity: .7; }
+.angles-lg.is-close { height: 10px; }
+.rv-ctx mark.angles-m.is-wide { background: var(--surface-3); color: var(--text-1); }
+.rv-ctx mark.angles-m.is-medium { background: var(--accent-soft); color: var(--accent-text); }
+.rv-ctx mark.angles-m.is-close { background: var(--accent); color: var(--on-accent); }
+.rv.is-off .rv-ctx mark.angles-m { background: var(--surface-3); color: var(--text-3); }
+
+/* Tinjau: frame preview with the crop box of each angle (click a box to pick it) */
+.angles-pv { display: flex; flex-direction: column; gap: 6px; padding: 8px; border-radius: var(--r-card); background: var(--surface-1); border: 1px solid var(--border-subtle); flex: none; }
+.angles-pv-h { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--text-2); font-size: var(--fs-sm); font-weight: 600; }
+.angles-pv-body { display: flex; flex-direction: column; gap: 6px; }
+.angles-pv-body[hidden] { display: none; }
+.angles-pv-frame { position: relative; width: 100%; height: 0; padding-top: 41.9%; overflow: hidden; border-radius: 5px; background: var(--surface-0); }
+.angles-pv-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; display: block; }
+.angles-pv-msg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 8px; text-align: center; color: var(--text-3); font-size: var(--fs-sm); }
+.angles-pv-msg[hidden] { display: none; }
+.angles-pv-boxes { position: absolute; inset: 0; }
+.angles-pv-box { position: absolute; box-sizing: border-box; padding: 0; margin: 0; background: none; border: 1.5px dashed rgba(255, 255, 255, .75); border-radius: 2px; cursor: pointer; }
+.angles-pv-box:hover { border-color: #fff; }
+.angles-pv-box:focus-visible { box-shadow: var(--ring); outline: none; }
+.angles-pv-box i { position: absolute; left: 2px; top: 2px; padding: 0 4px; border-radius: 3px; font-style: normal; font-size: var(--fs-2xs); line-height: 1.5; color: #fff; background: rgba(0, 0, 0, .6); }
+/* No z-index on .is-on: boxes stack wide < medium < close (DOM order) so a smaller box stays clickable when a
+   bigger one is the active angle (a raised full-frame Lebar box swallowed every click). */
+.angles-pv-box.is-on { border: 2px solid var(--accent); box-shadow: 0 0 0 999px rgba(0, 0, 0, .42); }
+.angles-pv-box.is-on i { background: var(--accent); color: var(--on-accent); font-weight: 650; }
+.angles-pv-box.is-wide i { top: auto; bottom: 2px; }
+.angles-pv-box.is-close i { left: auto; right: 2px; }
+.angles-pv-dot { position: absolute; z-index: 2; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 2px rgba(0, 0, 0, .55); pointer-events: none; }
+.angles-pv-ctl { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.angles-pv-ctl .seg { flex: none; }
+.angles-pv-info { color: var(--text-3); font-size: var(--fs-xs); min-width: 0; }
+.angles-pv-info b { color: var(--text-2); font-weight: 600; }
+.angles-warn { display: flex; align-items: center; gap: 4px; margin-top: 2px; color: var(--warn); }
+.angles-warn .svg-i { width: 12px; height: 12px; flex: none; }
+.angles-pv.is-closed { padding-bottom: 8px; }
+
+/* Result card: the final angle lane */
+.card canvas.angles-lane { cursor: default; }
+
+/* Narrow panels: the 4-way focus control and the balance control must not overflow */
+@media (max-width: 340px) {
+  .angles-anchor.seg button, .angles-balance.seg button { padding: 0 3px; font-size: var(--fs-xs); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .angles-pv-box { transition: none; }
+}

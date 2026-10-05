@@ -1,0 +1,53 @@
+{
+  "name": "Kuning 3D",
+  "description": "Kapital super tebal dengan efek 3D hitam, kata aktif kuning dan membesar.",
+  "group": "shorts_viral",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "shorts",
+    "portrait",
+    "3d"
+  ],
+  "font": {
+    "family": "Montserrat Black",
+    "size": 90,
+    "uppercase": true,
+    "punct": "strip",
+    "line_spacing": 1.0
+  },
+  "style": {
+    "outline": 7,
+    "extrude": {
+      "depth": 12,
+      "angle": 70,
+      "color": "#000000",
+      "steps": 0
+    }
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 66
+  },
+  "timing": {
+    "max_gap": 0.35,
+    "max_dur": 1.5,
+    "hold": 0.1
+  },
+  "highlight": {
+    "color": "#FFE600",
+    "scale": 1.12
+  },
+  "anim": {
+    "in": "pop",
+    "in_dur": 0.16,
+    "out": "none"
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#22E58B"
+  }
+}

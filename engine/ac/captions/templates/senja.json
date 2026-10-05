@@ -1,0 +1,52 @@
+{
+  "name": "Senja",
+  "description": "Gradasi oranye ke pink menyapu kalimat, garis gelap tipis, cahaya hangat lembut.",
+  "group": "aesthetic",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "aesthetic",
+    "cinematic"
+  ],
+  "font": {
+    "family": "Sora ExtraBold",
+    "size": 70,
+    "punct": "soft",
+    "line_spacing": 1.1
+  },
+  "style": {
+    "outline": 3,
+    "outline_color": "#3B0A2A",
+    "gradient": {
+      "colors": [
+        "#FFB347",
+        "#FF5E8A"
+      ],
+      "dir": "horizontal",
+      "span": "line",
+      "bands": 8
+    },
+    "glow": {
+      "color": "#FF5E8A66",
+      "width": 10,
+      "blur": 16
+    }
+  },
+  "layout": {
+    "max_words": 5,
+    "max_chars": 22,
+    "max_lines": 2,
+    "y": 74
+  },
+  "highlight": {
+    "color": "#FFFFFF"
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.2,
+    "out": "fade",
+    "out_dur": 0.15
+  }
+}

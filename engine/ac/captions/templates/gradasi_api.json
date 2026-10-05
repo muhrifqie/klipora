@@ -1,0 +1,51 @@
+{
+  "name": "Gradasi Api",
+  "description": "Anton kapital bergradasi kuning ke oranye, garis ganda, kata aktif putih membesar.",
+  "group": "shorts_viral",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "shorts",
+    "portrait"
+  ],
+  "font": {
+    "family": "Anton",
+    "size": 100,
+    "uppercase": true,
+    "punct": "strip",
+    "letter_spacing": 1,
+    "line_spacing": 1.02
+  },
+  "style": {
+    "outline": 6,
+    "outline_color": "#3B0A00",
+    "outline2": 5,
+    "outline2_color": "#FFFFFF",
+    "gradient": {
+      "colors": [
+        "#FFF35C",
+        "#FF7A00"
+      ],
+      "dir": "vertical",
+      "span": "word",
+      "bands": 6
+    }
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 65
+  },
+  "highlight": {
+    "color": "#FFFFFF",
+    "scale": 1.1
+  },
+  "anim": {
+    "in": "scale",
+    "in_dur": 0.16,
+    "out": "fade",
+    "out_dur": 0.08
+  }
+}

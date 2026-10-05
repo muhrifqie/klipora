@@ -1,0 +1,76 @@
+/* chapters tool styles (owner: chapters tool agent). Shared components live in ../base.css; see docs/PANEL_API.md
+   "CSS conventions". Tokens only (light theme + Premiere brightness keep working), Chrome 99 safe, 280-1200 px. */
+.chapters-setup, .chapters-edit { display: flex; flex-direction: column; gap: calc(var(--gap) + 4px); min-width: 0; }
+
+/* ---------- setup */
+.chapters-hint { height: auto; min-height: 52px; padding: 6px 8px; line-height: 1.4; resize: vertical; font: inherit; }
+.chapters-est { font-size: var(--fs-xs); }
+.chapters-resume { display: flex; flex-direction: column; gap: var(--gap-sm); }
+.chapters-resume:empty { display: none; }
+.chapters-resume-card { display: flex; align-items: center; gap: 10px; }
+.chapters-resume-txt { flex: 1; min-width: 0; }
+.chapters-resume-txt b { display: block; }
+.chapters-resume-txt small { color: var(--text-3); font-size: var(--fs-xs); }
+
+/* ---------- editor header + chapter map */
+.chapters-head { display: flex; align-items: center; gap: 8px; }
+.chapters-title { flex: 1; min-width: 0; }
+.chapters-title h2 { margin: 0; font: 650 var(--fs-xl) var(--font-display); letter-spacing: -.01em; }
+.chapters-title small { display: block; color: var(--text-3); font-size: var(--fs-xs); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chapters-strip { display: flex; gap: 2px; height: 14px; }
+.chapters-seg { min-width: 3px; height: 100%; padding: 0; border: 0; border-radius: 3px; background: var(--surface-4); cursor: pointer; }
+.chapters-seg.is-alt { background: var(--surface-3); }
+.chapters-seg:hover { background: var(--border-strong); }
+.chapters-seg.is-on { background: var(--accent); }
+.chapters-notice { display: flex; flex-direction: column; gap: var(--gap-sm); }
+.chapters-notice:empty { display: none; }
+
+/* ---------- chapter rows */
+.chapters-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.chapters-row { display: grid; grid-template-columns: 16px 62px minmax(0, 1fr); gap: 4px 6px; align-items: center; padding: 6px 6px 6px 4px; border-radius: 8px; position: relative; }
+.chapters-row:hover { background: var(--surface-1); }
+.chapters-row.is-on { background: var(--surface-2); box-shadow: inset 2px 0 0 var(--accent); }
+.chapters-row.is-warn .chapters-n { color: var(--warn); }
+.chapters-n { color: var(--text-3); font-size: var(--fs-xs); text-align: right; font-variant-numeric: tabular-nums; cursor: pointer; }
+.chapters-time { padding: 0 6px; text-align: center; }
+.chapters-name { font-weight: 600; }
+.chapters-row.is-warn .chapters-time, .chapters-row.is-warn .chapters-name { border-color: rgba(232, 192, 78, .5); }
+.chapters-sub { grid-column: 2 / 4; display: flex; align-items: center; gap: 6px; min-width: 0; }
+.chapters-info { flex: 1; min-width: 0; display: flex; gap: 6px; align-items: baseline; color: var(--text-3); font-size: var(--fs-xs); cursor: pointer; }
+.chapters-len { flex: none; color: var(--text-2); font-variant-numeric: tabular-nums; }
+.chapters-ctx { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chapters-acts { display: flex; flex: none; gap: 0; }
+.chapters-acts .ibtn { width: 24px; height: 24px; color: var(--text-3); }
+.chapters-acts .ibtn:hover { color: var(--text-1); }
+.chapters-acts .ibtn[disabled] { opacity: .35; cursor: default; background: transparent; }
+.chapters-acts .svg-i { width: 14px; height: 14px; }
+.chapters-notes { grid-column: 2 / 4; display: flex; flex-direction: column; gap: 2px; }
+.chapters-notes:empty { display: none; }
+.chapters-note { display: flex; align-items: center; gap: 5px; font-size: var(--fs-xs); color: var(--text-2); }
+.chapters-note.is-warn { color: var(--warn); }
+.chapters-note .svg-i { width: 12px; height: 12px; flex: none; }
+.chapters-empty { list-style: none; }
+.chapters-tools { margin-top: 2px; }
+.chapters-inline { display: flex; flex-direction: column; gap: var(--gap-sm); }
+.chapters-inline:empty { display: none; }
+
+/* ---------- YouTube text + metadata */
+.chapters-yt { margin: 0; padding: 8px 10px; max-height: 220px; overflow: auto; border-radius: 8px; background: var(--surface-0); border: 1px solid var(--border-subtle);
+  color: var(--text-1); font: var(--fs-sm)/1.55 var(--font-mono); white-space: pre-wrap; word-break: break-word; }
+.chapters-yt:focus-visible { box-shadow: var(--ring); outline: none; }
+.sec-h.is-ok .aside { color: var(--success); }
+.chapters-meta { display: flex; flex-direction: column; gap: var(--gap); }
+.chapters-titles { display: flex; flex-direction: column; gap: 2px; }
+.chapters-opt { display: grid; grid-template-columns: 16px minmax(0, 1fr) auto; gap: 6px; align-items: center; padding: 4px 4px 4px 6px; border-radius: 6px; background: var(--surface-1); }
+.chapters-opt-n { color: var(--text-3); font-size: var(--fs-xs); font-variant-numeric: tabular-nums; }
+.chapters-opt-t { font-weight: 600; overflow-wrap: anywhere; }
+.chapters-opt .ibtn { width: 24px; height: 24px; }
+.chapters-desc { height: auto; min-height: 120px; padding: 6px 8px; line-height: 1.45; resize: vertical; font: inherit; }
+.chapters-tagbox { padding: 6px 8px; border-radius: 6px; background: var(--surface-1); color: var(--text-2); font-size: var(--fs-sm); overflow-wrap: anywhere; }
+.chapters-busy { display: flex; align-items: center; gap: 8px; color: var(--text-2); font-size: var(--fs-sm); }
+.chapters-spin { width: 14px; height: 14px; flex: none; border-radius: 50%; border: 2px solid var(--surface-4); border-top-color: var(--accent); animation: spin 0.9s linear infinite; }
+
+@media (max-width: 320px) {
+  .chapters-row { grid-template-columns: 14px 56px minmax(0, 1fr); gap: 4px; }
+  .chapters-ctx { display: none; }
+}

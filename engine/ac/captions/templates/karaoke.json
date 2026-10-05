@@ -1,0 +1,37 @@
+{
+  "name": "Karaoke",
+  "description": "Karaoke klasik: warna kuning menyapu tiap kata sesuai ucapan.",
+  "aspect": [
+    "16:9",
+    "9:16"
+  ],
+  "tags": [
+    "karaoke"
+  ],
+  "font": {
+    "family": "Montserrat ExtraBold",
+    "size": 70,
+    "line_spacing": 1.15
+  },
+  "style": {
+    "outline": 6,
+    "shadow": 3,
+    "shadow_color": "#00000099"
+  },
+  "layout": {
+    "max_words": 7,
+    "max_chars": 26,
+    "max_lines": 2,
+    "y": 78
+  },
+  "highlight": {
+    "color": "#FFD400",
+    "sweep": true
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.12,
+    "out": "fade",
+    "out_dur": 0.12
+  }
+}

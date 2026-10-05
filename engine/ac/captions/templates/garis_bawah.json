@@ -1,0 +1,41 @@
+{
+  "name": "Garis Bawah",
+  "description": "Archivo Black, garis kuning meluncur di bawah kata aktif.",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "shorts"
+  ],
+  "font": {
+    "family": "Archivo Black",
+    "size": 72,
+    "punct": "soft",
+    "line_spacing": 1.25
+  },
+  "style": {
+    "outline": 0,
+    "shadow": 4,
+    "shadow_x": 0,
+    "shadow_y": 4,
+    "shadow_blur": 6,
+    "shadow_color": "#000000A0"
+  },
+  "layout": {
+    "max_words": 5,
+    "max_chars": 20,
+    "max_lines": 2,
+    "y": 70
+  },
+  "highlight": {
+    "color": null,
+    "underline": "#FFD400"
+  },
+  "anim": {
+    "in": "slide_up",
+    "in_dur": 0.18,
+    "out": "slide_up",
+    "out_dur": 0.12
+  }
+}

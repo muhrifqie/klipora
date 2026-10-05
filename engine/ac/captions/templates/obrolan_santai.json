@@ -1,0 +1,43 @@
+{
+  "name": "Obrolan Santai",
+  "description": "Nunito bulat tanpa kotak, bayangan lembut, kata aktif oranye hangat. Ramah untuk ngobrol santai.",
+  "group": "podcast",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "podcast",
+    "clean"
+  ],
+  "font": {
+    "family": "Nunito Black",
+    "size": 60,
+    "line_spacing": 1.15
+  },
+  "style": {
+    "outline": 3,
+    "outline_color": "#00000099",
+    "shadow": 4,
+    "shadow_x": 0,
+    "shadow_y": 4,
+    "shadow_blur": 8,
+    "shadow_color": "#000000B3"
+  },
+  "layout": {
+    "max_words": 7,
+    "max_chars": 28,
+    "max_lines": 2,
+    "y": 80
+  },
+  "highlight": {
+    "color": "#FFB347",
+    "scale": 1.05
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.15,
+    "out": "fade",
+    "out_dur": 0.12
+  }
+}

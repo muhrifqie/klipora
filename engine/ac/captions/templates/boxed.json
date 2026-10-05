@@ -1,0 +1,44 @@
+{
+  "name": "Boxed",
+  "description": "Gaya TikTok klasik: teks hitam di kotak putih membulat per baris, kata aktif merah.",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "shorts",
+    "box"
+  ],
+  "font": {
+    "family": "Poppins Bold",
+    "size": 62,
+    "line_spacing": 1.32
+  },
+  "style": {
+    "fill": "#111111",
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 6,
+    "max_chars": 22,
+    "max_lines": 2,
+    "y": 70
+  },
+  "box": {
+    "enabled": true,
+    "per": "line",
+    "color": "#FFFFFF",
+    "radius": 14,
+    "pad_x": 20,
+    "pad_y": 12
+  },
+  "highlight": {
+    "color": "#FE2C55"
+  },
+  "anim": {
+    "in": "scale",
+    "in_dur": 0.16,
+    "out": "fade",
+    "out_dur": 0.1
+  }
+}

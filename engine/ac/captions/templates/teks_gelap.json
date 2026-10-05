@@ -1,0 +1,44 @@
+{
+  "name": "Teks Gelap",
+  "description": "Teks hitam dengan halo putih lembut, untuk video terang seperti layar web dan dokumen.",
+  "group": "minimal",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "clean",
+    "tutorial"
+  ],
+  "font": {
+    "family": "Inter Black",
+    "size": 56,
+    "line_spacing": 1.2
+  },
+  "style": {
+    "fill": "#111111",
+    "outline": 5,
+    "outline_color": "#FFFFFF",
+    "outline_opacity": 0.9,
+    "glow": {
+      "color": "#FFFFFFB3",
+      "width": 10,
+      "blur": 12
+    }
+  },
+  "layout": {
+    "max_words": 8,
+    "max_chars": 32,
+    "max_lines": 2,
+    "y": 82
+  },
+  "highlight": {
+    "color": "#2563EB"
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.14,
+    "out": "fade",
+    "out_dur": 0.12
+  }
+}

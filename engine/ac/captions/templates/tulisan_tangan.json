@@ -1,0 +1,42 @@
+{
+  "name": "Tulisan Tangan",
+  "description": "Pacifico putih dengan bayangan halus, satu kalimat pendek. Manis untuk vlog dan quote.",
+  "group": "aesthetic",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "aesthetic"
+  ],
+  "font": {
+    "family": "Pacifico",
+    "size": 86,
+    "punct": "soft",
+    "line_spacing": 1.1
+  },
+  "style": {
+    "outline": 3,
+    "outline_color": "#00000099",
+    "shadow": 3,
+    "shadow_x": 0,
+    "shadow_y": 3,
+    "shadow_blur": 10,
+    "shadow_color": "#000000CC"
+  },
+  "layout": {
+    "max_words": 5,
+    "max_chars": 24,
+    "max_lines": 2,
+    "y": 76
+  },
+  "timing": {
+    "mode": "line"
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.3,
+    "out": "fade",
+    "out_dur": 0.25
+  }
+}

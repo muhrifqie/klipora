@@ -1,0 +1,46 @@
+{
+  "name": "Typewriter",
+  "description": "Huruf diketik satu per satu mengikuti ucapan, panel gelap.",
+  "aspect": [
+    "16:9",
+    "9:16"
+  ],
+  "tags": [
+    "tutorial"
+  ],
+  "font": {
+    "family": "Inter ExtraBold",
+    "size": 60,
+    "line_spacing": 1.25
+  },
+  "style": {
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 7,
+    "max_chars": 28,
+    "max_lines": 2,
+    "y": 78
+  },
+  "box": {
+    "enabled": true,
+    "per": "page",
+    "color": "#000000B3",
+    "radius": 12,
+    "pad_x": 26,
+    "pad_y": 18
+  },
+  "timing": {
+    "mode": "reveal"
+  },
+  "highlight": {
+    "color": null
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.1,
+    "out": "fade",
+    "out_dur": 0.12,
+    "word_in": "typewriter"
+  }
+}

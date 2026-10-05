@@ -1,0 +1,39 @@
+/* broll tool styles (owner: broll tool agent). Shared components live in ../base.css; see docs/PANEL_API.md
+   "CSS conventions". Tokens only (light theme + Premiere brightness keep working), Chrome 99 safe, 280-1200 px. */
+
+/* ---------- settings */
+.broll-sub { display: flex; flex-direction: column; gap: var(--gap-sm); padding: 0 0 2px 2px; min-width: 0; }
+.broll-sub.is-off { opacity: .55; }
+.broll-folder { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.broll-folder .input { flex: 1; }
+.broll-folder .btn { flex: none; }
+.broll-folder-info { font-size: var(--fs-xs); }
+.broll-folder-info.is-warn { color: var(--warn); }
+.broll-pex { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.broll-pex small { font-size: var(--fs-xs); }
+.broll-quota { font-size: var(--fs-xs); }
+.broll-sub .field { flex-direction: row; align-items: center; justify-content: space-between; gap: 10px; }
+.broll-strip .broll-srcs { font-size: var(--fs-md); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+
+/* ---------- review rows: thumbnail + keyword + spoken line + source */
+.broll-rv .rv-ctx { display: block; white-space: normal; }
+.broll-row { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.broll-th { flex: none; width: 72px; height: 40px; border-radius: 5px; object-fit: cover; background: var(--surface-3);
+  display: inline-flex; align-items: center; justify-content: center; color: var(--text-3); }
+.broll-th .svg-i { width: 16px; height: 16px; }
+.broll-th.is-empty { border: 1px dashed var(--border-strong); background: var(--surface-1); }
+.broll-tx { min-width: 0; flex: 1; display: flex; flex-direction: column; line-height: 1.3; }
+.broll-tx b, .broll-say, .broll-src { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.broll-tx b { color: var(--text-1); font-weight: 600; font-size: var(--fs-sm); }
+.broll-say { color: var(--text-3); font-size: var(--fs-xs); }
+.broll-src { color: var(--text-2); font-size: var(--fs-xs); }
+.rv.is-off .broll-th { opacity: .45; }
+.rv.is-off .broll-tx b { color: var(--text-2); }
+.broll-rv .rv-l1 { min-width: 0; overflow: hidden; }
+.broll-rv .rv-l1 .tag { flex: none; }
+.broll-ask { display: flex; flex-direction: column; gap: 6px; padding: 10px; }
+.broll-ask .btn-row { display: flex; gap: 6px; }
+
+@media (max-width: 320px) {
+  .broll-th { width: 56px; height: 32px; }
+}

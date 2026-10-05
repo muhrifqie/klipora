@@ -1,0 +1,39 @@
+{
+  "name": "Minimal Putih",
+  "description": "Teks putih polos tanpa outline, bayangan lembut, satu kalimat.",
+  "aspect": [
+    "16:9",
+    "9:16"
+  ],
+  "tags": [
+    "clean"
+  ],
+  "font": {
+    "family": "Inter SemiBold",
+    "size": 58,
+    "line_spacing": 1.2
+  },
+  "style": {
+    "outline": 0,
+    "shadow": 3,
+    "shadow_x": 0,
+    "shadow_y": 3,
+    "shadow_blur": 10,
+    "shadow_color": "#000000B3"
+  },
+  "layout": {
+    "max_words": 9,
+    "max_chars": 34,
+    "max_lines": 2,
+    "y": 82
+  },
+  "timing": {
+    "mode": "line"
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.15,
+    "out": "fade",
+    "out_dur": 0.15
+  }
+}

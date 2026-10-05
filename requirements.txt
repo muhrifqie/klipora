@@ -1,0 +1,17 @@
+# Klipora engine. Python 3.12+ on Windows 10/11 (tested with Python 3.14).
+#   py -m pip install --no-cache-dir -r requirements.txt
+# NVIDIA GPU (optional, faster Whisper): also install requirements-gpu.txt.
+# External tool (not pip): FFmpeg full build (libass; NVENC optional) on PATH, e.g. `winget install Gyan.FFmpeg`.
+# The AI layer (ac.ai) uses only the standard library: no extra packages.
+
+# core: media, timeline, transcription
+numpy>=2.4,<3
+scipy>=1.18
+faster-whisper==1.2.1          # pins ctranslate2 and av; tested with ctranslate2 4.8.1, av 18
+
+# captions + visual tools (caption layout, face detection, denoise models)
+pillow>=12.2
+uharfbuzz>=0.56
+fonttools>=4.63
+opencv-python-headless>=4.13
+onnxruntime>=1.24

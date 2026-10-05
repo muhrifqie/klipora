@@ -1,0 +1,58 @@
+{
+  "name": "Pita Diskon",
+  "description": "Teks gelap di pita kuning, kata aktif merah, masuk geser. Cocok untuk katalog dan testimoni.",
+  "group": "jualan",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "jualan",
+    "shorts"
+  ],
+  "font": {
+    "family": "Passion One",
+    "size": 86,
+    "uppercase": true,
+    "punct": "soft",
+    "line_spacing": 1.28
+  },
+  "style": {
+    "fill": "#1A1A1A",
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 4,
+    "max_chars": 18,
+    "max_lines": 2,
+    "y": 68
+  },
+  "box": {
+    "enabled": true,
+    "per": "line",
+    "shape": "ribbon",
+    "color": "#FFD400",
+    "radius": 0,
+    "pad_x": 26,
+    "pad_y": 8,
+    "shadow": {
+      "x": 0,
+      "y": 6,
+      "blur": 4,
+      "color": "#00000066"
+    }
+  },
+  "highlight": {
+    "color": "#D90429"
+  },
+  "anim": {
+    "in": "slide_right",
+    "in_dur": 0.18,
+    "out": "fade",
+    "out_dur": 0.1
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#D90429"
+  }
+}

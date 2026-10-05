@@ -1,0 +1,37 @@
+/* zoom tool styles (owner: zoom tool agent). Shared components live in ../base.css; see docs/PANEL_API.md "CSS conventions". */
+.zoom-help { margin: -2px 0 2px; }
+
+/* ---------- Tinjau rows: thumbnail (frame + zoom rectangle) on the left of the row, zoom level + what is said */
+.zoom-rv .rv-main { position: relative; padding-left: 104px; min-height: 42px; }
+.zoom-th { position: absolute; left: 0; top: 1px; width: 96px; height: 40px; border-radius: 4px; overflow: hidden; background: var(--surface-3); box-shadow: inset 0 0 0 1px var(--border); }
+.zoom-th img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.zoom-th.is-empty { background: repeating-linear-gradient(135deg, var(--surface-2) 0 6px, var(--surface-3) 6px 12px); }
+.zoom-tx mark { background: var(--accent-soft); color: var(--accent-text); border-radius: 3px; padding: 0 3px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.rv.is-off .zoom-tx mark { background: var(--surface-3); color: var(--text-2); text-decoration: line-through; text-decoration-color: var(--text-3); }
+.rv.is-off .zoom-th { opacity: .55; }
+.zoom-rv .rv-note { min-width: 0; }
+.zoom-rv .rv-note span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.zoom-rv .rv-l1 { min-width: 0; overflow: hidden; }
+
+/* ---------- big preview of the active moment */
+.zoom-pv { display: flex; flex-direction: column; gap: 6px; padding: 8px; border-radius: var(--r-card); background: var(--surface-1); border: 1px solid var(--border); }
+.zoom-pv-h { display: flex; align-items: center; justify-content: space-between; color: var(--text-2); font-size: var(--fs-sm); font-weight: 600; }
+.zoom-pv-body { display: flex; flex-direction: column; gap: 6px; }
+.zoom-pv { --zoom-pv-h: 118px; }
+.zoom-pv-frame { position: relative; width: 100%; border-radius: 6px; overflow: hidden; background: var(--surface-3); }
+.zoom-pv-img, .zoom-pv-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; background: var(--surface-0); }
+.zoom-pv-img[hidden] { display: none; }
+.zoom-pv-info { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; color: var(--text-2); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
+.zoom-pv-info b { color: var(--accent-text); font-size: var(--fs-md); }
+.zoom-pv-info .zoom-off { color: var(--text-3); text-decoration: line-through; }
+.zoom-pv-msg { margin: 0; color: var(--text-3); font-size: var(--fs-xs); }
+.zoom-pv-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px; }
+.zoom-pv-btns { display: flex; flex-wrap: wrap; gap: 6px; }
+.zoom-pv.is-closed { padding-bottom: 6px; }
+
+@media (min-height: 860px) { .zoom-pv { --zoom-pv-h: 170px; } }
+@media (max-height: 600px) { .zoom-pv { --zoom-pv-h: 84px; } }
+@media (max-width: 320px) {
+  .zoom-rv .rv-main { padding-left: 80px; }
+  .zoom-th { width: 72px; height: 30px; }
+}

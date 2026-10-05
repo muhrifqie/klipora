@@ -1,0 +1,6 @@
+/* silence tool styles (owner: silence tool agent). Shared components live in ../base.css; see docs/PANEL_API.md "CSS conventions". */
+.silence-info:empty { display: none; }
+.silence-info .tag { max-width: 100%; }
+.silence-tracks { gap: 4px; }
+.silence-tracks .lbl { color: var(--text-2); font-size: var(--fs-sm); }
+.silence-tracks .chip[aria-pressed="false"] { color: var(--text-3); text-decoration: line-through; }

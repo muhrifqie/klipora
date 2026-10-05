@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docs: install and use Klipora</title>
+<meta name="description" content="Install Klipora for Premiere Pro 2026: Python, FFmpeg and GPU setup, enabling unsigned CEP extensions, every tool, AI providers and troubleshooting.">
+<link rel="canonical" href="https://klipora.vercel.app/docs">
+<link rel="alternate" hreflang="en" href="https://klipora.vercel.app/docs">
+<link rel="alternate" hreflang="id" href="https://klipora.vercel.app/id/docs">
+<link rel="alternate" hreflang="x-default" href="https://klipora.vercel.app/docs">
+<meta name="theme-color" content="#111110">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Klipora">
+<meta property="og:title" content="Docs: install and use Klipora">
+<meta property="og:description" content="Install Klipora for Premiere Pro 2026: Python, FFmpeg and GPU setup, enabling unsigned CEP extensions, every tool, AI providers and troubleshooting.">
+<meta property="og:url" content="https://klipora.vercel.app/docs">
+<meta property="og:image" content="https://klipora.vercel.app/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Klipora: automatic editing panel for Premiere Pro">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="/assets/site.js"></script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol id="i-wave-sine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12h-2c-.894 0 -1.662 -.857 -1.761 -2c-.296 -3.45 -.749 -6 -2.749 -6s-2.5 3.582 -2.5 8s-.5 8 -2.5 8s-2.452 -2.547 -2.749 -6c-.1 -1.147 -.867 -2 -1.763 -2h-2" /></symbol>
+<symbol id="i-message-circle-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.595 4.577c3.223 -1.176 7.025 -.61 9.65 1.63c2.982 2.543 3.601 6.523 1.636 9.66m-1.908 2.109c-2.787 2.19 -6.89 2.666 -10.273 1.024l-4.7 1l1.3 -3.9c-2.229 -3.296 -1.494 -7.511 1.68 -10.057" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-repeat-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v-3c0 -1.336 .873 -2.468 2.08 -2.856m3.92 -.144h10m-3 -3l3 3l-3 3" /> <path d="M20 12v3a3 3 0 0 1 -.133 .886m-1.99 1.984a3 3 0 0 1 -.877 .13h-13m3 3l-3 -3l3 -3" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-volume-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8a5 5 0 0 1 1.912 4.934m-1.377 2.602a5 5 0 0 1 -.535 .464" /> <path d="M17.7 5a9 9 0 0 1 2.362 11.086m-1.676 2.299a9 9 0 0 1 -.686 .615" /> <path d="M9.069 5.054l.431 -.554a.8 .8 0 0 1 1.5 .5v2m0 4v8a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l1.294 -1.664" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-badge-cc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /> <path d="M10 10.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /> <path d="M17 10.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /></symbol>
+<symbol id="i-list-numbers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 6h9" /> <path d="M11 12h9" /> <path d="M12 18h8" /> <path d="M4 16a2 2 0 1 1 4 0c0 .591 -.5 1 -1 1.5l-3 2.5h4" /> <path d="M6 10v-6l-2 2" /></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z" /></symbol>
+<symbol id="i-zoom-in" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /> <path d="M7 10l6 0" /> <path d="M10 7l0 6" /> <path d="M21 21l-6 -6" /></symbol>
+<symbol id="i-device-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" /> <path d="M11 4h2" /> <path d="M12 17v.01" /></symbol>
+<symbol id="i-focus-centered" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M4 8v-2a2 2 0 0 1 2 -2h2" /> <path d="M4 16v2a2 2 0 0 0 2 2h2" /> <path d="M16 4h2a2 2 0 0 1 2 2v2" /> <path d="M16 20h2a2 2 0 0 0 2 -2v-2" /></symbol>
+<symbol id="i-microphone-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12.9a5 5 0 1 0 -3.902 -3.9" /> <path d="M15 12.9l-3.902 -3.899l-7.513 8.584a2 2 0 1 0 2.827 2.83l8.588 -7.515z" /></symbol>
+<symbol id="i-photo-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15h-3a3 3 0 0 1 -3 -3v-6a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v3" /> <path d="M9 9m0 3a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-6a3 3 0 0 1 -3 -3z" /> <path d="M3 12l2.296 -2.296a2.41 2.41 0 0 1 3.408 0l.296 .296" /> <path d="M14 13.5v3l2.5 -1.5z" /> <path d="M7 6v.01" /></symbol>
+<symbol id="i-ear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3a4.5 4.5 0 0 1 -6.8 1.4" /> <path d="M10 10a3 3 0 1 1 5 2.2" /></symbol>
+<symbol id="i-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /> <path d="M9 9h6v6h-6z" /> <path d="M3 10h2" /> <path d="M3 14h2" /> <path d="M10 3v2" /> <path d="M14 3v2" /> <path d="M21 10h-2" /> <path d="M21 14h-2" /> <path d="M14 21v-2" /> <path d="M10 21v-2" /></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /> <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /> <path d="M8 11v-4a4 4 0 1 1 8 0v4" /></symbol>
+<symbol id="i-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" /> <path d="M15 19l2 2l4 -4" /></symbol>
+<symbol id="i-brand-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></symbol>
+<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /> <path d="M7 11l5 5l5 -5" /> <path d="M12 4l0 12" /></symbol>
+<symbol id="i-terminal-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l3 3l-3 3" /> <path d="M13 15l3 0" /> <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /></symbol>
+<symbol id="i-plug-connected" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5z" /> <path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5z" /> <path d="M3 21l2.5 -2.5" /> <path d="M18.5 5.5l2.5 -2.5" /> <path d="M10 11l-2 2" /> <path d="M13 14l-2 2" /></symbol>
+<symbol id="i-language" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h7" /> <path d="M9 3v2c0 4.418 -2.239 8 -5 8" /> <path d="M5 9c0 2.144 2.952 3.908 6.7 4" /> <path d="M12 20l4 -9l4 9" /> <path d="M19.1 18h-6.2" /></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /> <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></symbol>
+<symbol id="i-menu-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l16 0" /> <path d="M4 12l16 0" /> <path d="M4 18l16 0" /></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6l-12 12" /> <path d="M6 6l12 12" /></symbol>
+<symbol id="i-brand-windows" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 20l-12 -1.5c-1 -.1 -1.8 -.9 -1.8 -1.9v-9.2c0 -1 .8 -1.8 1.8 -1.9l12 -1.5c1.2 -.1 2.2 .8 2.2 1.9v12.1c0 1.2 -1.1 2.1 -2.2 1.9z" /> <path d="M12 5l0 14" /> <path d="M4 12l16 0" /></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6z" /></symbol>
+<symbol id="i-external-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /> <path d="M11 13l9 -9" /> <path d="M15 4h5v5" /></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6" /></symbol>
+<symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /> <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></symbol>
+<symbol id="i-typography" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l3 0" /> <path d="M14 20l7 0" /> <path d="M6.9 15l6.9 0" /> <path d="M10.2 6.3l5.8 13.7" /> <path d="M5 20l6 -16l2 0l7 16" /></symbol>
+<symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /> <path d="M13 17a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /> <path d="M9 17v-13h10v13" /> <path d="M9 8h10" /></symbol>
+<symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0z" /> <path d="M15 9h.01" /></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2" /></symbol>
+<symbol id="i-alert-triangle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4" /> <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /> <path d="M12 16h.01" /></symbol>
+<symbol id="i-info-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M12 9h.01" /> <path d="M11 12h1v4h1" /></symbol>
+<symbol id="i-player-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16l13 -8z" /></symbol>
+<symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M6 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M8.6 8.6l10.4 10.4" /> <path d="M8.6 15.4l10.4 -10.4" /></symbol>
+<symbol id="i-text-caption" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15h16" /> <path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /> <path d="M4 20h12" /></symbol>
+<symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" /> <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" /></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /> <path d="M7 9l5 -5l5 5" /> <path d="M12 4l0 12" /></symbol>
+<symbol id="i-git-fork" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-2" /> <path d="M12 12l0 4" /></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /> <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></symbol>
+<symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /> <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /> <path d="M3 6l0 13" /> <path d="M12 6l0 13" /> <path d="M21 6l0 13" /></symbol>
+<symbol id="i-history" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8l0 4l2 2" /> <path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5" /></symbol>
+<symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7l-10 10" /> <path d="M8 7l9 0l0 9" /></symbol>
+<symbol id="i-cloud-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.58 5.548c.24 -.11 .492 -.207 .752 -.286c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 .957 -.383 1.824 -1.003 2.454m-2.997 1.033h-11.343c-2.572 -.004 -4.657 -2.011 -4.657 -4.487c0 -2.475 2.085 -4.482 4.657 -4.482c.13 -.582 .37 -1.128 .7 -1.62" /> <path d="M3 3l18 18" /></symbol>
+<symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /> <path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /> <path d="M7 8l0 .01" /> <path d="M7 16l0 .01" /></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="28" height="28">Klipora</a>
+    <nav class="nav-links" aria-label="Main"><a href="/#features">Features</a><a href="/#install">Install</a><a href="/docs" aria-current="page">Docs</a><a href="/changelog">Changelog</a></nav>
+    <div class="nav-end">
+      <div class="lang" role="group" aria-label="Language">
+        <a href="/docs" hreflang="en" lang="en" aria-current="true">EN</a>
+        <a href="/id/docs" hreflang="id" lang="id">ID</a>
+      </div>
+      <a class="btn btn-ghost btn-sm gh-btn" href="https://github.com/muhrifqie/klipora"><svg class="icon" aria-hidden="true"><use href="#i-brand-github"/></svg>GitHub</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="icon i-open" aria-hidden="true"><use href="#i-menu-2"/></svg><svg class="icon i-close" aria-hidden="true"><use href="#i-x"/></svg></summary>
+        <nav class="menu-panel" aria-label="Mobile"><a href="/#features">Features</a><a href="/#install">Install</a><a href="/docs" aria-current="page">Docs</a><a href="/changelog">Changelog</a><a href="https://github.com/muhrifqie/klipora">GitHub</a></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<div class="doc-hero">
+  <div class="wrap">
+    <span class="eyebrow">Documentation</span>
+    <h1>Install and use Klipora</h1>
+    <p class="lede">From a clean Windows PC to your first automatic cut, then every tool in the panel.</p>
+    <details class="toc-mobile"><summary>On this page</summary><nav class="toc" aria-label="Contents">
+    <p>Get started</p><ul><li><a href="#requirements">Requirements</a></li><li><a href="#install">Install the engine</a></li><li><a href="#gpu">GPU setup</a></li><li><a href="#cep">Enable the panel</a></li><li><a href="#first-run">First run</a></li></ul>
+    <p>Tools</p><ul><li><a href="#basics">Shared basics</a></li><li><a href="#silence">Silence cutting</a></li><li><a href="#fillers">Filler words</a></li><li><a href="#repeat">Repeated takes</a></li><li><a href="#profanity">Profanity censor</a></li><li><a href="#captions">Animated captions</a></li><li><a href="#chapters">Auto chapters</a></li><li><a href="#viral">Viral clip finder</a></li><li><a href="#zoom">Auto zoom</a></li><li><a href="#resize">Auto resize / reframe</a></li><li><a href="#angles">Virtual angles</a></li><li><a href="#podcast">Podcast multicam</a></li><li><a href="#broll">B-roll</a></li><li><a href="#voice">Clear Voice</a></li></ul>
+    <p>More</p><ul><li><a href="#ai">AI providers</a></li><li><a href="#troubleshooting">Troubleshooting</a></li><li><a href="#update">Update and uninstall</a></li></ul></nav></details>
+  </div>
+</div>
+<div class="wrap doc-layout">
+  <nav class="toc" aria-label="Contents">
+    <p>Get started</p><ul><li><a href="#requirements">Requirements</a></li><li><a href="#install">Install the engine</a></li><li><a href="#gpu">GPU setup</a></li><li><a href="#cep">Enable the panel</a></li><li><a href="#first-run">First run</a></li></ul>
+    <p>Tools</p><ul><li><a href="#basics">Shared basics</a></li><li><a href="#silence">Silence cutting</a></li><li><a href="#fillers">Filler words</a></li><li><a href="#repeat">Repeated takes</a></li><li><a href="#profanity">Profanity censor</a></li><li><a href="#captions">Animated captions</a></li><li><a href="#chapters">Auto chapters</a></li><li><a href="#viral">Viral clip finder</a></li><li><a href="#zoom">Auto zoom</a></li><li><a href="#resize">Auto resize / reframe</a></li><li><a href="#angles">Virtual angles</a></li><li><a href="#podcast">Podcast multicam</a></li><li><a href="#broll">B-roll</a></li><li><a href="#voice">Clear Voice</a></li></ul>
+    <p>More</p><ul><li><a href="#ai">AI providers</a></li><li><a href="#troubleshooting">Troubleshooting</a></li><li><a href="#update">Update and uninstall</a></li></ul></nav>
+  <article class="prose">
+
+<section id="requirements">
+  <h2>Requirements</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Part</th><th>Needed</th></tr></thead>
+    <tbody>
+      <tr><td>Operating system</td><td>Windows 10 or 11, 64-bit. Tested on Windows 11. macOS is not supported yet.</td></tr>
+      <tr><td>Premiere Pro</td><td>2026 (26.x). The panel is a CEP 12 extension.</td></tr>
+      <tr><td>Python</td><td>3.14 (the tested version), with pip.</td></tr>
+      <tr><td>FFmpeg</td><td>8.x full build (libass and NVENC) available on PATH.</td></tr>
+      <tr><td>GPU</td><td>Optional. An NVIDIA GPU with a recent driver runs Whisper on CUDA 12. Tested with 8 GB VRAM. Without it, the CPU is used.</td></tr>
+      <tr><td>Disk</td><td>A few GB free for the Whisper model, caches and renders. Klipora checks free space before every render.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="install">
+  <h2>Install the engine</h2>
+  <p>Klipora has two parts: the panel that lives inside Premiere, and a Python engine that does the heavy work on your PC. Open <strong>PowerShell</strong> and run the commands below.</p>
+  <h3>1. Get the code</h3>
+  <p>Clone the repository, or download the ZIP from <a href="https://github.com/muhrifqie/klipora">GitHub</a> and extract it. The examples use <code>C:\klipora</code>.</p>
+  <div class="code"><pre><code><span class="ln">git clone https://github.com/muhrifqie/klipora.git C:\klipora</span></code></pre><button class="copy-btn" type="button" aria-label="Copy command" data-label="Copy command" data-copied="Copied"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <h3>2. Python and packages</h3>
+  <p>Install Python 3.14 if you do not have it, then install the engine packages. <code>--no-cache-dir</code> keeps pip from filling drive C.</p>
+  <div class="code"><pre><code><span class="ln">winget install Python.Python.3.14</span>
+<span class="ln">py -3.14 -m pip install --no-cache-dir -r C:\klipora\requirements.txt</span>
+<span class="c"># NVIDIA GPU only (optional): CUDA 12 libraries for faster transcription</span>
+<span class="ln">py -3.14 -m pip install --no-cache-dir -r C:\klipora\requirements-gpu.txt</span></code></pre><button class="copy-btn" type="button" aria-label="Copy command" data-label="Copy command" data-copied="Copied"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <h3>3. FFmpeg</h3>
+  <p>Klipora needs a full FFmpeg build (with libass for captions and NVENC for fast video renders). Open a new terminal afterwards so PATH is updated.</p>
+  <div class="code"><pre><code><span class="ln">winget install Gyan.FFmpeg</span>
+<span class="ln">ffmpeg -version</span></code></pre><button class="copy-btn" type="button" aria-label="Copy command" data-label="Copy command" data-copied="Copied"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+</section>
+
+<section id="gpu">
+  <h2>GPU setup</h2>
+  <p>Transcription uses faster-whisper. On an NVIDIA GPU it runs about 1 minute per 30 minutes of video on the test machine. The CUDA 12 libraries (cuBLAS, cuDNN) come from the pip packages in <code>requirements-gpu.txt</code>, so you only need a current NVIDIA driver.</p>
+  <div class="code"><pre><code><span class="c"># check that Windows sees the GPU and the driver</span>
+<span class="ln">nvidia-smi</span></code></pre><button class="copy-btn" type="button" aria-label="Copy command" data-label="Copy command" data-copied="Copied"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <ul>
+    <li>Default model: <code>large-v3-turbo</code>. The first transcription downloads it, so the first run takes longer.</li>
+    <li>Only one Whisper job uses the GPU at a time. Others wait instead of running out of VRAM.</li>
+    <li>No NVIDIA GPU, or low VRAM? Turn off <strong>Pakai GPU untuk transkripsi</strong> in Settings and the CPU is used.</li>
+    <li>Transcripts are cached next to the media, so every other tool reuses them for free.</li>
+  </ul>
+</section>
+
+<section id="cep">
+  <h2>Enable the panel in Premiere</h2>
+  <p>Klipora is not signed or sold through Adobe Exchange, so Premiere hides it until you allow unsigned extensions. Premiere Pro 26.x uses CEP 12, which reads the <code>CSXS.12</code> registry key.</p>
+  <h3>1. Turn on PlayerDebugMode</h3>
+  <div class="code"><pre><code><span class="ln">reg add "HKCU\Software\Adobe\CSXS.12" /v PlayerDebugMode /t REG_SZ /d 1 /f</span></code></pre><button class="copy-btn" type="button" aria-label="Copy command" data-label="Copy command" data-copied="Copied"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <div class="callout"><svg class="icon" aria-hidden="true"><use href="#i-info-circle"/></svg><div>This only changes your Windows user (HKCU), needs no admin rights, and only allows unsigned CEP panels to load. To undo it, set the value back to <code>0</code>.</div></div>
+  <h3>2. Link the panel folder</h3>
+  <p>Create a junction from the CEP extensions folder to the <code>panel</code> folder of the repo. A junction keeps one copy, so a <code>git pull</code> updates the panel too.</p>
+  <div class="code"><pre><code><span class="ln">New-Item -ItemType Directory -Force "$env:APPDATA\Adobe\CEP\extensions" | Out-Null</span>
+<span class="ln">New-Item -ItemType Junction -Path "$env:APPDATA\Adobe\CEP\extensions\com.klipora.panel" -Target "C:\klipora\panel"</span></code></pre><button class="copy-btn" type="button" aria-label="Copy command" data-label="Copy command" data-copied="Copied"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <h3>3. Open it</h3>
+  <p>Restart Premiere Pro, then choose <strong>Window &gt; Extensions</strong> and pick the Klipora panel. Dock it wherever you like. It works from 280 px wide.</p>
+</section>
+
+<section id="first-run">
+  <h2>First run</h2>
+  <ol>
+    <li>Open <strong>Pengaturan</strong> (Settings, the slider icon). Under <strong>Mesin</strong> (engine), set <strong>Python</strong> to <code>py</code>, <code>python</code> or the full path to <code>python.exe</code>, then click <strong>Tes</strong>.</li>
+    <li>Click <strong>Cek ulang</strong> (check again). Python, FFmpeg and GPU should turn green. The AI dot stays grey until you add a provider, which is fine.</li>
+    <li>Pick a <strong>Folder kerja</strong> (work folder) on a drive with free space. Reviews, renders and XML files go there, one folder per sequence.</li>
+    <li>Open any sequence and start with <strong>Potong Silence</strong>. It is the fastest way to see the whole flow.</li>
+  </ol>
+</section>
+
+<section id="basics">
+  <h2>Shared basics</h2>
+  <p>Every tool follows the same pattern, so once you know one you know them all.</p>
+  <ul>
+    <li><strong>Scope</strong>: the source card at the top picks <em>Seluruh sequence</em> (whole sequence), <em>In/Out</em> or <em>Clip terpilih</em> (selected clips).</li>
+    <li><strong>Presets first</strong>: each tool opens with sensible presets. Fine-tuning hides under <em>Pengaturan lanjutan</em> (advanced).</li>
+    <li><strong>Tinjau</strong> (review): results come as a checklist. Click a row to move the Premiere playhead there, press Space to listen, uncheck what should stay. <em>Kirim ke marker</em> sends rows to timeline markers.</li>
+    <li><strong>Apply</strong>: <kbd>Ctrl</kbd>+<kbd>Enter</kbd> runs the main button. Cuts land on a cloned sequence next to yours; <em>Buka yang asli</em> opens your original again.</li>
+    <li><strong>Re-runs keep your choices</strong>: rows you toggled by hand stay that way when you analyze again.</li>
+    <li><kbd>Ctrl</kbd>+<kbd>K</kbd> opens the command palette to jump to any tool.</li>
+  </ul>
+
+  <h2 style="margin-top:48px">Tools</h2>
+
+  <div class="tool-head" id="silence"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-wave-sine"/></svg></span><h3>Silence cutting <span class="muted" style="font-weight:500">(Potong Silence)</span></h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-silence.webp" width="380" height="720" loading="lazy" decoding="async" alt="Silence tool with waveform and presets">
+  <p>Finds pauses across every unmuted audio track and removes them with a ripple on a clone. A frame only counts as silent when all included tracks are silent.</p>
+  <ol>
+    <li>Pick a style: <em>Santai</em>, <em>Natural</em> (default), <em>Cepat</em> or <em>Kilat</em>, from relaxed to tight.</li>
+    <li>The threshold is automatic (calculated from the whole source file). Drag the line on the waveform or use the arrow keys to nudge it.</li>
+    <li>Keep <strong>Lindungi kata</strong> (word guard) on. It needs a transcript; tick <em>Buat transkrip dulu</em> if there is none yet.</li>
+    <li>Choose the result: remove pauses (ripple), markers only, or mute the pauses. Then review and apply.</li>
+  </ol>
+  <p>Running it again on an already cut sequence finds no new gaps, because the threshold comes from the source media and not the cut timeline.</p><div class="clear"></div>
+
+  <div class="tool-head" id="fillers"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-message-circle-off"/></svg></span><h3>Filler words <span class="muted" style="font-weight:500">(Hapus Filler)</span></h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-fillers.webp" width="380" height="720" loading="lazy" decoding="async" alt="Filler tool with hesitation and habit word options">
+  <p>Removes hesitations such as eh, ehm, emm, eee, hmm, uh and um. Three detectors work together: the main transcript, a second verbatim listening pass, and an acoustic detector that catches hesitations Whisper did not write down.</p>
+  <ul>
+    <li><strong>Kepekaan</strong> (sensitivity): careful 80 %, balanced 65 % (default), or clean 50 %.</li>
+    <li>Habit words (ya, oke, gitu, apa namanya...) are off until you pick them. After a run each chip shows how often the word sits at a phrase boundary.</li>
+    <li>Rows marked <em>Mepet</em> are glued to a real word. Listen before cutting those.</li>
+    <li><em>Sekalian potong jeda</em> also removes pauses in the same pass, using your silence settings.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="repeat"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-repeat-off"/></svg></span><h3>Repeated takes <span class="muted" style="font-weight:500">(Potong Pengulangan)</span></h3></div>
+  <p>Finds stutters, restarts, corrections ("sorry, I mean...") and full retakes, and removes the earlier attempt so your last take always stays.</p>
+  <ul>
+    <li>Presets <em>Ketat</em>, <em>Normal</em>, <em>Longgar</em> set the minimum confidence, sentence similarity and the maximum gap between takes.</li>
+    <li><strong>Dengar</strong> plays 2 seconds before and after the cut with the cut applied, so you hear the edit before committing.</li>
+    <li>Whisper hallucinations (text over silence) are flagged, never cut. <em>Minta pendapat AI</em> adds an opinion per row but never changes a checkbox.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="profanity"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-volume-off"/></svg></span><h3>Profanity censor <span class="muted" style="font-weight:500">(Sensor Kata Kasar)</span></h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-profanity.webp" width="380" height="720" loading="lazy" decoding="async" alt="Profanity tool with level and censor mode">
+  <p>Finds swear words (Indonesian, regional and English) in the transcript and a second listening pass, then censors the ones you keep checked.</p>
+  <ul>
+    <li>Level: <em>Longgar</em>, <em>Normal</em> or <em>Ketat</em>. Words with an innocent meaning (for example animal names) are judged by context, with optional AI votes.</li>
+    <li>Mode: <em>Bip</em> (a 1 kHz tone matched to your voice level), <em>Senyap</em> (mute), <em>Kecilkan</em> (duck by 20 dB) or your own sound.</li>
+    <li>Keep personal lists: always censor, always allow. Captions can mask the same words automatically.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="captions"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-badge-cc"/></svg></span><h3>Animated captions <span class="muted" style="font-weight:500">(Auto Caption)</span></h3></div>
+  <p>Word-by-word captions from the local transcript, previewed over your real frame and rendered as a transparent overlay on its own captions track. Edits re-render only the changed part.</p>
+  <ol>
+    <li><strong>Setup</strong>: pick a starting template, hide fillers in captions, tidy numbers and Rupiah, add glossary words that are often misheard. Then <strong>Buat caption</strong>.</li>
+    <li><strong>Template</strong>: 51 templates in groups (Shorts, tutorial, podcast, promo, cinematic, gaming and more). Hover to see the animation. <em>Cocok</em> filters templates that fit this video shape. <em>Acak gaya</em> and <em>Gabung gaya</em> mix styles.</li>
+    <li><strong>Teks</strong>: edit words, split or merge pages, style a single word. Edits are tied to stable word ids and survive re-runs.</li>
+    <li><strong>Gaya</strong> (style): fonts with real previews, colors and gradients, outline, shadow and 3D, glow, 10 background shapes, active word, position. Quick effects and a reset per group. <kbd>Ctrl</kbd>+<kbd>Z</kbd> works.</li>
+    <li><strong>Animasi</strong>: 40 animations (in, active word, out, loop), a keyframe <em>Studio</em>, and <em>Efek suara</em>: sounds on numbers, key words, emoji or every page, placed on one dedicated SFX track.</li>
+    <li><strong>Ekspor</strong>: apply the overlay, or export native SRT captions. <em>Perbarui di timeline</em> swaps in a new version in place.</li>
+  </ol>
+  <h3>Copy style from an image</h3>
+  <p>Take a screenshot of a caption you like (<kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>), open <strong>Template</strong> and use <em>Tiru gaya dari gambar</em> &gt; <em>Tempel</em>. Compare "your image" with the result, then use it or save it. With the AI image reader off, matching is free and offline; with it on, it uses one Vision request.</p>
+  <h3>Brand kit and saved styles</h3>
+  <p>In <strong>Gaya</strong>, the Brand Kit bar stores 4 colors, a title font, brand words that are always spelled right, emoji and tone. <em>Sorot kata penting (AI)</em> suggests words to color. <em>Simpan gaya</em> saves the current look to <em>Gaya Saya</em> (my styles), with export and import as .json. New videos start from the style you used last, remembered separately for vertical and horizontal.</p><div class="clear"></div>
+
+  <div class="tool-head" id="chapters"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-list-numbers"/></svg></span><h3>Auto chapters <span class="muted" style="font-weight:500">(Bab Otomatis)</span></h3></div>
+  <p>Creates YouTube chapters from the transcript: an editable list, chapter markers on the sequence, and the <code>00:00 Title</code> text for your description (copied to the clipboard and saved as .txt).</p>
+  <ul>
+    <li>Edit titles and times, merge chapters, add one at the playhead. Live warnings follow YouTube rules (first at 00:00, at least 3 chapters, at least 10 seconds each).</li>
+    <li>With AI: better titles, plus <em>Judul, deskripsi &amp; hashtag</em> for video titles, description and tags. Without AI: topic shifts and cue words, with titles flagged for you to check.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="viral"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-flame"/></svg></span><h3>Viral clip finder <span class="muted" style="font-weight:500">(Klip Viral)</span></h3></div>
+  <p>Finds the moments of a long video that work as Shorts, TikTok or Reels, scores them 0 to 100, and turns the ones you keep into one sub-sequence per clip, plus score-colored markers.</p>
+  <ul>
+    <li>Clip length presets from 15 to 90 seconds, count (automatic, 3, 5, 10), a style (education, funny, sales, story or custom) and an optional topic.</li>
+    <li><em>Jadikan 9:16</em> also makes a vertical version of each clip with Auto resize.</li>
+    <li>Works without AI (labelled "tanpa AI"), scoring by keywords, voice energy and speaking density.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="zoom"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-zoom-in"/></svg></span><h3>Auto zoom</h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-zoom.webp" width="380" height="720" loading="lazy" decoding="async" alt="Auto Zoom modes and strength">
+  <p>Punch-in zooms as editable Motion Scale and Position keyframes on a clone of your sequence.</p>
+  <ul>
+    <li><em>Ikuti aksi layar</em> (follow screen action, default): for screen recordings. Zooms toward clicks, typing, menus and cursor pauses, from 1.25x up to 2.2x.</li>
+    <li><em>Penekanan bicara</em> (speech emphasis): punch in on action and emphasis words, numbers and louder words, centred on the biggest face.</li>
+    <li><em>Ritmis</em>: alternates wide and close every other sentence, like a two-camera shoot.</li>
+    <li>Set strength, a maximum zooms per minute, animation (smooth, fast, cut) and areas to ignore such as the taskbar.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="resize"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-device-mobile"/></svg></span><h3>Auto resize and reframe <span class="muted" style="font-weight:500">(Auto Resize)</span></h3></div>
+  <p>Makes a 9:16, 1:1, 4:5 or 16:9 version of the sequence. Every result is a new sequence.</p>
+  <ul>
+    <li><em>Pintar</em> (smart, default): framing follows the cursor, clicks, typing and page changes, or faces and the active speaker. Editable Position keyframes per clip.</li>
+    <li><em>Fokus + blur</em>: for screen content, a sharp window that follows the action over a blurred background, so forms and text are not cropped.</li>
+    <li><em>Premiere Auto Reframe</em>: Premiere's own reframe, started from the panel.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="angles"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-focus-centered"/></svg></span><h3>Virtual camera angles <span class="muted" style="font-weight:500">(Angle Otomatis)</span></h3></div>
+  <p>A single-camera "multicam": each clip gets a static wide, medium or close crop (100 / 118 / 140 % by default). The angle changes on every cut, never repeats twice in a row, and is anchored on the action or a face.</p>
+  <ul>
+    <li>Presets <em>Halus</em>, <em>Normal</em>, <em>Sering</em>. Choose when to switch: on every cut, or only after a minimum shot length.</li>
+    <li>Only one long clip? <em>Tambah potongan di awal kalimat</em> splits at sentence starts to create more angle changes.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="podcast"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-microphone-2"/></svg></span><h3>Podcast multicam</h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-podcast.webp" width="380" height="720" loading="lazy" decoding="async" alt="Podcast multicam speaker mapping">
+  <p>The camera follows whoever is talking. Put one mic track and one camera track per speaker (stacked and in sync), plus an optional wide camera.</p>
+  <ul>
+    <li>Tracks are mapped automatically. Naming them "Mic Andi" and "Cam Andi" makes it exact. Up to 6 speakers.</li>
+    <li>Review each shot on a speaker ribbon, pick another camera by hand, then apply. Inactive camera clips are disabled on a clone; audio is never cut or muted.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="broll"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-photo-video"/></svg></span><h3>B-roll</h3></div>
+  <p>Finds moments in your speech that benefit from supporting footage and places clips on a new top video track of a clone.</p>
+  <ul>
+    <li>Sources: your own folder, Pexels stock video (add a free Pexels API key in Settings) or an AI still with a slow Ken Burns move. Credits are written to a text file.</li>
+    <li>Placement is activity aware: a quiet screen gets full-screen b-roll, a screen with action gets a picture-in-picture card in the quietest corner, a busy screen is skipped.</li>
+  </ul><div class="clear"></div>
+
+  <div class="tool-head" id="voice"><span class="tool-ic"><svg class="icon" aria-hidden="true"><use href="#i-ear"/></svg></span><h3>Clear Voice <span class="muted" style="font-weight:500">(Suara Jernih)</span></h3></div>
+  <img class="shot shot-inline" src="/assets/img/panel-voice.webp" width="380" height="720" loading="lazy" decoding="async" alt="Clear Voice settings">
+  <p>Makes your voice pleasant to listen to, non-destructively. The processed voice is rendered to a new audio track on a clone, and the original voice clips are disabled there.</p>
+  <ul>
+    <li><strong>Denoise</strong> with DeepFilterNet3 (runs on the CPU), with adjustable strength.</li>
+    <li><strong>Clicks and breaths</strong>: mouse and keyboard clicks between words are lowered, breaths are softened. Never inside a word. Each one is listed for review.</li>
+    <li><strong>Loudness per platform</strong>: YouTube -14, podcast -16, TikTok/Reels -14 LUFS or your own target, true peak -1 dBTP.</li>
+    <li><strong>Music ducking</strong>: music tracks drop by 12 dB (adjustable) while you speak.</li>
+    <li>Compare before and after in the result card. <em>Buka yang asli</em> goes back to the original.</li>
+  </ul><div class="clear"></div>
+</section>
+
+<section id="ai">
+  <h2>AI providers</h2>
+  <p>AI is optional. It improves chapter titles, viral clip picks, b-roll plans, retake opinions, ambiguous profanity, caption text cleanup and reading a caption style from an image. Without it, every tool falls back to its rules.</p>
+  <h3>Add a provider</h3>
+  <ol>
+    <li>Open <strong>Pengaturan</strong> &gt; <strong>AI</strong> &gt; <strong>Penyedia AI</strong> &gt; <strong>Tambah penyedia</strong> and pick a provider. The URL fills in.</li>
+    <li>Paste your API key and click <strong>Simpan kunci</strong>. The field empties right away; the key is encrypted with Windows DPAPI and never shown again.</li>
+    <li>Click <strong>Ambil daftar model</strong> and pick the <em>Cepat</em> (fast), <em>Pintar</em> (smart) and optional <em>Vision</em> models.</li>
+    <li><strong>Tes koneksi</strong>, then <strong>Simpan</strong>. Reorder with the arrows: the top one is primary, the rest are backups.</li>
+  </ol>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Provider</th><th>Where to get a key</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Local proxy</td><td>your own</td><td>Any OpenAI-compatible server on 127.0.0.1</td></tr>
+      <tr><td>OpenRouter</td><td><code>openrouter.ai/keys</code></td><td>One key, many models, some free</td></tr>
+      <tr><td>Gemini</td><td><code>aistudio.google.com/apikey</code></td><td>Daily free quota</td></tr>
+      <tr><td>OpenAI</td><td><code>platform.openai.com/api-keys</code></td><td>Paid</td></tr>
+      <tr><td>xAI</td><td><code>console.x.ai</code></td><td>Paid</td></tr>
+      <tr><td>Anthropic</td><td><code>console.anthropic.com/settings/keys</code></td><td>Paid, native Messages API</td></tr>
+      <tr><td>DeepSeek</td><td><code>platform.deepseek.com/api_keys</code></td><td>Low cost, no image input</td></tr>
+      <tr><td>Groq</td><td><code>console.groq.com/keys</code></td><td>Very fast, free quota</td></tr>
+      <tr><td>Ollama</td><td>no key</td><td>Runs on your PC, nothing leaves it</td></tr>
+      <tr><td>Custom</td><td>optional</td><td>Any endpoint with <code>/chat/completions</code></td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><svg class="icon" aria-hidden="true"><use href="#i-info-circle"/></svg><div><strong>Privacy and cost.</strong> With a cloud provider, the transcript text (and the screenshot for "copy style from an image") is sent to that provider under its own policy. Paid providers charge per request. Results are cached, and AI only runs when you click its button.</div></div>
+  <div class="callout warn"><svg class="icon" aria-hidden="true"><use href="#i-alert-triangle"/></svg><div>A local proxy that wraps a consumer web account (instead of an official API) can get that account rate-limited or blocked. Keep a second provider as a backup.</div></div>
+</section>
+
+<section id="troubleshooting">
+  <h2>Troubleshooting</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Symptom</th><th>Fix</th></tr></thead>
+    <tbody>
+      <tr><td>Klipora is not in Window &gt; Extensions</td><td>Check the <code>CSXS.12</code> PlayerDebugMode value is the string <code>1</code>, the junction points at the <code>panel</code> folder (it must contain <code>CSXS\manifest.xml</code>), then fully restart Premiere.</td></tr>
+      <tr><td>Panel opens blank</td><td>Close the panel and open it again from the Window menu. If it stays blank, check that the folder was not copied without its subfolders.</td></tr>
+      <tr><td>Python shows "Belum dicek" or red</td><td>Set the full path to <code>python.exe</code> in Settings (run <code>py -3.14 -c "import sys; print(sys.executable)"</code> to find it), then click Tes.</td></tr>
+      <tr><td>FFmpeg red</td><td>Open a new terminal and run <code>ffmpeg -version</code>. If it is not found, reinstall with winget and restart Premiere so it sees the new PATH.</td></tr>
+      <tr><td>GPU red or "GPU busy"</td><td>Update the NVIDIA driver. Only one transcription runs at a time, so wait for the other job or cancel it. Otherwise turn the GPU off in Settings and use the CPU.</td></tr>
+      <tr><td>First transcription is slow</td><td>The Whisper model is downloaded on first use. After that, transcripts are cached and reused by every tool.</td></tr>
+      <tr><td>"Not enough disk space"</td><td>Klipora refuses to render when the drive is nearly full. Move the work folder to another drive in Settings.</td></tr>
+      <tr><td>AI: key rejected (401/403)</td><td>The key is wrong or revoked. <em>Ubah</em> &gt; paste a new key &gt; <em>Simpan kunci</em>.</td></tr>
+      <tr><td>AI: quota or rate limit (402/429)</td><td>Wait, top up, or move another provider to the top. Klipora already skips to the next one.</td></tr>
+      <tr><td>AI: not responding</td><td>Check the internet connection, or that Ollama / your proxy is running, then <em>Cek status</em>.</td></tr>
+      <tr><td>Cut sequence looks wrong</td><td>Your original is untouched. Click <em>Buka yang asli</em>, adjust the settings or uncheck rows, and run again. Re-runs keep your manual choices.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Still stuck? <a href="https://github.com/muhrifqie/klipora/issues">Open an issue</a> with your Premiere version, the step you were on and the error text. Never paste API keys or <code>.env</code> files.</p>
+</section>
+
+<section id="update">
+  <h2>Update and uninstall</h2>
+  <h3>Update</h3>
+  <div class="code"><pre><code><span class="ln">cd C:\klipora</span>
+<span class="ln">git pull</span>
+<span class="ln">py -3.14 -m pip install --no-cache-dir -r requirements.txt</span></code></pre><button class="copy-btn" type="button" aria-label="Copy command" data-label="Copy command" data-copied="Copied"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+  <p>Then close and reopen the panel in Premiere.</p>
+  <h3>Uninstall</h3>
+  <p>Remove the junction (this does not delete the repo), and optionally turn debug mode off again.</p>
+  <div class="code"><pre><code><span class="ln">cmd /c rmdir "%APPDATA%\Adobe\CEP\extensions\com.klipora.panel"</span>
+<span class="ln">reg add "HKCU\Software\Adobe\CSXS.12" /v PlayerDebugMode /t REG_SZ /d 0 /f</span></code></pre><button class="copy-btn" type="button" aria-label="Copy command" data-label="Copy command" data-copied="Copied"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div>
+</section>
+
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="24" height="24">Klipora</a>
+    <nav aria-label="Footer">
+      <a href="/docs">Docs</a>
+      <a href="/docs#troubleshooting">Troubleshooting</a>
+      <a href="/changelog">Changelog</a>
+      <a href="https://github.com/muhrifqie/klipora">GitHub</a>
+      <a href="https://github.com/muhrifqie/klipora/issues">Report a bug</a>
+    </nav>
+    <p>Open source. Not affiliated with Adobe. Premiere Pro is a trademark of Adobe.</p>
+  </div>
+</footer>
+</body>
+</html>

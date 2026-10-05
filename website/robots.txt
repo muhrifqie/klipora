@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_tools/
+Disallow: /_shots/
+
+Sitemap: https://klipora.vercel.app/sitemap.xml

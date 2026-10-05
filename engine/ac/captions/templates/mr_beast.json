@@ -1,0 +1,55 @@
+{
+  "name": "Mr Beast",
+  "description": "Font komik besar, warna selang-seling, tiap kata muncul pop + miring.",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "shorts",
+    "portrait",
+    "fun"
+  ],
+  "font": {
+    "family": "Titan One",
+    "size": 104,
+    "uppercase": true,
+    "punct": "strip",
+    "line_spacing": 1.0
+  },
+  "style": {
+    "outline": 10,
+    "shadow": 9,
+    "shadow_x": 0,
+    "shadow_y": 9,
+    "shadow_color": "#000000",
+    "color_cycle": [
+      "#FFFFFF",
+      "#FFE600",
+      "#FFFFFF",
+      "#3CFF5A",
+      "#FFFFFF",
+      "#FF4646"
+    ]
+  },
+  "layout": {
+    "max_words": 2,
+    "max_chars": 14,
+    "max_lines": 1,
+    "y": 60
+  },
+  "timing": {
+    "mode": "reveal"
+  },
+  "highlight": {
+    "color": null,
+    "scale": 1.0
+  },
+  "anim": {
+    "in": "rotate",
+    "in_dur": 0.22,
+    "out": "pop",
+    "out_dur": 0.12,
+    "word_in": "pop",
+    "word_in_dur": 0.16
+  }
+}

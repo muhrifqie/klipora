@@ -1,0 +1,43 @@
+/* profanity tool styles (owner: profanity tool agent). Shared components live in ../base.css; see docs/PANEL_API.md "CSS conventions". */
+.profanity-row { display: flex; gap: 6px; align-items: center; min-width: 0; }
+.profanity-row .input { flex: 1 1 auto; min-width: 0; }
+.profanity-row .btn { flex: none; }
+.profanity-custom { display: grid; gap: 4px; }
+.profanity-custom[hidden] { display: none; }
+.profanity-custom .help.is-warn { color: var(--warn); }
+
+/* word lists ("Selalu sensor" / "Selalu izinkan") */
+.profanity-list { display: grid; gap: 6px; padding: 8px; border: 1px solid var(--border); border-radius: var(--r-card); background: var(--surface-1); }
+.profanity-list + .profanity-list { margin-top: 2px; }
+.profanity-list-h b { display: block; font-size: var(--fs-sm); color: var(--text-1); }
+.profanity-list-h small { display: block; color: var(--text-3); font-size: var(--fs-xs); }
+.profanity-list[data-kind="block"] .profanity-list-h b::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 6px; border-radius: 50%; background: var(--danger); vertical-align: middle; }
+.profanity-list[data-kind="allow"] .profanity-list-h b::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 6px; border-radius: 50%; background: var(--success); vertical-align: middle; }
+.profanity-tokens { display: flex; flex-wrap: wrap; gap: 4px; min-height: 24px; align-items: center; }
+.profanity-tok { padding-right: 2px; max-width: 100%; }
+.profanity-tok > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.profanity-x { width: 24px; height: 22px; display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: var(--r-pill); background: transparent; color: var(--text-3); cursor: pointer; flex: none; }
+.profanity-x:hover { color: var(--text-1); background: var(--surface-3); }
+.profanity-x:focus-visible { outline: none; box-shadow: var(--ring); }
+.profanity-x .svg-i { width: 10px; height: 10px; }
+
+/* built-in lexicon (collapsed) */
+.profanity-builtin summary { cursor: pointer; color: var(--text-2); font-size: var(--fs-sm); padding: 4px 0; }
+.profanity-builtin summary:focus-visible { outline: none; box-shadow: var(--ring); border-radius: var(--r-chip); }
+.profanity-builtin-body p { margin: 4px 0; word-break: break-word; }
+.profanity-builtin-body b { color: var(--text-2); margin-right: 4px; }
+
+/* review rows: tags and notes stay on one line (the virtual list measures row heights once) */
+[data-screen="tool-profanity"] .rv-l1 { overflow: hidden; }
+[data-screen="tool-profanity"] .rv-l1 .tag { flex: none; }
+[data-screen="tool-profanity"] .rv-note { min-width: 0; }
+[data-screen="tool-profanity"] .rv-note > span { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+[data-screen="tool-profanity"] .rv-actions { flex-wrap: wrap; }
+/* narrow docked panel (Premiere 330 px measured live): the "Dengar ulang" / "Daftarmu" source tag says more than the
+   confidence %, so the % goes first; below 300 px the source tag goes too (the note line repeats it). */
+@media (min-width: 301px) and (max-width: 340px) {
+  [data-screen="tool-profanity"] .rv-l1 .profanity-src ~ .conf { display: none; }
+}
+@media (max-width: 300px) {
+  [data-screen="tool-profanity"] .rv-l1 .profanity-src { display: none; }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Hook Tengah",
+  "description": "Satu kata raksasa di tengah dengan 3D merah tua, pas untuk 3 detik pertama.",
+  "group": "shorts_viral",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "shorts",
+    "hook",
+    "3d"
+  ],
+  "font": {
+    "family": "Bungee",
+    "size": 300,
+    "uppercase": true,
+    "punct": "strip"
+  },
+  "style": {
+    "fill": "#FFFFFF",
+    "outline": 6,
+    "outline_color": "#1A0000",
+    "extrude": {
+      "depth": 14,
+      "angle": 60,
+      "color": "#B91C1C",
+      "color_end": "#450A0A",
+      "steps": 0
+    }
+  },
+  "layout": {
+    "max_words": 1,
+    "max_chars": 12,
+    "max_lines": 1,
+    "y": 50
+  },
+  "timing": {
+    "mode": "word",
+    "min_dur": 0.25,
+    "hold": 0.05,
+    "fill_gaps": 0.3
+  },
+  "highlight": {
+    "color": null
+  },
+  "anim": {
+    "in": "zoom",
+    "in_dur": 0.14,
+    "out": "none"
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#FFE600"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "Langkah Klik",
+  "description": "Kata muncul saat diucap di panel bergaris, istilah klik/menu/tombol disorot oranye.",
+  "group": "tutorial",
+  "aspect": [
+    "16:9",
+    "21:9"
+  ],
+  "tags": [
+    "tutorial",
+    "landscape"
+  ],
+  "font": {
+    "family": "Sora Bold",
+    "size": 48,
+    "line_spacing": 1.32
+  },
+  "style": {
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 10,
+    "max_chars": 40,
+    "max_lines": 2,
+    "y": 86,
+    "width": 80
+  },
+  "timing": {
+    "mode": "reveal"
+  },
+  "box": {
+    "enabled": true,
+    "per": "page",
+    "color": "#111827",
+    "opacity": 0.88,
+    "radius": 16,
+    "pad_x": 28,
+    "pad_y": 16,
+    "border": 3,
+    "border_color": "#F7843E"
+  },
+  "highlight": {
+    "color": null
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.12,
+    "out": "fade",
+    "out_dur": 0.12,
+    "word_in": "slide_up",
+    "word_in_dur": 0.14
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#FDBA74",
+    "keywords": [
+      "klik",
+      "pilih",
+      "buka",
+      "menu",
+      "tombol",
+      "simpan",
+      "upload",
+      "download",
+      "install",
+      "login",
+      "daftar",
+      "masuk",
+      "setting",
+      "copy",
+      "paste",
+      "centang",
+      "ketik"
+    ]
+  }
+}

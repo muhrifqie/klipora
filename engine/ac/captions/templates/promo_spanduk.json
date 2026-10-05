@@ -1,0 +1,69 @@
+{
+  "name": "Promo Spanduk",
+  "description": "Spanduk merah per baris dengan bayangan, teks putih kapital, harga dan angka kuning.",
+  "group": "jualan",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "jualan",
+    "shorts",
+    "portrait"
+  ],
+  "font": {
+    "family": "Anton",
+    "size": 88,
+    "uppercase": true,
+    "punct": "soft",
+    "letter_spacing": 1,
+    "line_spacing": 1.25
+  },
+  "style": {
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 4,
+    "max_chars": 18,
+    "max_lines": 2,
+    "y": 66
+  },
+  "box": {
+    "enabled": true,
+    "per": "line",
+    "shape": "banner",
+    "color": "#E11D48",
+    "radius": 0,
+    "pad_x": 18,
+    "pad_y": 8,
+    "shadow": {
+      "x": 0,
+      "y": 7,
+      "blur": 3,
+      "color": "#00000080"
+    }
+  },
+  "highlight": {
+    "color": "#FFE600",
+    "scale": 1.06
+  },
+  "anim": {
+    "in": "slide_left",
+    "in_dur": 0.18,
+    "out": "fade",
+    "out_dur": 0.08
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#FFE600",
+    "keywords": [
+      "promo",
+      "diskon",
+      "gratis",
+      "ongkir",
+      "murah",
+      "cuan",
+      "hemat",
+      "sale"
+    ]
+  }
+}

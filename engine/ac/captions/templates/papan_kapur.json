@@ -1,0 +1,48 @@
+{
+  "name": "Papan Kapur",
+  "description": "Tulisan tangan Caveat Brush di panel hijau papan tulis, kata aktif kuning kapur.",
+  "group": "edukasi",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "education",
+    "fun"
+  ],
+  "font": {
+    "family": "Caveat Brush",
+    "size": 76,
+    "line_spacing": 1.12
+  },
+  "style": {
+    "fill": "#F5F5F0",
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 6,
+    "max_chars": 26,
+    "max_lines": 2,
+    "y": 78
+  },
+  "box": {
+    "enabled": true,
+    "per": "page",
+    "color": "#1F3D2B",
+    "opacity": 0.94,
+    "radius": 14,
+    "pad_x": 30,
+    "pad_y": 16,
+    "border": 5,
+    "border_color": "#8B5A2B"
+  },
+  "highlight": {
+    "color": "#FFE97A"
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.18,
+    "out": "fade",
+    "out_dur": 0.12
+  }
+}

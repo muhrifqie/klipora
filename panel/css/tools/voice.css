@@ -1,0 +1,41 @@
+/* voice tool styles (owner: voice tool agent). Shared components live in ../base.css; see docs/PANEL_API.md "CSS conventions". */
+.voice-row { display: flex; gap: 6px; align-items: center; min-width: 0; flex-wrap: wrap; }
+.voice-row .input, .voice-row .select { flex: 1 1 140px; min-width: 0; }
+.voice-row .btn { flex: none; }
+.voice-row .voice-eq-ref { flex: 1 1 120px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.voice-music { display: grid; gap: 6px; }
+.voice-music[hidden], .voice-eq[hidden] { display: none; }
+
+/* platform segmented control: 2 x 2 on a narrow docked panel */
+@media (max-width: 340px) {
+  .voice-plat { grid-auto-flow: row; grid-template-columns: 1fr 1fr; }
+}
+
+/* A/B listening */
+.voice-ab { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.voice-ab .help { flex: 1 1 100%; }
+.voice-ab-btn.is-playing { box-shadow: var(--ring); }
+.voice-ab-btn.is-playing .svg-i { animation: voice-pulse 1s var(--ease) infinite alternate; }
+@keyframes voice-pulse { from { opacity: 1; } to { opacity: .35; } }
+[data-motion="reduce"] .voice-ab-btn.is-playing .svg-i { animation: none; }
+@media (prefers-reduced-motion: reduce) { .voice-ab-btn.is-playing .svg-i { animation: none; } }
+.voice-prev:empty { display: none; }
+.voice-result { display: grid; gap: 8px; }
+
+/* "Tiru EQ" curve: one bar per octave band, centre line = 0 dB, up = boost, down = cut */
+.voice-eq { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 3px; height: 74px; padding: 4px 6px;
+  border: 1px solid var(--border); border-radius: var(--r-card); background: var(--surface-1); }
+.voice-eq.is-off { opacity: .5; }
+.voice-eq-b { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-width: 0; }
+.voice-eq-b::before { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - 7px); border-top: 1px dashed var(--border-strong, var(--border)); }
+.voice-eq-bar { position: absolute; left: 22%; right: 22%; border-radius: 2px; }
+.voice-eq-bar.up { bottom: calc(50% + 7px); background: var(--accent); }
+.voice-eq-bar.dn { top: calc(50% - 7px); background: var(--text-3); }
+.voice-eq-b small { position: absolute; bottom: -1px; left: 0; right: 0; text-align: center; font-size: var(--fs-2xs); color: var(--text-3); }
+
+/* review rows: kind + confidence tags stay on one line */
+[data-screen="tool-voice"] .rv-l1 { overflow: hidden; }
+[data-screen="tool-voice"] .rv-l1 .tag { flex: none; }
+@media (max-width: 300px) {
+  [data-screen="tool-voice"] .rv-l1 .conf { display: none; }
+}

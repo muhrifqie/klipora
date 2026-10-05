@@ -1,0 +1,10 @@
+/* resize tool styles (owner: resize tool agent). Shared components live in ../base.css; see docs/PANEL_API.md "CSS conventions". */
+.resize-fmt-help { margin-top: 2px; }
+.resize-note:empty { display: none; }
+.resize-prev { display: flex; flex-direction: column; gap: 6px; }
+.resize-sheet {
+  display: block; width: 100%; height: auto; border-radius: var(--r-ctl);
+  border: 1px solid var(--border); background: var(--surface-0); cursor: zoom-in;
+}
+.resize-sheet:hover { border-color: var(--accent); }
+.resize-sheet:focus-visible { outline: none; box-shadow: var(--ring); }

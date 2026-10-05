@@ -1,0 +1,46 @@
+{
+  "name": "Bayangan Dramatis",
+  "description": "Archivo Black dengan bayangan panjang miring, 1 sampai 2 kata. Dramatis untuk kutipan kuat.",
+  "group": "sinematik",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "cinematic",
+    "shorts"
+  ],
+  "font": {
+    "family": "Archivo Black",
+    "size": 104,
+    "uppercase": true,
+    "punct": "strip",
+    "line_spacing": 1.0
+  },
+  "style": {
+    "outline": 3,
+    "outline_color": "#111111",
+    "long_shadow": {
+      "length": 44,
+      "angle": 45,
+      "color": "#000000CC",
+      "fade": true,
+      "steps": 0
+    }
+  },
+  "layout": {
+    "max_words": 2,
+    "max_chars": 14,
+    "max_lines": 2,
+    "y": 56
+  },
+  "highlight": {
+    "color": "#FF5A36"
+  },
+  "anim": {
+    "in": "slide_up",
+    "in_dur": 0.2,
+    "out": "fade",
+    "out_dur": 0.12
+  }
+}

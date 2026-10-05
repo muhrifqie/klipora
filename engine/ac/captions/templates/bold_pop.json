@@ -1,0 +1,46 @@
+{
+  "name": "Bold Pop",
+  "description": "Kapital tebal, pil ungu meluncur ke kata aktif, masuk pop.",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "shorts",
+    "portrait"
+  ],
+  "font": {
+    "family": "Poppins Black",
+    "size": 84,
+    "uppercase": true,
+    "punct": "strip",
+    "line_spacing": 1.12
+  },
+  "style": {
+    "outline": 0,
+    "shadow": 5,
+    "shadow_x": 0,
+    "shadow_y": 5,
+    "shadow_blur": 6,
+    "shadow_color": "#00000080"
+  },
+  "layout": {
+    "max_words": 4,
+    "max_chars": 18,
+    "max_lines": 2,
+    "y": 66
+  },
+  "highlight": {
+    "color": "#FFFFFF",
+    "pill": "#7C3AED",
+    "pill_radius": 18,
+    "pill_pad_x": 18,
+    "pill_pad_y": 12,
+    "scale": 1.06
+  },
+  "anim": {
+    "in": "pop",
+    "in_dur": 0.2,
+    "out": "pop",
+    "out_dur": 0.12
+  }
+}

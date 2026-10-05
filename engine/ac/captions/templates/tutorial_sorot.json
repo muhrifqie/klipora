@@ -1,0 +1,110 @@
+{
+  "name": "Tutorial Sorot",
+  "description": "Rekaman layar: kata muncul saat diucap, istilah UI & angka cyan, emoji kata kunci.",
+  "aspect": [
+    "16:9",
+    "21:9"
+  ],
+  "tags": [
+    "tutorial",
+    "landscape",
+    "emoji"
+  ],
+  "font": {
+    "family": "Plus Jakarta Sans ExtraBold",
+    "size": 50,
+    "line_spacing": 1.3
+  },
+  "style": {
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 10,
+    "max_chars": 40,
+    "max_lines": 2,
+    "y": 86,
+    "width": 80
+  },
+  "box": {
+    "enabled": true,
+    "per": "line",
+    "color": "#111827E6",
+    "radius": 14,
+    "pad_x": 22,
+    "pad_y": 12
+  },
+  "timing": {
+    "mode": "reveal"
+  },
+  "highlight": {
+    "color": null
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.12,
+    "out": "fade",
+    "out_dur": 0.12,
+    "word_in": "fade",
+    "word_in_dur": 0.12
+  },
+  "emphasis": {
+    "numbers": true,
+    "keywords": [
+      "klik",
+      "pilih",
+      "daftar",
+      "masuk",
+      "setting",
+      "email",
+      "password",
+      "akun",
+      "reseller",
+      "jualan",
+      "seller",
+      "login",
+      "upload",
+      "simpan",
+      "buka",
+      "download",
+      "install",
+      "menu",
+      "tombol"
+    ],
+    "color": "#38E1FF"
+  },
+  "emoji": {
+    "enabled": true,
+    "map": {
+      "uang": "💰",
+      "duit": "💰",
+      "cuan": "💰",
+      "untung": "💰",
+      "mantap": "🔥",
+      "viral": "🔥",
+      "keren": "😎",
+      "gratis": "🎁",
+      "daftar": "📝",
+      "email": "📧",
+      "password": "🔑",
+      "reseller": "🤝",
+      "jualan": "🛒",
+      "jual": "🛒",
+      "setting": "⚙️",
+      "mulai": "🚀",
+      "tutorial": "📚",
+      "semoga": "🙏",
+      "kelihatan": "👀",
+      "akun": "👤",
+      "berhasil": "✅",
+      "salah": "❌",
+      "penting": "❗",
+      "cepat": "⚡",
+      "rahasia": "🤫",
+      "promo": "🏷️",
+      "diskon": "🏷️",
+      "ongkir": "🚚"
+    },
+    "position": "after",
+    "size": 0.95
+  }
+}

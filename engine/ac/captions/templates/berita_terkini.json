@@ -1,0 +1,60 @@
+{
+  "name": "Berita Terkini",
+  "description": "Gaya breaking news: spanduk merah per baris di kiri bawah, teks putih kapital, kata aktif kuning.",
+  "group": "berita",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "news",
+    "landscape"
+  ],
+  "font": {
+    "family": "Barlow Condensed ExtraBold",
+    "size": 62,
+    "uppercase": true,
+    "punct": "soft",
+    "line_spacing": 1.3
+  },
+  "style": {
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 7,
+    "max_chars": 30,
+    "max_lines": 2,
+    "x": 8,
+    "y": 82,
+    "align": "left",
+    "width": 80
+  },
+  "box": {
+    "enabled": true,
+    "per": "line",
+    "shape": "banner",
+    "color": "#C8102E",
+    "radius": 0,
+    "pad_x": 18,
+    "pad_y": 6,
+    "shadow": {
+      "x": 0,
+      "y": 5,
+      "blur": 4,
+      "color": "#00000080"
+    }
+  },
+  "highlight": {
+    "color": "#FFE600"
+  },
+  "anim": {
+    "in": "slide_right",
+    "in_dur": 0.18,
+    "out": "fade",
+    "out_dur": 0.1
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#FFE600"
+  }
+}

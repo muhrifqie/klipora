@@ -1,0 +1,72 @@
+{
+  "name": "Flash Sale",
+  "description": "Russo One bergradasi kuning-oranye dengan 3D merah, sedikit miring. Untuk harga dan diskon.",
+  "group": "jualan",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "jualan",
+    "shorts",
+    "portrait",
+    "3d"
+  ],
+  "font": {
+    "family": "Russo One",
+    "size": 84,
+    "uppercase": true,
+    "punct": "soft",
+    "line_spacing": 1.08
+  },
+  "style": {
+    "outline": 5,
+    "outline_color": "#4A0404",
+    "gradient": {
+      "colors": [
+        "#FFF7AE",
+        "#FFC300",
+        "#FF6A00"
+      ],
+      "dir": "vertical",
+      "span": "word",
+      "bands": 7
+    },
+    "extrude": {
+      "depth": 10,
+      "angle": 65,
+      "color": "#B91C1C",
+      "color_end": "#3F0505",
+      "steps": 0
+    }
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 64,
+    "rotate": -3
+  },
+  "highlight": {
+    "color": null,
+    "scale": 1.12
+  },
+  "anim": {
+    "in": "pop",
+    "in_dur": 0.18,
+    "out": "scale",
+    "out_dur": 0.1
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#FFFFFF",
+    "pill": "#E11D48",
+    "keywords": [
+      "promo",
+      "diskon",
+      "gratis",
+      "ongkir",
+      "murah",
+      "sale"
+    ]
+  }
+}

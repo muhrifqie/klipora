@@ -1,0 +1,22 @@
+# Secrets and local config
+.env
+.env.*
+*.har
+
+# Python
+__pycache__/
+*.pyc
+
+# Local-only material: personal test media, research notes with private screens/transcripts, prototypes
+samples/
+proto/
+docs/research/
+docs/shots/
+/panel-*.png
+website/_shots/
+
+# Generated caches
+engine/ac/assets/sfx/beep_*.wav
+*_words.json
+*_listen.json
+*_env.npy

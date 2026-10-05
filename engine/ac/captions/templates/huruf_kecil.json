@@ -1,0 +1,43 @@
+{
+  "name": "Huruf Kecil",
+  "description": "huruf kecil semua, tanpa garis, bayangan halus, satu kalimat. Tenang dan modern.",
+  "group": "minimal",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "clean"
+  ],
+  "font": {
+    "family": "Outfit Bold",
+    "size": 58,
+    "case": "lower",
+    "punct": "soft",
+    "line_spacing": 1.15
+  },
+  "style": {
+    "outline": 2,
+    "outline_color": "#00000066",
+    "shadow": 4,
+    "shadow_x": 0,
+    "shadow_y": 4,
+    "shadow_blur": 8,
+    "shadow_color": "#000000E6"
+  },
+  "layout": {
+    "max_words": 7,
+    "max_chars": 30,
+    "max_lines": 2,
+    "y": 80
+  },
+  "timing": {
+    "mode": "line"
+  },
+  "anim": {
+    "in": "slide_up",
+    "in_dur": 0.2,
+    "out": "fade",
+    "out_dur": 0.15
+  }
+}

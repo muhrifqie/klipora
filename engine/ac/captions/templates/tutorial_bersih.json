@@ -1,0 +1,58 @@
+{
+  "name": "Tutorial Bersih",
+  "description": "Default rekaman layar 16:9: panel gelap tipis per baris, kata aktif kuning lembut, angka disorot.",
+  "aspect": [
+    "16:9",
+    "21:9"
+  ],
+  "default_for": [
+    "landscape"
+  ],
+  "tags": [
+    "tutorial",
+    "landscape"
+  ],
+  "font": {
+    "family": "Plus Jakarta Sans Bold",
+    "size": 50,
+    "line_spacing": 1.32
+  },
+  "style": {
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 10,
+    "max_chars": 42,
+    "max_lines": 2,
+    "y": 86,
+    "width": 80
+  },
+  "timing": {
+    "max_gap": 0.6,
+    "max_dur": 4.0,
+    "hold": 0.3,
+    "fill_gaps": 0.5
+  },
+  "box": {
+    "enabled": true,
+    "per": "line",
+    "color": "#0B0F19",
+    "opacity": 0.72,
+    "radius": 12,
+    "pad_x": 20,
+    "pad_y": 10
+  },
+  "highlight": {
+    "color": "#FFE066"
+  },
+  "anim": {
+    "in": "fade",
+    "in_dur": 0.12,
+    "out": "fade",
+    "out_dur": 0.12
+  },
+  "emphasis": {
+    "numbers": true,
+    "color": "#7FE7FF"
+  }
+}

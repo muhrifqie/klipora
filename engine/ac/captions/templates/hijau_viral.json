@@ -1,0 +1,77 @@
+{
+  "name": "Hijau Viral",
+  "description": "Kapital, kata aktif hijau membesar, emoji muncul di atas kata kunci.",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "shorts",
+    "portrait",
+    "emoji"
+  ],
+  "font": {
+    "family": "Montserrat ExtraBold",
+    "size": 86,
+    "uppercase": true,
+    "punct": "strip",
+    "line_spacing": 1.02
+  },
+  "style": {
+    "outline": 8,
+    "shadow": 6,
+    "shadow_x": 0,
+    "shadow_y": 6,
+    "shadow_color": "#000000B3"
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 64
+  },
+  "highlight": {
+    "color": "#22E58B",
+    "scale": 1.15
+  },
+  "anim": {
+    "in": "bounce",
+    "in_dur": 0.35,
+    "out": "scale",
+    "out_dur": 0.1
+  },
+  "emoji": {
+    "enabled": true,
+    "map": {
+      "uang": "💰",
+      "duit": "💰",
+      "cuan": "💰",
+      "untung": "💰",
+      "mantap": "🔥",
+      "viral": "🔥",
+      "keren": "😎",
+      "gratis": "🎁",
+      "daftar": "📝",
+      "email": "📧",
+      "password": "🔑",
+      "reseller": "🤝",
+      "jualan": "🛒",
+      "jual": "🛒",
+      "setting": "⚙️",
+      "mulai": "🚀",
+      "tutorial": "📚",
+      "semoga": "🙏",
+      "kelihatan": "👀",
+      "akun": "👤",
+      "berhasil": "✅",
+      "salah": "❌",
+      "penting": "❗",
+      "cepat": "⚡",
+      "rahasia": "🤫",
+      "promo": "🏷️",
+      "diskon": "🏷️",
+      "ongkir": "🚚"
+    },
+    "position": "above",
+    "size": 1.1
+  }
+}

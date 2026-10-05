@@ -1,0 +1,61 @@
+{
+  "name": "Stiker Lucu",
+  "description": "Fredoka bulat di stiker kuning dengan bingkai hitam, miring lucu, kata muncul pop.",
+  "group": "fun",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "fun",
+    "shorts",
+    "portrait"
+  ],
+  "font": {
+    "family": "Fredoka Bold",
+    "size": 80,
+    "punct": "strip",
+    "line_spacing": 1.35,
+    "case": "lower"
+  },
+  "style": {
+    "fill": "#1A1A1A",
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 66
+  },
+  "timing": {
+    "mode": "reveal"
+  },
+  "box": {
+    "enabled": true,
+    "per": "word",
+    "shape": "sticker",
+    "color": "#FFD60A",
+    "radius": 16,
+    "pad_x": 16,
+    "pad_y": 8,
+    "tilt": 6,
+    "border": 4,
+    "border_color": "#1A1A1A",
+    "shadow": {
+      "x": 5,
+      "y": 6,
+      "blur": 0,
+      "color": "#1A1A1A"
+    }
+  },
+  "highlight": {
+    "color": null
+  },
+  "anim": {
+    "in": "none",
+    "out": "pop",
+    "out_dur": 0.1,
+    "word_in": "pop",
+    "word_in_dur": 0.16
+  }
+}

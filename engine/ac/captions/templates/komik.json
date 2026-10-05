@@ -1,0 +1,52 @@
+{
+  "name": "Komik",
+  "description": "Bangers warna-warni, tiap kata jatuh (drop) seperti stempel.",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "fun",
+    "portrait"
+  ],
+  "font": {
+    "family": "Bangers",
+    "size": 108,
+    "uppercase": true,
+    "letter_spacing": 2,
+    "punct": "soft",
+    "line_spacing": 0.98
+  },
+  "style": {
+    "outline": 8,
+    "shadow": 8,
+    "shadow_x": 6,
+    "shadow_y": 8,
+    "shadow_color": "#000000",
+    "color_cycle": [
+      "#FFE600",
+      "#FFFFFF",
+      "#45F0FF",
+      "#FFFFFF",
+      "#FF5EC4"
+    ]
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 62
+  },
+  "timing": {
+    "mode": "reveal"
+  },
+  "highlight": {
+    "color": null
+  },
+  "anim": {
+    "in": "none",
+    "out": "fade",
+    "out_dur": 0.1,
+    "word_in": "drop",
+    "word_in_dur": 0.22
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Goyang Hijau",
+  "description": "Lilita One dengan garis ganda, kata aktif hijau bergoyang. Energik untuk vlog dan reaction.",
+  "group": "shorts_viral",
+  "aspect": [
+    "9:16"
+  ],
+  "tags": [
+    "shorts",
+    "portrait",
+    "fun"
+  ],
+  "font": {
+    "family": "Lilita One",
+    "size": 84,
+    "uppercase": true,
+    "punct": "strip",
+    "line_spacing": 1.05
+  },
+  "style": {
+    "outline": 6,
+    "outline2": 5,
+    "outline2_color": "#FFFFFF",
+    "shadow": 0
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 66
+  },
+  "highlight": {
+    "color": "#3CFF5A",
+    "scale": 1.14,
+    "wiggle": 7
+  },
+  "anim": {
+    "in": "bounce",
+    "in_dur": 0.3,
+    "out": "scale",
+    "out_dur": 0.1
+  }
+}

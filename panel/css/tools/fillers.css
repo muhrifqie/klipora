@@ -1,0 +1,17 @@
+/* fillers tool styles (owner: fillers tool agent). Shared components live in ../base.css; see docs/PANEL_API.md "CSS conventions". */
+.fillers-habits .chips-wrap { margin: 2px 0; }
+.fillers-habits .linkbtn { font-size: var(--fs-xs); }
+.fillers-counts:empty { display: none; }
+/* Review rows: tags stay on one line (row heights are measured once); clip instead of spilling into the duration column. */
+[data-screen="tool-fillers"] .rv-l1 { overflow: hidden; }
+[data-screen="tool-fillers"] .rv-l1 .tag { flex: none; }
+/* The source tag gives way first (ellipsis) so "Mepet" and the confidence stay visible: at the docked 330 px width
+   "Pendengar +1 / Mepet / 85%" overflowed by 17 px and the confidence was cut to "85". */
+[data-screen="tool-fillers"] .rv-l1 .fillers-src { display: block; flex: 0 1 auto; min-width: 3em; overflow: hidden; text-overflow: ellipsis; line-height: 16px; }
+.fillers-tight .svg-i { width: 10px; height: 10px; }
+@media (max-width: 320px) {
+  [data-screen="tool-fillers"] .rv-l1 .fillers-src { display: none; }
+}
+/* Notes stay one line too (the virtual list measures a one-line note); long reasons are ellipsized. */
+[data-screen="tool-fillers"] .rv-note { min-width: 0; }
+[data-screen="tool-fillers"] .rv-note > span { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

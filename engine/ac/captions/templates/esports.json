@@ -1,0 +1,52 @@
+{
+  "name": "Esports",
+  "description": "Russo One bergradasi cyan ke ungu, garis ganda, miring cepat, masuk geser dari kiri.",
+  "group": "gaming",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "gaming",
+    "shorts"
+  ],
+  "font": {
+    "family": "Russo One",
+    "size": 80,
+    "uppercase": true,
+    "punct": "strip",
+    "skew": 0.15,
+    "line_spacing": 1.05
+  },
+  "style": {
+    "outline": 5,
+    "outline_color": "#0B0420",
+    "outline2": 4,
+    "outline2_color": "#22D3EE",
+    "gradient": {
+      "colors": [
+        "#67E8F9",
+        "#A855F7"
+      ],
+      "dir": "horizontal",
+      "span": "line",
+      "bands": 8
+    }
+  },
+  "layout": {
+    "max_words": 3,
+    "max_chars": 16,
+    "max_lines": 2,
+    "y": 66
+  },
+  "highlight": {
+    "color": "#FFFFFF",
+    "scale": 1.1
+  },
+  "anim": {
+    "in": "slide_left",
+    "in_dur": 0.16,
+    "out": "fade",
+    "out_dur": 0.08
+  }
+}

@@ -1,0 +1,45 @@
+/* viral tool styles (Klip Viral). Shared components live in ../base.css; see docs/PANEL_API.md "CSS conventions".
+   Chrome 99 / CEP 12: no nesting, :has(), container queries, color-mix(). Colours come from tokens only. */
+
+/* ---------- Atur */
+.viral-ai:empty, .viral-resume:empty { display: none; }
+.viral-resume .linkbtn { display: inline-flex; align-items: center; gap: 5px; }
+.viral-resume .svg-i { width: 13px; height: 13px; }
+.viral-prompt { height: auto; min-height: 60px; padding: 6px 8px; line-height: var(--lh); resize: vertical; }
+.viral-prompt[hidden] { display: none; }
+.viral-vert[hidden] { display: none; }
+.viral-est { font-variant-numeric: tabular-nums; }
+.viral-len .seg { grid-auto-columns: minmax(0, 1fr); }
+@media (max-width: 330px) { .viral-len .seg button { padding: 0 2px; font-size: var(--fs-xs); } }
+
+/* ---------- score badge (number + colour; the number carries the meaning, colour is a hint) */
+.viral-score {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 26px; height: 18px; padding: 0 5px;
+  border-radius: var(--r-pill); font: 700 var(--fs-xs)/1 var(--font-ui); font-variant-numeric: tabular-nums;
+  background: var(--accent-soft); color: var(--accent-text);
+}
+.viral-score.is-hi { background: var(--success-soft); color: var(--success); }
+.viral-score.is-mid { background: var(--warn-soft); color: var(--warn); }
+.viral-score.is-lo { background: var(--accent-soft); color: var(--accent-text); }
+
+/* ---------- Tinjau: two-line rows (title + transcript snippet), one-line note */
+.viral-rv .rv-ctx { display: flex; flex-direction: column; gap: 1px; white-space: normal; }
+.viral-rv .viral-ttl, .viral-rv .viral-snip { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.viral-rv .viral-ttl { color: var(--text-1); font-weight: 600; }
+.viral-rv .rv.is-off .viral-ttl { color: var(--text-2); }
+.viral-rv .viral-snip { color: var(--text-3); font-size: var(--fs-sm); }
+.viral-rv .rv-note { min-width: 0; }
+.viral-rv .rv-note span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.viral-rv .rv-l1 .viral-score { height: 16px; }
+.viral-rv .rv-head .legend span:nth-child(3) { display: none; }   /* "Hemat ..., jadi ..." is about cutting */
+.viral-bar { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.viral-sort { display: inline-flex; align-items: center; gap: 6px; color: var(--text-3); font-size: var(--fs-sm); }
+.viral-why { font-size: var(--fs-xs); }
+
+/* ---------- Hasil: created sequences */
+.viral-made { display: flex; flex-direction: column; gap: 2px; }
+.viral-made-i { display: flex; align-items: center; gap: 8px; min-height: 28px; padding: 2px 4px 2px 6px; border-radius: var(--r-ctl); }
+.viral-made-i:hover { background: var(--surface-2); }
+.viral-made-n { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.viral-made-i small { color: var(--text-3); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.viral-made-i.is-vert { padding-left: 22px; color: var(--text-2); }

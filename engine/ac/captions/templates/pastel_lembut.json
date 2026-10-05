@@ -1,0 +1,54 @@
+{
+  "name": "Pastel Lembut",
+  "description": "Fredoka huruf kecil bergradasi pink ke ungu muda, garis ungu tua tipis, masuk pelan.",
+  "group": "aesthetic",
+  "aspect": [
+    "9:16",
+    "16:9"
+  ],
+  "tags": [
+    "aesthetic",
+    "clean"
+  ],
+  "font": {
+    "family": "Fredoka Bold",
+    "size": 70,
+    "case": "lower",
+    "punct": "soft",
+    "line_spacing": 1.1
+  },
+  "style": {
+    "outline": 4,
+    "outline_color": "#4C1D95",
+    "gradient": {
+      "colors": [
+        "#FFD1E8",
+        "#C4B5FD"
+      ],
+      "dir": "vertical",
+      "span": "word",
+      "bands": 6
+    },
+    "shadow": 3,
+    "shadow_x": 0,
+    "shadow_y": 3,
+    "shadow_blur": 6,
+    "shadow_color": "#4C1D9580"
+  },
+  "layout": {
+    "max_words": 5,
+    "max_chars": 22,
+    "max_lines": 2,
+    "y": 74
+  },
+  "highlight": {
+    "color": "#FFFFFF",
+    "scale": 1.05
+  },
+  "anim": {
+    "in": "slide_up",
+    "in_dur": 0.24,
+    "out": "fade",
+    "out_dur": 0.15
+  }
+}

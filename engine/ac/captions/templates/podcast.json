@@ -1,0 +1,44 @@
+{
+  "name": "Podcast",
+  "description": "Lower-third dua baris di panel gelap, kata aktif emas, sisanya redup.",
+  "aspect": [
+    "16:9",
+    "9:16"
+  ],
+  "tags": [
+    "podcast",
+    "interview"
+  ],
+  "font": {
+    "family": "Plus Jakarta Sans Bold",
+    "size": 54,
+    "line_spacing": 1.25
+  },
+  "style": {
+    "outline": 0
+  },
+  "layout": {
+    "max_words": 9,
+    "max_chars": 32,
+    "max_lines": 2,
+    "y": 84
+  },
+  "box": {
+    "enabled": true,
+    "per": "page",
+    "color": "#0B0B10D9",
+    "radius": 26,
+    "pad_x": 34,
+    "pad_y": 22
+  },
+  "highlight": {
+    "color": "#FFD24A",
+    "future_alpha": 0.55
+  },
+  "anim": {
+    "in": "slide_up",
+    "in_dur": 0.2,
+    "out": "fade",
+    "out_dur": 0.12
+  }
+}

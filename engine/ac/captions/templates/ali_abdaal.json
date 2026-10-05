@@ -1,0 +1,42 @@
+{
+  "name": "Ali Abdaal",
+  "description": "Bersih, huruf kecil, kata yang belum diucap redup lalu terang (progresif).",
+  "aspect": [
+    "16:9",
+    "9:16"
+  ],
+  "tags": [
+    "clean",
+    "education"
+  ],
+  "font": {
+    "family": "Poppins Bold",
+    "size": 64,
+    "punct": "keep",
+    "line_spacing": 1.18
+  },
+  "style": {
+    "outline": 0,
+    "shadow": 4,
+    "shadow_x": 0,
+    "shadow_y": 4,
+    "shadow_blur": 8,
+    "shadow_color": "#00000099"
+  },
+  "layout": {
+    "max_words": 7,
+    "max_chars": 26,
+    "max_lines": 2,
+    "y": 76
+  },
+  "highlight": {
+    "color": null,
+    "future_alpha": 0.4
+  },
+  "anim": {
+    "in": "slide_up",
+    "in_dur": 0.22,
+    "out": "fade",
+    "out_dur": 0.15
+  }
+}
